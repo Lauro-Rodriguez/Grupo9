@@ -1,0 +1,111 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_CLASES
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+@Html.AntiForgeryToken()
+<div class="col-md-8">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+        {
+            <h3 class="box-title">Tipo (Nuevo)</h3>
+        }
+        else
+        {
+            <h3 class="box-title">Tipo (Editar)</h3>
+        }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+        {
+            <div class="col-md-12">
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                    <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                    @ViewBag.MsgError
+                </div>
+            </div>
+        }
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_CLASE, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-3">
+                    @if (ViewBag.EsNuevo == 1)
+                            {
+                    @Html.EditorFor(model => model.ID_CLASE, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @Value = 0 } })
+                            }
+                            else
+                            {
+                    @Html.EditorFor(model => model.ID_CLASE, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            }
+                    @Html.ValidationMessageFor(model => model.ID_CLASE, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DESRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.DESRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DESRIPCION, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TIPO_USO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EnumDropDownListFor(model => model.TIPO_USO, "Elija un Tipo (*)", htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.TIPO_USO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-offset-9 col-md-10">
+                @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                <button id="saveOrder" type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+}
+@if (@ViewBag.MsgError != null)
+{
+<div class="col-md-12">
+    <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+        @ViewBag.MsgError
+    </div>
+</div>
+}
+
+
+
+
+@section Scripts{
+    <script>
+        $('#DESRIPCION').keyup(function () {
+            var datos = new String($('#DESRIPCION').val());
+            datos = datos.toUpperCase(datos);
+            $('#DESRIPCION').val(datos);
+        })
+    </script>
+}
+
+

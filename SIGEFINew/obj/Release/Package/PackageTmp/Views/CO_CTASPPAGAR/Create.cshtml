@@ -1,0 +1,839 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CTASPPAGAR
+<style>
+    .toast-top-right {
+        top: 60px;
+        right: 12px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    thead, tbody, tr, td, th {
+        display: block;
+    }
+
+        tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        thead th {
+            height: 30px;
+            text-align: left;
+        }
+
+    tbody {
+        height: 130px;
+        overflow-y: auto;
+    }
+
+    thead {
+         fallback 
+    }
+
+
+        tbody td, thead th {
+            width: 19.2%;
+            float: left;
+        }
+
+    .thah {
+        text-align: right;
+    }
+
+    .FColor {
+        background-color: #fcf3cf;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Cuenta por Pagar (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Cuenta por Pagar (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+           
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    @Html.DropDownList("COD_PROV", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                    @Html.ValidationMessageFor(model => model.COD_PROV, "", new { @class = "text-danger" })
+                    <div>
+                        <div id="NIden"></div>
+                    </div>
+                </div>
+                @Html.LabelFor(model => model.NUM_COMPROMISO, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-2">
+                    @Html.DropDownList("NUM_COMPROMISO", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                    @Html.ValidationMessageFor(model => model.NUM_COMPROMISO, "", new { @class = "text-danger" })
+                    <div>
+                        <div id="SaldoComp"></div>
+                    </div>
+                </div>
+                @Html.LabelFor(model => model.FECHA_TRANSAC, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.FECHA_TRANSAC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.FECHA_TRANSAC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.DETALLE, htmlAttributes: new { @class = "control-label col-md-1" })
+            <div class="col-md-7">
+                @Html.EditorFor(model => model.DETALLE, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.DETALLE, "", new { @class = "text-danger" })
+            </div>
+
+            @Html.LabelFor(model => model.TM_FDO_TER, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.TM_FDO_TER)
+                    @Html.ValidationMessageFor(model => model.TM_FDO_TER, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.TM_FDO_TER, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.TM_FDO_TER)
+                        @Html.ValidationMessageFor(model => model.TM_FDO_TER, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>*@
+
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.NUM_COMPROMISO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.DropDownList("NUM_COMPROMISO", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                @Html.ValidationMessageFor(model => model.NUM_COMPROMISO, "", new { @class = "text-danger" })
+                <div>
+                    <div id="SaldoComp"></div>
+                </div>
+            </div>
+        </div>*@
+            <div class="form-group">
+                @*<div class="col-md-5">
+                <div class="panel panel-primary" style="width:100%">
+                    <div class="panel-heading">Proveedores</div>
+                    <div class="panel-body" font size="">
+                        <div class="col-md-12">
+                            @Html.DropDownList("COD_PROV", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                            @Html.ValidationMessageFor(model => model.COD_PROV, "", new { @class = "text-danger" })
+                            <div>
+                                <div id="NIden"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>*@
+                @*@Html.LabelFor(model => model.NUM_TRANSAC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUM_TRANSAC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NUM_TRANSAC, "", new { @class = "text-danger" })
+            </div>*@
+                @*<div class="col-md-2">
+                <div class="panel panel-info" style="width:100%">
+                    <div class="panel-heading">Compromisos</div>
+                    <div class="panel-body" font size="">
+                        <div class="col-md-12">
+                            @Html.DropDownList("NUM_COMPROMISO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.NUM_COMPROMISO, "", new { @class = "text-danger" })
+                            <div>
+                                <div id="SaldoComp"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>*@
+
+                @*<div class="col-md-5">
+                <div class="panel panel-info" style="width:100%">
+                    <div class="panel-heading">Datos</div>
+                    <div class="panel-body" font size="">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.FECHA_TRANSAC, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.FECHA_TRANSAC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                    @Html.ValidationMessageFor(model => model.FECHA_TRANSAC, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TM_FDO_TER, htmlAttributes: new { @class = "control-label col-md-8" })
+                                    <div class="col-md-4">
+                                        <div class="checkbox">
+                                            @Html.EditorFor(model => model.TM_FDO_TER)
+                                            @Html.ValidationMessageFor(model => model.TM_FDO_TER, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+            </div>
+
+            <div class="box box-success">
+
+                <div class="box-body">
+                    @if (@ViewBag.MsgError != null)
+                    {
+                        <div class="col-md-12">
+                            <div class="alert alert-danger alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                                <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                                @ViewBag.MsgError
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+            
+
+                <a id="addToList" class="btn btn-success btn-xs">Nuevo</a>
+
+                <div id="Program">
+
+                </div>
+
+                <div style="overflow-x:auto;">
+                    <table id="detailsTable" class="table-responsive table-striped table-bordered table-hover table-condensed" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th style="width:7%">
+                                    Tipo
+                                </th>
+                                <th style="width:9%">
+                                    Fecha
+                                    @*@Html.DropDownList("datalist", null, htmlAttributes: new { @class = "form-control input-sm select2" })*@
+                                </th>
+                                <th style="width:13%">
+                                    Número
+                                    @*<input type="number" id="VALOR" name="Valor" placeholder="Valor" class="form-control input-sm" />*@
+                                </th>
+                                <th style="width:10%">
+                                    Valor
+                                    @*@Html.DropDownList("ID_FONDO", null, htmlAttributes: new { @class = "form-control input-sm" })*@
+                                </th>
+                                <th style="width:5%">
+                                    %
+                                </th>
+                                <th style="width:10%">
+                                    I.V.A.
+                                </th>
+                                <th style="width:10%">
+                                    Total
+                                </th>
+                                <th style="width:13%">
+                                    Cuenta por Pagar
+                                </th>
+                                <th style="width:13%">
+                                    Cuenta de Débito
+                                </th>
+                                @*<th style="width:5%">
+                            Asiento
+                        </th>
+                        <th style="width:8%">
+                            0% RF IVA
+                        </th>
+                        <th style="width:5%">
+                            Vencimiento
+                        </th>
+                        <th style="width:3%">
+                            AD
+                        </th>
+                        <th style="width:3%">
+                            IG
+                        </th>
+                        <th style="width:10%">
+                            Autorización
+                        </th>
+                        <th style="width:10%">
+                            Válido Hasta
+                        </th>
+                        <th style="width:5%">
+                            Reposición
+                        </th>
+                        <th style="width:5%">
+                            ICE
+                        </th>
+                        <th style="width:5%">
+                            Sustento
+                        </th>
+                        <th style="width:10%">
+                            Forma de Pago
+                        </th>*@
+                            </tr>
+
+                        </thead>
+                        <tbody></tbody>
+                        <thead>
+                            <tr>
+                                <th class="thah" style="width:7%" align="right"></th>
+                                <th class="thah" style="width:54%" align="right">Total :</th>
+                                <th class="thah" style="width:13%" align="right" id="TotalTecho"></th>
+                                <th class="thah" style="width:1%" align="right"></th>
+                                <th class="thah" style="width:14%" align="right"></th>
+                                <th style="width:10%"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+
+            </div>
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.COD_PROV, "Proveedor", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-9">
+                @Html.DropDownList("COD_PROV", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                @Html.ValidationMessageFor(model => model.COD_PROV, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.FECHA_TRANSAC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FECHA_TRANSAC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FECHA_TRANSAC, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.TIPO_TRANSAC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TIPO_TRANSAC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TIPO_TRANSAC, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.NUM_COMPROMISO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NUM_COMPROMISO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NUM_COMPROMISO, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.APLICADO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.APLICADO)
+                    @Html.ValidationMessageFor(model => model.APLICADO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.TIPO_MOV, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TIPO_MOV, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TIPO_MOV, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.ANTICIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.ANTICIPO)
+                    @Html.ValidationMessageFor(model => model.ANTICIPO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>*@
+
+
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.USER_CREA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.USER_CREA, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.USER_CREA, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FECHA_CREA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FECHA_CREA, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FECHA_CREA, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.USER_MODIF, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.USER_MODIF, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.USER_MODIF, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FECHA_MODIF, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FECHA_MODIF, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FECHA_MODIF, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="col-md-offset-9 col-md-10">
+            @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+
+            @*<button type="submit" onclick="@("location.href='"+ Url.Action("Create","CO_CTASPPAGAR")+ "'")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+            </button>*@
+
+            <button id="saveOrder2" type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+            </button>
+            @*<button id="saveOrder" type="submit" onclick="@("location.href='"+ Url.Action("Index","PR_CERTDISPRESUP")+ "'")" class="btn btn-primary">
+            <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+        </button>*@
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newOrderModal">
+        <br />
+        <br />
+        <div class="modal-dialog modal-lg" style=" width 900px !important;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h4>Detalle</h4>
+                </div>
+                <form id="NewOrderForm">
+                    <div class="modal-body">
+                        <div id="Recursos">
+
+                        </div>
+                        @*Customer Details*@
+                        @*<h5 style="color:#ff6347">Customer Details</h5>
+                            <hr />*@
+                        @*<div class="form-horizontal">
+                                <input type="hidden" id="CustomerId" />
+                                <div class="form-group">
+                                    <label class="control-label col-md-2">
+                                        Customer Name
+                                    </label>
+                                    <div class="col-md-4">
+                                        <input type="text" id="name" name="name" placeholder="Customer Name" class="form-control" />
+                                    </div>
+                                    <label class="control-label col-md-2">
+                                        Address
+                                    </label>
+                                    <div class="col-md-4">
+                                        <input type="text" id="address" name="address" placeholder="Customer Address" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>*@
+
+                        @*Order Details*@
+                        @*<h5 style="margin-top:10px;color:#ff6347">Datos</h5>
+                            <hr />*@
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+    $('.select2').select2();
+    var EsNuevo = false;
+    $(document).ready(function () {
+        //$('#detailsTable').dataTable({
+        //    "scrollY": 200,
+        //    "scrollX": true
+        //});
+        //$('#detailsTable').DataTable();
+        //$('#detailsTable').DataTable({
+        //    "sScrollX": "100%",
+        //    "sScrollXInner": "110%",
+        //    "bScrollCollapse": true
+        //});
+        //$('#addToList').attr('disabled', true);
+    });
+
+    //Proceso de Programas
+    $('#addToList').click(function () {
+        if ($('#COD_PROV').val() == 0) {
+            alert('Elija un Proveedor...');
+            return;
+        }
+        var idprov = $("#NUM_COMPROMISO").val();
+        //$("#newOrderModal").modal();
+        //$("#program").modal();
+        if (EsNuevo == true) {
+            return;
+        }
+        EsNuevo = true;
+        $(this).prop("disabled", true);
+        $('#editProg').prop("disabled", true);
+        $('#borraProg').prop("disabled", true);
+        var url = "@Url.Action("_CreateCtaxPag", "CO_DETCTASPPAG")";
+        var data = { EsNuevo: 1, NumC: idprov};
+        $.get(url, data).done(function (data) {
+            $("#Program").append(data);
+        });
+
+
+
+    });
+
+    $("#COD_PROV").change(function () {
+        var idprov = $("#COD_PROV").val();
+
+        var url = "@Url.Action("TipoIdentif", "Funciones")";
+        var url2 = "@Url.Action("FillCompromXProv", "Funciones")";
+
+        var data = { CodProv: idprov }
+        document.getElementById('NIden').innerHTML = "";
+        $.post(url, data).done(function (data) {
+            document.getElementById('NIden').innerHTML = data;
+
+        });
+
+        $("#NUM_COMPROMISO").empty();
+        if ($("#COD_PROV").val() != "0") {
+            $.post(url2, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#NUM_COMPROMISO").append("<option value='" + row.NUM_COMPROMISO + "'>" + row.NUM_COMPROMISO + "</option>")
+                 });
+            });
+        }
+        //alert("Hola Mundo con jQuery!" + $("#NIden").val());
+    });
+
+    $("#NUM_COMPROMISO").change(function () {
+        GetSaldoComp();
+        GetDetalleComp();
+    });
+
+    function GetSaldoComp() {
+    document.getElementById('SaldoComp').innerHTML ="Saldo : 0";
+        var idprov = $("#NUM_COMPROMISO").val();
+        var url = "@Url.Action("GetSaldoComprom", "Funciones")";
+        var data = { NumComp: idprov }
+        $.post(url, data).done(function (data) {
+            document.getElementById('SaldoComp').innerHTML ="Saldo : "+ data;
+            //alert("Hola Mundo con jQuery!" + data);
+        });
+    }
+
+    function GetDetalleComp() {
+        var idprov = $("#NUM_COMPROMISO").val();
+        var url = "@Url.Action("GetDetalleComprom", "Funciones")";
+        var data = { NumComp: idprov }
+        $.post(url, data).done(function (data) {
+            $("#DETALLE").val(data);
+
+        });
+    }
+
+    function TipoDoc(id, Nuevo) {
+        var url = "@Url.Action("GetTipoSRI", "Funciones")";
+        var url2 = "@Url.Action("GetPorcIVA", "Funciones")";
+        var data = { CodItem: id }
+        $.post(url, data).done(function (data) {
+            $("#TIPOSRI").val(data);
+             if (data == "01") {
+                $("#NUM_DOC").val("001001");
+
+                $.post(url2).done(function (data) {
+                    $("#IVA_PORC").val(data);
+
+                });
+                 $("#FECHA_DOC").focus();
+                 document.getElementById('NUM_DOC').minlength = 15;
+            }
+            else {
+                 $("#NUM_DOC").val("");
+                 $("#IVA_PORC").val("");
+            }
+
+        });
+    }
+
+    var total = 0;
+    var NUMFILA = 0;
+    var RfI = false;
+    var ADir = false;
+    var IGto = false;
+    function Aceptar() {
+        detailsTableBody = $("#detailsTable tbody");
+        var TIPDOC = $("#COD_TIPO_DOC").val();
+        //var FECTRAN = $("#FECHA_TRANSAC").val();
+        var FECDOC = $("#FECHA_DOC").val();
+        var NUMDOC = $("#NUM_DOC").val();
+        var VALORDOC = $("#VALOR_DOC").val();
+        var PORCIVA = $("#IVA_PORC").val();
+        var TOTIVA = $("#TOT_IVA").val();
+        var TOTAL = $("#TOTAL").val();
+        var CTAXPAG = $("#CTA_X_PAG").val();
+        var CTADEBITO = $("#CTA_DEBITO").val();
+        var RFIVA = $("#RFIVA").val();
+        var AD1 = $("#AD").val();
+        var IG1 = $("#IG").val();
+        var AUTORIZA = $("#AUTORIZACION").val();
+        var FECHACADDOC = $("#FECHACAD_DOC").val();
+        var REPOSICION = $("#REPOSICION").val();
+        var ICE1 = $("#ICE").val();
+        var CodSustento = $("#COD_SUSTENTO").val();
+        var FormaPago = $("#FORMA_PAGO").val();
+
+        var productItem = '<tr><td class="thah" style="width:7%">' + TIPDOC +
+            '</td><td style="width:9%">' + FECDOC + '</td><td class="thah" style="width:13%">' + NUMDOC +
+            '</td><td style="width:10%" align="right">' + VALORDOC + '</td><td style="width:5%">' + PORCIVA +
+            '</td><td style="width:10%" align="right">' + TOTIVA + '</td><td style="width:10%" align="right">' + TOTAL +
+            '</td><td style="width:13%">' + CTAXPAG + '</td><td style="width:13%">' + CTADEBITO +
+            //'</td><td style="width:8%">' + RFIVA + '</td><td style="width:3%">' + AD +
+            //'</td><td style="width:3%">' + IG + '</td><td style="width:10%">' + Autoriza +
+            //'</td><td style="width:10%">' + FechaCadDoc + '</td><td style="width:5%">' + Reposicion +
+            //'</td><td style="width:5%">' + ICE + '</td><td style="width:5%">' + CodSustento +
+            //'</td><td style="width:10%">' + FormaPago +
+            '</td><td style="width:10%"><a data-itemId="0" data-itemId2="' + NUM_FILA +
+            '" href="#" class="deleteItem btn btn-danger glyphicon glyphicon-trash btn-xs" data-toggle="tooltip", title = "Eliminar""></a></td></tr>';
+          /*  '</td><td style="width:10%"><a data-itemId="0" href="#" class="deleteItem">Borrar</a></td></tr>';*/
+
+        NUMFILA = NUMFILA + 1;
+        detailsTableBody.append(productItem);
+        /*$("#newOrderModal").closest();*/
+
+        SetTotal();
+
+        EsNuevo = false;
+
+
+        var url = "@Url.Action("AddDetCtaxPagar", "Funciones")";
+
+        var data = {
+            NumFila: NUMFILA,
+            CodTDoc: TIPDOC,
+/*            Fecha: FECTRAN*/
+            FechaDoc: FECDOC,
+            NumDoc: NUMDOC, ValorDoc: VALORDOC,
+            PorcIva: PORCIVA, TotIVA: TOTIVA, Total: TOTAL, CtaXPag: CTAXPAG,
+            CtaDebito: CTADEBITO, Rfiva: RfI, AD: ADir, IG: IGto, Autoriza: AUTORIZA,
+            FechaCadDoc: FECHACADDOC, Repos: REPOSICION, ICE: ICE1
+        }
+
+        //alert(NUMFILA);
+        //alert(TIPDOC);
+        //alert(FECDOC);
+        //alert(NUMDOC);
+        //alert(VALORDOC);
+        //alert(PORCIVA);
+        //alert(TOTIVA);
+        //alert(CTAXPAG);
+        //alert(CTADEBITO);
+        //alert(RfI);
+        //alert(ADir);
+        //alert(IGto);
+        //alert(AUTORIZA);
+        //alert(FECHACADDOC);
+        //alert(REPOSICION);
+        //alert(ICE1);
+
+        $.get(url, data).done(function (data) {
+            
+                //$("#Recursos").append(data);
+            });
+
+        $("#Program").empty();
+    }
+
+    $("VALOR_DOC").focusout(function () {
+        $(this).css("background-color", "#FFFFFF");
+    });
+
+    function Cancelar() {
+        EsNuevo = false;
+
+        $("#Program").empty();
+    }
+
+    // After Add A New Order In The List, If You Want, You Can Remove It.
+         $(document).on('click', 'a.deleteItem', function (e) {
+             e.preventDefault();
+             var $self = $(this);
+             var NFila = $(this).attr('data-itemId2');
+             var Ctot = parseFloat($(this).closest('tr').find('td:eq(9)').text());
+             //alert(NFila);
+
+                    if ($(this).attr('data-itemId') == "0") {
+                        $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
+                            var url = "@Url.Action("RemoveDetCxP", "Funciones")";
+                            var data = { NumFila: NFila }
+                           
+                            $.get(url, data).done(function (data) {
+                                //$("#Recursos").append(data);
+                                });
+
+                            total -= Ctot;
+                            $(this).remove();
+
+                            SetTotal();
+
+                    });
+            }
+         });
+
+    //Guardar la Cuenta por pagar
+    $("#saveOrder2").click(function (e) {
+
+        e.preventDefault();
+        var orderArr = [];
+        orderArr.length = 0;
+        if (total > 0) {
+            $.each($("#detailsTable tbody tr"), function () {
+                orderArr.push({
+                    COD_TIPO: $(this).find('td:eq(0)').html(),
+                    FECHA_DOC: $(this).find('td:eq(1)').html(),
+                    NUM_DOC: $(this).find('td:eq(2)').html(),
+                    VALOR_DOC: $(this).find('td:eq(3)').html(),
+                    PORC_IVA: $(this).find('td:eq(4)').html(),
+                    VAL_IVA: $(this).find('td:eq(5)').html(),
+                    TOTAL: $(this).find('td:eq(6)').html(),
+                    CXP: $(this).find('td:eq(7)').html(),
+                    CDEBITO: $(this).find('td:eq(8)').html()
+                });
+                //alert($(this).find('td:eq(0)').html());
+                //alert($(this).find('td:eq(1)').html());
+                //alert($(this).find('td:eq(2)').html());
+                //alert($(this).find('td:eq(3)').html());
+                //alert($(this).find('td:eq(4)').html());
+                //alert($(this).find('td:eq(5)').html());
+                //alert($(this).find('td:eq(6)').html());
+                //alert($(this).find('td:eq(7)').html());
+                //alert($(this).find('td:eq(8)').html());
+            });
+
+            var data = JSON.stringify({
+                CodProv: $("#COD_PROV").val(),
+                FechaTran: $("#FECHA_TRANSAC").val(),
+                TipoTran: "CP",
+                NumComp: $("#NUM_COMPROMISO").val(),
+                Detalle: $("#DETALLE").val(),
+                TipoMov: "8",
+                //FechaDoc: $("#FECHA_DOC").val(),
+                //NumDoc: $("#NUM_DOC").val(),
+                //Autoriza: $("#AUTORIZACION").val(),
+                //FechaCadDoc: $("#FECHACAD_DOC").val(),
+
+                order: orderArr
+            });
+
+            //var data = {NumComp : 1 };
+
+            //saveOrderx(data);
+
+            $.when(saveOrderx(data)).then(function (response) {
+                console.log(response);
+            }).fail(function (err) {
+                console.log(err);
+                
+            });
+        }
+        else {
+            alert("No se Puede Guardar sin Detalle!");
+        }
+    });
+
+    function SetTotal() {
+        var Total = 0;
+        var Costo = 0;
+
+        $.each($("#detailsTable tbody tr"), function (index) {
+
+            $(this).children("td").each(function (index2) {
+                if (index2 == 6) {
+                    Costo = parseFloat($(this).text());
+                    if (isNaN(Costo)) {
+                        Costo = 0;
+                    }
+
+                    Total += Costo;
+                    /*alert(Costo);*/
+                }
+
+            })
+
+        });
+        total = Total;
+        document.getElementById('TotalTecho').innerHTML = Total.toFixed(2);
+    }
+
+    function saveOrderx(data) {
+        alert(data);
+        return $.ajax({
+            //contentType: 'application/json; charset=utf-8',
+            //dataType: 'json',
+            //type: 'POST',
+            //url: "/Funciones/Save",
+            data: data,
+            success: function (result) {
+                //alert(result);
+                location.reload();
+            },
+            error: function () {
+                alert("Error!")
+            }
+        });
+    }
+</script>

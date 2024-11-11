@@ -1,0 +1,51 @@
+﻿@model SIGEFINew.Models.Nomina.RP_RECEPFONDOS
+@{
+    ViewBag.Title = "Eliminar";
+}
+    <div class="col-md-8">
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-remove-sign"></i>
+                <h3 class="box-title">Receptor de Fondos</h3>
+            </div>
+            <div class="box-body">
+                <h4>Está seguro de borrar este registro?</h4>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ID_RECEPFONDO)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ID_RECEPFONDO)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.COD_PROV)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.COD_PROV)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Proveedores.NOMBRE)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Proveedores.NOMBRE)
+                    </dd>
+
+                </dl>
+
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                        @Html.ActionLink("Regrsar a la Lista", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

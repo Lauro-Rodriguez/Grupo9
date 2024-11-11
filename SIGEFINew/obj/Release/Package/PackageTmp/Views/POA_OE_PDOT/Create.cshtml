@@ -1,0 +1,81 @@
+﻿@model SIGEFINew.Models.POA.POA_OE_PDOT
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-8">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                @if (ViewBag.EsNuevo == 1)
+                {
+                    <h3 class="box-title">Objetivo Estratégico del PDOT (Nuevo)</h3>
+                }
+                else
+                {
+                    <h3 class="box-title">Objetivo Estratégico del PDOT (Editar)</h3>
+                }
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.COD_OE_PDOT, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.COD_OE_PDOT, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.COD_OE_PDOT, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NOM_OE_PDOT, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.NOM_OE_PDOT, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NOM_OE_PDOT, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label("Eje de Desarrollo", "Eje de Desarrollo", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownList("COD_ED_PDOT", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.COD_ED_PDOT, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ACTIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EnumDropDownListFor(model => model.ACTIVO, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ACTIVO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-offset-8 col-md-10">
+                        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button id="saveOrder" type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+}
+

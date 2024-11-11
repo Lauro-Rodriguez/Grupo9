@@ -1,0 +1,95 @@
+﻿@model SIGEFINew.Models.Presupuesto.PR_FONDOS
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-8">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                @if (ViewBag.EsNuevo == 1)
+                {
+                    <h3 class="box-title">Fuente de Financiamiento (Nuevo)</h3>
+                }
+                else
+                {
+                    <h3 class="box-title">Fuente de Financiamiento (Editar)</h3>
+                }
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ID_FONDO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @if (ViewBag.EsNuevo == 1)
+                            {
+                                @Html.EditorFor(model => model.ID_FONDO, new { htmlAttributes = new { @class = "form-control" } })
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.ID_FONDO, new { htmlAttributes = new { @class = "form-control",@Readonly="readonly" } })
+                            }
+                            @Html.ValidationMessageFor(model => model.ID_FONDO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                    </div>
+
+                    <div class="col-md-offset-8 col-md-10">
+                        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $('#DESCRIPCION').keyup(function () {
+        var datos = new String($('#DESCRIPCION').val());
+        datos = datos.toUpperCase(datos);
+        $('#DESCRIPCION').val(datos);
+    })
+</script>
+
+

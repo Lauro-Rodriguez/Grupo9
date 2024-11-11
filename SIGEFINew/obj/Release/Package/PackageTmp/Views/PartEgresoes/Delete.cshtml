@@ -1,0 +1,87 @@
+﻿@model SIGEFINew.Models.Presupuesto.PartEgreso
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Borrar</h2>
+
+<h3>Está seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Partida de Egreso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividades.ACTI_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividades.ACTI_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grupos.GRUP_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grupos.GRUP_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Programas.PROG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programas.PROG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proyectos.PROY_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proyectos.PROY_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subprogramas.PROG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subprogramas.PROG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAEG_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAEG_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAEG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAEG_NOMBRE)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,114 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CUENBANCOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CO_CUENBANCOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_BANCO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_BANCO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUENTA_CORRIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUENTA_CORRIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_CG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_CG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONCILIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONCILIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTA_DEBITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTA_DEBITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTA_CREDITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTA_CREDITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

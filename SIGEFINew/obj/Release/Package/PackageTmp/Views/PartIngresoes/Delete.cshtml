@@ -1,0 +1,90 @@
+﻿@model SIGEFINew.Models.Presupuesto.PartIngreso
+
+@{
+    ViewBag.Title = "Borrar";
+}
+<div class="col-md-8">
+    <div class="box box-warning">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-remove-sign"></i>
+            <h3 class="box-title">Borrar Partida de Ingreso</h3>
+        </div>
+        <div class="box-body">
+            <h4>Está seguro de borrar este registro?</h4>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    Proyecto
+                    @*@Html.DisplayNameFor(model => model.Proyectos.PROY_NOMBRE)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Proyectos.PROY_NOMBRE)
+                </dd>
+
+                <dt>
+                    Actividad
+                    @*@Html.DisplayNameFor(model => model.Actividades.ACTI_NOMBRE)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Actividades.ACTI_NOMBRE)
+                </dd>
+
+                <dt>
+                    Grupo
+                    @*@Html.DisplayNameFor(model => model.Grupos.GRUP_NOMBRE)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Grupos.GRUP_NOMBRE)
+                </dd>
+                <dt>
+                    Programa
+                    @*@Html.DisplayNameFor(model => model.Programas.PROG_NOMBRE)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Programas.PROG_NOMBRE)
+                </dd>
+
+
+                <dt>
+                    Subprograma
+                    @*@Html.DisplayNameFor(model => model.Subprogramas.PROG_NOMBRE)*@
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Subprogramas.PROG_NOMBRE)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PAIN_CLAVE)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PAIN_CLAVE)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PAIN_NOMBRE)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PAIN_NOMBRE)
+                </dd>
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+                    @Html.ActionLink("Regresar a la lista", "Index")
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

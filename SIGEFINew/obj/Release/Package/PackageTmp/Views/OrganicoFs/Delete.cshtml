@@ -1,0 +1,47 @@
+﻿@model SIGEFINew.Models.Presupuesto.OrganicoF
+
+@{
+    ViewBag.Title = "Borrar";
+}
+    <div class="col-md-8">
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-remove-sign"></i>
+                <h3 class="box-title">Borrar Elemento</h3>
+            </div>
+            <div class="box-body">
+                <h4>Está seguro de borrar este registro?</h4>
+                <div>
+                    <dl class="dl-horizontal">
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ORG_CLAVE)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ORG_CLAVE)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ORG_NOMBRE)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ORG_NOMBRE)
+                        </dd>
+                    </dl>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+                            @Html.ActionLink("Regresar a la lista", "Index")
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+

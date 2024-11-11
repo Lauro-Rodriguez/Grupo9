@@ -1,0 +1,58 @@
+﻿@model SIGEFINew.Models.Periodos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Periodos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.INSITUCIONES.NOM_INSTITUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INSITUCIONES.NOM_INSTITUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACTIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACTIVO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CERRADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CERRADO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

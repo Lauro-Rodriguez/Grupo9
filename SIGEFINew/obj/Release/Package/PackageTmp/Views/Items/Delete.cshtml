@@ -1,0 +1,51 @@
+﻿@model SIGEFINew.Models.Presupuesto.Item
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<br />
+<br />
+<h2>Borrar</h2>
+
+<h3>Está seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            Grupo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRUP_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_NOMBRE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </div>
+    }
+</div>

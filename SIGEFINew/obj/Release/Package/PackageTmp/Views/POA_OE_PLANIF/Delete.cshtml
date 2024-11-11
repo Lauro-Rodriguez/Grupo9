@@ -1,0 +1,45 @@
+﻿@model SIGEFINew.Models.POA.POA_OE_PLANIF
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+    <div class="col-md-8">
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-remove-sign"></i>
+                <h3 class="box-title">Borrar Grupo Presupuestario</h3>
+            </div>
+            <div class="box-body">
+                <h4>Está seguro de borrar este registro?</h4>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.COD_OE_PLANIF)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.COD_OE_PLANIF)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DESCRIPCION)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DESCRIPCION)
+                    </dd>
+ 
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+                        @Html.ActionLink("Regresar a la Lista", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,255 @@
+﻿@model IEnumerable<SIGEFINew.Models.Contabilidad.CO_RETENCIONES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ASIENTO_NUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUC_CI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_DOCUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_EMISION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_TIPO_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODICLASRET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_PTOEMIRET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_PTOEMIRET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_RETENCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PORC_RET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_RET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BASE_IMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR_RET)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_EMI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_COMPROMISO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMITIDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAGADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASIENTO_PAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_PAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CHECK_PAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_CADUCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_SUSTENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_TRANSAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_CUENTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_CUENTACP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANULADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GENERADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIRMADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AUTORIZADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLAVE_ACCESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AUTORIZACION_SRI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_AUTORIZA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AMBIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMISION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CUENTAXPAGAR)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASIENTO_NUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUC_CI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_DOCUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_EMISION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_TIPO_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODICLASRET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_PTOEMIRET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PTOEMIRET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_RETENCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PORC_RET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_RET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALOR_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BASE_IMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALOR_RET)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_EMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_COMPROMISO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMITIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAGADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASIENTO_PAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_PAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHECK_PAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_CADUCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_SUSTENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_TRANSAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_CUENTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_CUENTACP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANULADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GENERADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIRMADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AUTORIZADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLAVE_ACCESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AUTORIZACION_SRI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_AUTORIZA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMBIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMISION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUENTAXPAGAR)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

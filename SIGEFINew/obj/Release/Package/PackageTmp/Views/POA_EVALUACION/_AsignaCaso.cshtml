@@ -1,0 +1,81 @@
+﻿@model SIGEFINew.Models.POA.POA_PYHISTORIAL
+
+@using (Html.BeginForm(new { @NumDoc = ViewBag.NumDoc, @CodPlan = ViewBag.CodPlan,@CodFase = ViewBag.CodFase, @CodPObtvo = ViewBag.NumDoc }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-8">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                <h3 class="box-title">Observaciones</h3>
+            </div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ID_INSTITUCION, new { @Value = ViewBag.IdInst })
+            @Html.HiddenFor(model => model.PERI_CODIGO, new { @Value = ViewBag.PeriCod })
+            @Html.HiddenFor(model => model.COD_PLAN, new { @Value = ViewBag.CodPlan })
+            @Html.HiddenFor(model => model.ORG_CODIGO, new { @Value = ViewBag.OrgCod })
+            @Html.HiddenFor(model => model.COD_PLANOBJTVO, new { @Value = ViewBag.NumDoc })
+            @Html.HiddenFor(model => model.CODIGO_DOC, new { @Value = ViewBag.CodiDoc })
+            @Html.HiddenFor(model => model.ESTADO_PY, new { @Value = ViewBag.EstadoPY })
+            @Html.HiddenFor(model => model.FECHA_GENERA, new { @Value = ViewBag.FechaGen })
+            @Html.HiddenFor(model => model.USER_GENERA, new { @Value = ViewBag.UserGen })
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <div><h4><b>Código Proyecto : @ViewBag.NumDoc</b></h4></div>
+                            @Html.TextAreaFor(model => model.DETALLE, new { @class = "form-control input-sm textarea-editor" })
+                            @Html.ValidationMessageFor(model => model.DETALLE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-offset-9 col-md-9">
+                    @switch (ViewBag.EstadoPY)
+                    {
+                        case "EP":
+                            @Html.ActionLink(" Cancelar", "Index2", "", new { @class = "btn btn-warning" })
+                            break;
+                        case "AS":
+                            @Html.ActionLink(" Cancelar", "Index3", "", new { @class = "btn btn-warning" })
+                            break;
+                        case "AA":
+                            @Html.ActionLink(" Cancelar", "Index4", "", new { @class = "btn btn-warning" })
+                            break;
+                        case "DS":
+                            @Html.ActionLink(" Cancelar", "Index2", "", new { @class = "btn btn-warning" })
+                            break;
+                        case "DA":
+                            @Html.ActionLink(" Cancelar", "Index4", "", new { @class = "btn btn-warning" })
+                            break;
+                        case "GA":
+                            @Html.ActionLink(" Cancelar", "Index4", "", new { @class = "btn btn-warning" })
+                            break;
+                    }
+                    @*@Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })*@
+                    <button id="saveOrder" type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+    //$("#FECHA_GENERA").val(@ViewBag.FechaGen);
+    //alert(@ViewBag.FechaGen);
+</script>

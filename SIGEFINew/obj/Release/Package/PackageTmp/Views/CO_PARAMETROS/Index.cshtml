@@ -1,0 +1,255 @@
+﻿@model IEnumerable<SIGEFINew.Models.Contabilidad.CO_PARAMETROS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PERIODOS.PERI_DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MESINI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MESPROC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MASKCUENPATRI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MASKCUENRESUL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ING1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ING2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ING3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GTO1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GTO2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GTO3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ORDENDEU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ORDENACRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESUMIG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CTARESINGGASTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CTARESEJERVIGENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CTARRESEJERANTERIOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPDIAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPEGRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPINGRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMASIEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMASIREFO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_TRANSAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_CERTDISP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_COMPROMISO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_TRANSFER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_DEVEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PORIVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_DECIMAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_PEDIDOCOMPRAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_ORDENPAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_ITEM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEVENGAR_CONTAB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAGAR_CONTAB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IVA_GASTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERIODOS.PERI_DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MESINI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MESPROC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASKCUENPATRI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASKCUENRESUL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ING1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ING2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ING3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GTO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GTO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GTO3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ORDENDEU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ORDENACRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESUMIG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CTARESINGGASTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CTARESEJERVIGENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CTARRESEJERANTERIOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPDIAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPEGRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPINGRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMASIEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMASIREFO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_TRANSAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_CERTDISP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_COMPROMISO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_TRANSFER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_DEVEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PORIVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_DECIMAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_PEDIDOCOMPRAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_ORDENPAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_ITEM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEVENGAR_CONTAB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAGAR_CONTAB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IVA_GASTO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

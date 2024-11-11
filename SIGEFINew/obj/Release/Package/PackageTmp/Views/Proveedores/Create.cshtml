@@ -1,0 +1,466 @@
+﻿@model SIGEFINew.Models.Proveedores
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+<style>
+    .contenedor {
+        padding: 1.5rem 1em;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgb(247, 247, 247);
+    }
+
+    legend::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: .1em;
+        margin-top: 1.5rem;
+        margin-bottom: .5em;
+        background: rgb(250,17,0);
+    }
+
+    .form-group input.line, select.line, textarea.line {
+        border-bottom: 1px solid #888 !important;
+        background: transparent !important;
+        border: 0;
+    }
+
+        input.line:focus,
+        select.line:focus,
+        textarea.line:focus {
+            outline: none !important;
+            outline-offset: 0;
+        }
+
+    input.line:active {
+        outline: none !important;
+        outline-offset: 0 !important;
+    }
+
+    .form-group .error {
+        display: none;
+    }
+
+    input.form-control, select.form-control,
+    textarea.form-control {
+        border-radius: 0 !important;
+    }
+
+    input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+        border-radius: 5px;
+        border: 1px solid #39c;
+    }
+
+    .form-group input.line, select.line, textarea.line {
+        border-bottom: 1px solid #888 !important;
+        background: transparent !important;
+        border: 0;
+    }
+
+    .o_control_panel {
+        /*border-bottom: 1px solid #cccccc;*/
+        padding-top: 10px;
+        padding-right: 16px;
+        padding-bottom: 10px;
+        padding-left: 16px;
+        background-color: aliceblue;
+        /*position: fixed;
+        top: 50px;*/
+    }
+
+    #modelo {
+        width: 400px;
+        height: 290px;
+        background-color: #00FFFF;
+        border: 0;
+        margin: 0;
+    }
+
+        #modelo .red {
+            width: 80px;
+            height: 40px;
+            border: 3px solid red;
+            margin: 0;
+        }
+
+        #modelo .orange {
+            width: 250px;
+            height: 120px;
+            background-color: #9FDAEF;
+            border: 15px solid orange;
+            margin: 20px;
+            padding: 20px;
+        }
+</style>
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Proveedores (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Proveedores (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            <div class="form-horizontal">
+                @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+                @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+                <div class="form-group">
+                    <strong>@Html.LabelFor(model => model.COD_PROV, htmlAttributes: new { @class = "control-label col-md-1 " })</strong>
+                    <div class="col-md-2">
+                        @Html.EditorFor(model => model.COD_PROV, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                        @Html.ValidationMessageFor(model => model.COD_PROV, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TIPO_IDENTI, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-2">
+                        @Html.EnumDropDownListFor(model => model.TIPO_IDENTI, "Elija un Tipo (*)", htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.TIPO_IDENTI, "", new { @class = "text-danger" })
+                    </div>
+                    @*@Html.LabelFor(model => model.NUMCEDRUC_PROV, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-2">
+                        @Html.EditorFor(model => model.NUMCEDRUC_PROV, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "N° Identificación (*)" } })
+                        @Html.ValidationMessageFor(model => model.NUMCEDRUC_PROV, "", new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.CONTRIBESPECIAL, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.CONTRIBESPECIAL)
+                            @Html.ValidationMessageFor(model => model.CONTRIBESPECIAL, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    @Html.LabelFor(model => model.TELEFONO, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.TELEFONO, new { htmlAttributes = new { @class = "form-control", placeholder = "Teléfono (*)" } })
+                        @Html.ValidationMessageFor(model => model.TELEFONO, "", new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NOMBRE, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-2">
+                        @Html.EnumDropDownListFor(model => model.TIPO_PROV, "Elija un Tipo (*)", htmlAttributes: new { @class = "form-control input-sm" })
+                        @*@Html.EditorFor(model => model.TIPO_PROV, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.TIPO_PROV, "", new { @class = "text-danger" })
+                    </div>
+                    @*@Html.LabelFor(model => model.NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.NOMBRE, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Nombre (*)" } })
+                        @Html.ValidationMessageFor(model => model.NOMBRE, "", new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.EMAIL, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control", placeholder = "EMail (*)" } })
+                        @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DIRECCION, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-6">
+                        @Html.TextAreaFor(model => model.DIRECCION, new { @class = "form-control input-sm textarea-editor", placeholder = "Dirección (*)" })
+                        @Html.ValidationMessageFor(model => model.DIRECCION, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.INSTIT_PUB, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-4">
+                        @Html.DropDownList("INSTIT_PUB", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @*@Html.EditorFor(model => model.INSTIT_PUB, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.INSTIT_PUB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ID_PROVINCIA, "Provincia", htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-2">
+                        @*@Html.DropDownListFor(model => model.ID_PROVINCIA, ViewBag.ID_PROVINCIA as SelectList, new { @class = "form-control input-sm" })*@
+                        @Html.DropDownList("ID_PROVINCIA", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.ID_PROVINCIA, "", new { @class = "text-danger" })
+                    </div>
+                    @*@Html.LabelFor(model => model.ID_CANTON, "Cantón", htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-2">
+                        @*@Html.DropDownList("ID_CANTON", null, htmlAttributes: new { @class = "form-control" })*@
+                        @Html.DropDownList("ID_CANTON", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.ID_CANTON, "", new { @class = "text-danger" })
+                    </div>
+
+                    @*@Html.LabelFor(model => model.ID_PARROQUIA, "Parroquia", htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-2">
+                        @Html.DropDownList("ID_PARROQUIA", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @*@Html.DropDownList("ID_PARROQUIA", null, htmlAttributes: new { @class = "form-control" })*@
+                        @Html.ValidationMessageFor(model => model.ID_PARROQUIA, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.SEXO, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        @Html.EnumDropDownListFor(model => model.SEXO, "(*)", htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.SEXO, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.OBLIGA_CONTAB, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-1">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.OBLIGA_CONTAB)
+                            @Html.ValidationMessageFor(model => model.OBLIGA_CONTAB, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <section class="card2">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">Pago Interbancario</a></li>
+                            <li><a data-toggle="tab" href="#ccont">Cuentas Contables</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <br />
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.CODIGO_BANCO, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-4">
+                                        @Html.DropDownList("CODIGO_BANCO", null, htmlAttributes: new { @class = "form-control select2 input-sm" })
+                                        @Html.ValidationMessageFor(model => model.CODIGO_BANCO, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    @Html.LabelFor(model => model.TIPO_CUENTA, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-2">
+                                        @Html.DropDownList("TIPO_CUENTA", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                        @Html.ValidationMessageFor(model => model.TIPO_CUENTA, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    @Html.LabelFor(model => model.NUM_CUENTA, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-2">
+                                        @Html.EditorFor(model => model.NUM_CUENTA, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "N° Cuenta (*)" } })
+                                        @Html.ValidationMessageFor(model => model.NUM_CUENTA, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TIPO_IDENTITRAN, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-2">
+                                        @Html.EnumDropDownListFor(model => model.TIPO_IDENTITRAN, "Elija un Tipo (*)", htmlAttributes: new { @class = "form-control input-sm" })
+                                        @Html.ValidationMessageFor(model => model.TIPO_IDENTITRAN, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    @Html.LabelFor(model => model.RUCCEDU_TRAN, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-2">
+                                        @Html.EditorFor(model => model.RUCCEDU_TRAN, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "N° Identificación (*)" } })
+                                        @Html.ValidationMessageFor(model => model.RUCCEDU_TRAN, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    @Html.LabelFor(model => model.RAZONSOCIAL, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-5">
+                                        @Html.EditorFor(model => model.RAZONSOCIAL, new { htmlAttributes = new { @class = "form-control input-sm", placeholder = "Razón Social (*)" } })
+                                        @Html.ValidationMessageFor(model => model.RAZONSOCIAL, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+
+                            <div id="ccont" class="tab-pane fade">
+                                <br />
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.CXC_PROVEED, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-5">
+                                        @Html.DropDownList("CXC_PROVEED", null, "Cuenta por Cobrar", htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                                        @Html.ValidationMessageFor(model => model.CXC_PROVEED, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    @Html.LabelFor(model => model.CXP_PROVEED, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-5">
+                                        @Html.DropDownList("CXP_PROVEED", null, "Cuenta por Pagar", htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                                        @Html.ValidationMessageFor(model => model.CXP_PROVEED, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.CXC_ANTICIPREC, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-5">
+                                        @Html.DropDownList("CXC_ANTICIPREC", null, "Cuenta Anticipos Recibidos", htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                                        @Html.ValidationMessageFor(model => model.CXC_ANTICIPREC, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    @Html.LabelFor(model => model.CXP_ANTICIPENT, htmlAttributes: new { @class = "control-label col-md-1" })
+                                    <div class="col-md-5">
+                                        @Html.DropDownList("CXP_ANTICIPENT", null, "Cuenta Anticipos Entregados", htmlAttributes: new { @class = "form-control select2input-sm", @style = "width: 100%;" })
+                                        @Html.ValidationMessageFor(model => model.CXP_ANTICIPENT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="panel panel-default">
+                    @*<div class="panel-heading">Cuentas por Cobrar</div>*@
+                    <div class="panel-body">
+                        <div class="col-md-offset-9 col-md-10">
+                            @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                            <button id="saveOrder" type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Aceptar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        var TGrupo;
+        var a = 5;
+        //alert("Hola Mundo con jQuery!" + @ViewBag.EsNuevo);
+        if (@ViewBag.EsNuevo==0) {
+            @*alert("Hola Mundo con jQuery!");
+            var Prov = $("#ID_PROVINCIA").val();
+            LlenaCantones(Prov);
+            $("#ID_CANTON").val(@Model.ID_CANTON);
+            var Canton = @Model.ID_CANTON
+            LlenaParroquias(Prov, Canton);*@
+        }
+
+        $('.select2').select2();
+        $("#ID_PROVINCIA").click(function () {
+            var idprov = $("#ID_PROVINCIA").val();
+            var url = "@Url.Action("LLenaCantones", "Instituciones")";
+            var data = { IdProv: idprov }
+            $("#ID_CANTON").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_CANTON").append("<option value='" + row.ID_CANTON + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+        });
+
+
+
+        $("#ID_CANTON").click(function () {
+            var idprov = $("#ID_PROVINCIA").val();
+             var idcanton = $("#ID_CANTON").val();
+            var url = "@Url.Action("LLenaParroquias", "Instituciones")";
+            var data = { IdProv: idprov, IdCanton: idcanton }
+            $("#ID_PARROQUIA").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_PARROQUIA").append("<option value='" + row.ID_PARROQUIA + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+        });
+
+         $("#TIPO_IDENTI").change(function () {
+            TGrupo = $("#TIPO_IDENTI").val();
+             });
+
+        $("#NUMCEDRUC_PROV").focusout(function () {
+            var Grupo = $("#NUMCEDRUC_PROV").val();
+
+            ValidaDoc(TGrupo,Grupo);
+                //BuscaCedula(Grupo);
+            });
+
+            function ValidaDoc(tipodoc,cedula) {
+                var url = "@Url.Action("ValidoDoc", "Funciones")";
+                var data = { TipoDoc: tipodoc, Cedula: cedula }
+
+                $.post(url, data).done(function (data) {
+                    if (!data) {
+                        $("#BtnSave").attr("readonly", false);
+                        alert("Número de R.U.C. o Cédula no Válidos!");
+                        $("#NUMCEDRUC_PROV").val("");
+                        $("#NUMCEDRUC_PROV").focus;
+                        return false;
+                    }
+                    else {
+                        $("#COD_PROV").val(cedula);
+                    }
+
+                    return true;
+                });
+            }
+
+        function LlenaCantones(idprov) {
+            var url = "@Url.Action("LLenaCantones", "Instituciones")";
+            var data = { IdProv: idprov }
+            $("#ID_CANTON").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_CANTON").append("<option value='" + row.ID_CANTON + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });
+        }
+
+        function LlenaParroquias(idprov,idcanton) {
+            var url = "@Url.Action("LLenaParroquias", "Instituciones")";
+            var data = { IdProv: idprov, IdCanton: idcanton }
+            $("#ID_PARROQUIA").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_PARROQUIA").append("<option value='" + row.ID_PARROQUIA + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });
+        }
+
+    });
+
+    $('#NOMBRE').keyup(function () {
+            var datos = new String($('#NOMBRE').val());
+            datos = datos.toUpperCase(datos);
+            $('#NOMBRE').val(datos);
+         })
+</script>

@@ -1,0 +1,110 @@
+﻿@model IEnumerable<SIGEFINew.Models.Contabilidad.CO_DETFACTURA>
+@*@model PagedList.IPagedList<SIGEFINew.Models.Contabilidad.CO_DETFACTURA>*@
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Facturas";
+}
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1">
+            <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","CO_DETFACTURA", new {@numComp=ViewBag.Comprom })+ "'")" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Nuevo
+            </button>
+        </div>
+        @*<div class="col-md-1">
+                <button type="submit" onclick="@("location.href='"+ Url.Action("Print","PartIngresoes")+ "'")" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-print"></span> Imprimir
+                </button>
+            </div>*@
+        <div class="col-md-5 col-lg-offset-6">
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+
+    </div>
+
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Registro de Valores|</h3>
+        @ViewBag.Prov - Factura : @ViewBag.Fact - Compromiso : @ViewBag.Comprom
+    </div>
+    <div class="box-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:10%">
+                        Tipo Gasto
+                    </th>
+                    <th style="width:50%">
+                        Valor
+                    </th>
+                    <th style="width:10%">
+                        % I.V.A.
+                    </th>
+                    <th style="width:10%">
+                        Total I.V.A.
+                    </th>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.VALOR_DOC)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IVA_PORC)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TOT_IVA)
+                        </th>*@
+                    <th style="width:10%">
+                        Total
+                    </th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.TIPO_GASTO)
+                    </td>
+                    <td style="width:50%">
+                        @Html.DisplayFor(modelItem => item.VALOR_DOC)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.IVA_PORC)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.TOT_IVA)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.TOTAL)
+                    </td>
+                    <td style="width:10%">
+                        @Html.ActionLink(" ", "Create", new { id = item.COD_PROV, NumDoc = item.NUM_DOC }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Editar" })
+                        @Html.ActionLink(" ", "Details", new { id = item.COD_PROV, NumDoc = item.NUM_DOC }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Valores" })
+                        @Html.ActionLink(" ", "Delete", new { id = item.NUM_DOC }, new { @class = "btn btn-danger glyphicon glyphicon-trash btn-xs", data_toggle = "tooltip", title = "Eliminar" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+@*Pag. @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))*@

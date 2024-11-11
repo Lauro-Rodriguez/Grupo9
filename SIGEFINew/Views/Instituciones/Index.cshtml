@@ -1,0 +1,150 @@
+﻿@model IEnumerable<SIGEFINew.Models.Instituciones>
+
+@{
+    ViewBag.Title = "Instituciones";
+}
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1">
+            <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","Instituciones")+ "'")" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Nuevo
+            </button>
+        </div>
+        @*<div class="col-md-1">
+            <button type="submit" onclick="@("location.href='"+ Url.Action("Print","PartIngresoes")+ "'")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-print"></span> Imprimir
+            </button>
+        </div>*@
+        <div class="col-md-5 col-lg-offset-5">
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+
+    </div>
+
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Instituciones</h3>
+    </div>
+    <div class="box-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.ID_INSTITUCION)
+                    </th>
+                    <th style="width:75%">
+                        @Html.DisplayNameFor(model => model.NOM_INSTITUCION)
+                    </th>
+                    <th style="width:10%">
+                        @Html.DisplayNameFor(model => model.RUC_INSTITUCION)
+                    </th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.ID_INSTITUCION)
+                    </td>
+                    <td style="width:75%">
+                        @Html.DisplayFor(modelItem => item.NOM_INSTITUCION)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.RUC_INSTITUCION)
+                    </td>
+                    <td style="width:10%">
+                        @*<input type="button" title="Editar" value="Editar" onclick="location.href='@Url.Action("Edit", "Instituciones", new { id = item.ID_INSTITUCION})'" class="btn btn-primary btn-sm" />
+                        <input type="button" title="Editar" value="Borrar" onclick="location.href='@Url.Action("Delete", "Instituciones", new { id = item.ID_INSTITUCION})'" class="btn btn-danger btn-sm" />*@
+                        @*<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Claves</button>*@
+                        @Html.ActionLink(" ", "Create", new { id = item.ID_INSTITUCION }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Editar" })
+                        @Html.ActionLink(" ", "Delete", new { id = item.ID_INSTITUCION }, new { @class = "btn btn-danger glyphicon glyphicon-trash btn-xs", data_toggle = "tooltip", title = "Eliminar" })}
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Claves</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" list="datalist1" />
+
+                <datalist id="datalist1">
+                    <option value="US" label="United States" />
+                    <option value="UK" label="United Kingdom" />
+                    <option value="IN" label="India" />
+                </datalist>
+
+                <input class="form-control" id="myInput" type="text" placeholder="Búsqueda">
+                <br>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                            <th>Opción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                            <td>@Html.ActionLink("Seleccionar", "Formularios")</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@mail.com</td>
+                            <td>@Html.ActionLink("Seleccionar", "Formularios")</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@greatstuff.com</td>
+                            <td>@Html.ActionLink("Seleccionar", "Formularios")</td>
+                        </tr>
+                        <tr>
+                            <td>Anja</td>
+                            <td>Ravendale</td>
+                            <td>a_r@test.com</td>
+                            <td>@Html.ActionLink("Seleccionar", "Formularios")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>

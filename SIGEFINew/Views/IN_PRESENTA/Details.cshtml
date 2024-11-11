@@ -1,0 +1,66 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_PRESENTA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IN_PRESENTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_CARACGEN.DESCRIP_CAGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_CARACGEN.DESCRIP_CAGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIP_CAGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIP_CAGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

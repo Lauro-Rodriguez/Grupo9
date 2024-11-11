@@ -1,0 +1,137 @@
+﻿@model SIGEFINew.Models.POA.POA_PLANOBJETIVOS
+@{
+    ViewBag.Title = "Details";
+    List<SIGEFINew.Models.POA.POA_INDICADOROBJ> Indicador = ViewBag.Indicadores;
+}
+
+<br />
+<br />
+
+<h2>@Html.DisplayFor(model => model.DESC_OBJETIVO)</h2>
+
+<div class="container-fluid">
+        <section class="card2">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Indicadores</a></li>
+                <li ><a data-toggle="tab" href="#home2">Recursos</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                Código
+                            </th>
+                            <th>
+                                Tipo
+                            </th>
+                            @*<th>
+                                @Html.DisplayNameFor(model => model.MEDIOSVERIF)
+                            </th>*@
+                            <th>
+                                Enero
+                            </th>
+                            <th>
+                                Febero
+                            </th>
+                            <th>
+                                Marzo
+                            </th>
+                            <th>
+                                Abril
+                            </th>
+                            <th>
+                                Mayo
+                            </th>
+                            <th>
+                                Junio
+                            </th>
+                            <th>
+                                Julio
+                            </th>
+                            <th>
+                                Agosto
+                            </th>
+                            <th>
+                                Septiembre
+                            </th>
+                            <th>
+                                Octubre
+                            </th>
+                            <th>
+                                Noviembre
+                            </th>
+                            <th>
+                                Diciembre
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var course in Indicador)
+                        {
+                            <tr>
+                                <td>
+                                    @course.COD_INDICADOROJ
+                                </td>
+                                <td>
+                                    @Html.Display(@course.TIPOOBJ.ToString())
+                                </td>
+                                @*<td>
+                                    @Html.DisplayFor(modelItem => item.MEDIOSVERIF)
+                                </td>*@
+                                <td>
+                                    @course.VAL_ENERO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_FEBRERO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_MARZO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_ABRIL.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_MAYO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_JUNIO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_JULIO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_AGOSTO.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_SEPTIEMBRE.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_OCTUBRE.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_NOVIEMBRE.ToString()
+                                </td>
+                                <td>
+                                    @course.VAL_DICIEMBRE.ToString()
+                                </td>
+                                <td>
+                                    @*@Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                                    @Html.ActionLink("Edit", "Edit", "POA_INDICADOROBJ",new {id=course.COD_PLAN,id2=course.ORG_CODIGO,id3=course.COD_PLANOBJTVO,id4=course.COD_INDICADOROJ })
+                                    @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                                    @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

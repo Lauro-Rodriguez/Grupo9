@@ -1,0 +1,41 @@
+﻿@model SIGEFINew.Models.POA.POA_PLANOBJETIVOS
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<br />
+<br />
+<h2>Borrar</h2>
+
+<h3>Está Seguro que Desea <strong>Eliminar</strong>  este Registro?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_OE_PLANIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_OE_PLANIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESC_OBJETIVO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESC_OBJETIVO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

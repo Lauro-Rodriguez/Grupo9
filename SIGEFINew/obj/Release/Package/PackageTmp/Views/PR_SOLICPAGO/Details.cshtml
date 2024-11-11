@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SIGEFINew.ViewModels.HistorialDoc>
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h3><b>N° Solicitud Pago :</b> @ViewBag.NumDoc </h3>
+<ul class="timeline">
+    @foreach (var item in Model)
+    {
+        <li class="time-label">
+            <span class="bg-red">
+                @Html.DisplayFor(modelItem => item.FECHA_GENERA)
+            </span>
+        </li>
+
+        <!-- /.timeline-label -->
+        <!-- timeline item -->
+        <li>
+            <!-- timeline icon -->
+            <i class="fa fa-inbox bg-blue"></i>
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> </span>
+
+                <h3 class="timeline-header"><a href="#">Proceso generado por : @Html.DisplayFor(modelItem => item.ORG_NOMBRE) </a> ...</h3>
+
+                <div class="timeline-body">
+                    @*...*@
+                    <div>
+                        <label>Usuario : @Html.DisplayFor(modelItem => item.FullName)</label>
+                    </div>
+
+                    @Html.DisplayFor(modelItem => item.DETALLE)
+                </div>
+
+                <div class="timeline-footer">
+                    @*<a class="btn btn-primary btn-xs">...</a>*@
+                </div>
+            </div>
+        </li>
+        <!-- END timeline item -->
+    }
+
+
+
+</ul>
+

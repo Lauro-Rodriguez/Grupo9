@@ -1,0 +1,502 @@
+﻿@model IEnumerable<SIGEFINew.Models.Nomina.RP_DETALLEROL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    table {
+        width: 100%;
+    }
+
+    thead, tbody, tr, td, th {
+        display: block;
+    }
+
+        tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        thead th {
+            height: 30px;
+            /*text-align: left;*/
+        }
+
+    tbody {
+        height: 350px;
+        overflow-y: auto;
+    }
+
+    thead {
+        /* fallback */
+    }
+
+
+        tbody td, thead th {
+            width: 19.2%;
+            float: left;
+        }
+
+    .thah {
+        text-align: right;
+    }
+
+    .FColor {
+        background-color: #fcf3cf;
+    }
+</style>
+
+<div class="form-group">
+    <div class="row">
+        @*<div class="col-md-1">
+            <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","PartEgresoes")+ "'")" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Nuevo
+            </button>
+        </div>*@
+        <div class="col-md-1">
+            <button type="submit" onclick="@("location.href='"+ Url.Action("PrintCargaIniEgr","Printer")+ "'")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+            </button>
+        </div>
+
+        <div class="col-md-1">
+            <button type="submit" onclick="Aprobar()" class="btn btn-success">
+                <span class="glyphicon glyphicon-check"></span> Procesar
+            </button>
+        </div>
+
+        <div class="col-md-5 col-lg-offset-5">
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+
+    </div>
+
+</div>
+
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Procesar rol por Empleado</h3>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            @using (Html.BeginForm())
+            {
+                <div class="col-md-6">
+                    <div class="form-group">
+                        @*"box box-solid bg-green-gradient"*@
+                        <div class="panel panel-primary" style="width:100%">
+                            <div class="panel-heading">Empleados</div>
+                            <div class="panel-body" font size="">
+                                <div class="input-group">
+                                    @Html.DropDownList("ID_EMPLEADO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-info btn-sm">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <div class="panel panel-success" style="width:100%">
+                            <div class="panel-heading">Total Ingresos</div>
+                            <div style="font-size:20px; color:green" class="panel-body text-info" id="TotalIng" align="right">
+                                <b>@ViewBag.TotalIng</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">Total Egresos</div>
+                            <div style="font-size:20px; color:maroon" class="panel-body text-info" id="TotalEgr" align="right">
+                                <b>@ViewBag.TotEgr</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <div class="panel panel-info" style="width:100%">
+                            <div class="panel-heading">Liquido a Recibir</div>
+                            <div style="font-size:20px;color:blueviolet" class="panel-body text-info" id="DiferEgr" align="right">
+                            <strong>@ViewBag.LiqRec</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <table id="tblCustomers" class="table table-striped table-bordered table-hover table-condensed" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th style="width:7%">
+                        Código
+                    </th>
+                    <th style="width:51%">
+                        @Html.DisplayNameFor(model => model.RP_RUBROS.DESCRIPCION)
+                    </th>
+                    <th style="width:20%">
+                        Valor
+                    </th>
+
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td style="width:7%" class="NOM_RUBRO FColor">
+                            <span>@item.RP_RUBROS.NOM_RUBRO</span>
+                        </td>
+                         <td style="width:51%" class="DESCRIPCION FColor" >
+                            <span>@item.RP_RUBROS.DESCRIPCION</span>
+                        </td>
+                        <td style="width:20%" class="VALOR FColor" align="right">
+                            <span>@item.VALOR</span>
+                        </td>
+                        
+                        @*<td>
+                        @Html.DisplayFor(modelItem => item.POA)
+                    </td>*@
+                        <td style="width:10%">
+                            @if (item.FORMULA == false)
+                            {
+                                <a class="Edit" href="javascript:;">Editar</a>
+                                <a class="Update" href="javascript:;" style="display:none">Guardar</a>
+                                <a class="Cancel" href="javascript:;" style="display:none">Cancelar</a>
+                            }
+                            else
+                            {
+                                @*@Html.ActionLink("Editar", "", new { id = item.ID_INSTITUCION }, new { onclick = "javascript:return false;" })*@
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <thead>
+                <tr>
+                    <th class="thah" style="width:7%" align="right"></th>
+                    <th class="thah" style="width:20%" align="right"></th>
+                    <th class="thah" style="width:51%" align="right">Total :</th>
+                    <th class="thah" style="width:10%" align="right" id="TotalTecho"></th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="newOrderModal">
+    <br />
+    <br />
+    <div class="modal-dialog modal-lg" style=" width: 900px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>Aprobar Presupuesto</h4>
+            </div>
+            <form id="NewOrderForm">
+                <div class="modal-body">
+                    <div id="Recursos">
+
+                    </div>
+  
+                    <div class="form-horizontal">
+                        <input type="hidden" id="OrderId" />
+                        <div class="form-group">
+                            <label class="control-label col-md-1">
+                                Fecha
+                            </label>
+                            <div class="col-md-4">
+                                <input type="date" id="fecha" name="productName" required placeholder="" class="form-control" />
+                            </div>
+                            <label class="control-label col-md-2">
+                                N° Documento
+                            </label>
+                            <div class="col-md-4">
+                                <input id="numero" name="Numero" required placeholder="" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="saveOrder" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("p").click(function () {
+            $(this).hide();
+        });
+    });
+    //document.getElementById('Techo').style.visibility="hidden";
+    //Edit event handler.
+    GetTotalesHead();
+    GetTotales();
+        $("body").on("click", "#tblCustomers .Edit", function () {
+            var row = $(this).closest("tr");
+            $("td", row).each(function () {
+                if ($(this).find("input").length > 0) {
+                    $(this).find("input").show();
+                    $(this).find("span").hide();
+                }
+            });
+
+            row.find(".Cancel").show();
+            row.find(".Delete").hide();
+            $(this).hide();
+
+            var url = "@Url.Action("AprobPres", "Funciones")";
+            var data = {};
+
+            $.get(url, data).done(function (data) {
+                if (data == false) {
+                    row.find(".Update").show();
+                }
+             });
+
+        });
+
+        //Update event handler.
+        $("body").on("click", "#tblCustomers .Update", function () {
+            var row = $(this).closest("tr");
+
+            $("td", row).each(function () {
+                if ($(this).find("input").length > 0) {
+                    var span = $(this).find("span");
+                    var input = $(this).find("input");
+                    span.html(input.val());
+                    span.show();
+                    input.hide();
+                }
+            });
+            row.find(".Edit").show();
+            row.find(".Delete").show();
+            row.find(".Cancel").hide();
+            $(this).hide();
+
+            var customer = {};
+            customer.PAEG_CODIGO = row.find(".PAEG_CODIGO").find("span").html();
+            customer.VALOR_TOTAL = row.find(".VALOR_TOTAL").find("span").html();
+            customer.ACTI_CODIGO = row.find(".ACTI_CODIGO").find("span").html();
+            customer.ITEM_CLAVE = row.find(".ITEM_CLAVE").find("span").html();
+            //customer.Country = row.find(".Country").find("span").html();
+
+            $.ajax({
+                type: "POST",
+                url: "/DETALLEGRESOS/UpdateCustomer",
+                data: '{customer:' + JSON.stringify(customer) + '}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+
+            });
+
+            GetTotalesHead();
+            GetTotales();
+
+        });
+
+        //Cancel event handler.
+        $("body").on("click", "#tblCustomers .Cancel", function () {
+            var row = $(this).closest("tr");
+            $("td", row).each(function () {
+                if ($(this).find("input").length > 0) {
+                    var span = $(this).find("span");
+                    var input = $(this).find("input");
+                    input.val(span.html());
+                    span.show();
+                    input.hide();
+                }
+            });
+            row.find(".Edit").show();
+            row.find(".Delete").show();
+            row.find(".Update").hide();
+            $(this).hide();
+        });
+
+
+
+    function GetTotalesHead() {
+        var url = "@Url.Action("Totales", "Funciones")";
+        var data = { }
+        $.post(url, data).done(function (data) {
+        document.getElementById('TotalIng').innerHTML = data;
+       });
+
+     var url = "@Url.Action("TotalEgre", "Funciones")";
+    var data = { }
+        $.post(url, data).done(function (data) {
+        document.getElementById('TotalEgr').innerHTML = data;
+    });
+
+    var url = "@Url.Action("DiferEgresos", "Funciones")";
+    var data = { }
+    $.post(url, data).done(function (data) {
+        document.getElementById('DiferEgr').innerHTML = data;
+    });
+
+    }
+
+    function GetTotales() {
+        @*var url = "@Url.Action("Diferencia", "Funciones")";
+    $.post(url, data).done(function (data) {
+        document.getElementById('Difer').innerHTML = data;*@
+        //alert(data);
+    });
+
+    var idprov = $("#ACTI_CODIGO").val();
+    var url = "@Url.Action("TotalEgreXActiv", "Funciones")";
+    var data = { ActiCod: idprov }
+    $.post(url, data).done(function (data) {
+        document.getElementById('TotalTecho').innerHTML = data;
+        //alert(data);
+
+    });
+
+    var url = "@Url.Action("TotalPorc", "Funciones")";
+    var data = { }
+    $.post(url, data).done(function (data) {
+        document.getElementById('TotalPorc').innerHTML = data;
+        //alert(data);
+
+            });
+    }
+
+    function addNewOrder() {
+
+            var url = "@Url.Action("FillFirmas", "Funciones")";
+
+            var data = { Codigo: 3 };
+
+            $("#detailsTable").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    //$("#detailsTable").append("<tr><td> <input class='form-control input-sm' type='text' value="+ row.NOMBRE+"/>" + "</td><td>" + row.CARGO + "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                    $("#detailsTable").append("<tr><td>" + row.NOMBRE + "</td><td>" + row.CARGO + "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                    @*<input align="right" type="number" value="@item.VALOR_TOTAL" style="display:none" class="form-control input-sm" />*@
+                });
+
+            });
+            $("#newOrderModal").modal();
+
+            $("#addToList").click(function (e) {
+            e.preventDefault();
+            if ($.trim($("#productName").val()) == "" || $.trim($("#cargo").val()) == "") return;
+                $("#detailsTable").append("<tr><td>" + $("#productName").val() + "</td><td>" + $("#cargo").val() + "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                //$("#detailsTable").append("<tr><td>" + "<input type='text' placeholder='Nombre' class='form-control'/>" + "</td><td>" + $("#cargo").val() + "</td><td>" +"<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>"+"</td></tr>");
+            clearItem();
+            });
+    }
+
+    function Aprobar() {
+        var url = "@Url.Action("AprobPres", "Funciones")";
+        var data = {};
+
+        if (ApropboPres() == false) {
+            if (Saldo() == 0) {
+                $("#newOrderModal").modal();
+            }
+            else {
+                alert("El Presupuestu no está Cuadrado");
+            }
+        }
+        else {
+            alert("El Presupuestu ya ha sido Aprobado");
+        }
+    }
+
+    $("#saveOrder").click(function (e) {
+        //e.preventDefault();
+        var url = "@Url.Action("SavePresup", "Funciones")";
+        var data = { Fecha: $("#fecha").val(), NDoc: $("#numero").val()};
+
+        $.get(url,data).done(function (data) {
+            //alert(data);
+        });
+
+        //$.when(saveOrder(data)).then(function (response) {
+        //    console.log(response);
+        //}).fail(function (err) {
+        //    console.log(err);
+        //});
+
+    });
+
+    function saveOrder(data) {
+        alert("3");
+        return $.ajax({
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            type: 'POST',
+            url: "/Funciones/SavePresup",
+            data: data,
+            success: function (result) {
+                //alert(result);
+                location.reload();
+            },
+            error: function () {
+                alert("Error!")
+            }
+        });
+    }
+
+    function ApropboPres() {
+        var mv;
+        jQuery.ajax({
+            url: "@Url.Action("AprobPres", "Funciones")",
+            success: function (result) {
+                mv=result;
+            },
+            async: false
+        });
+        return mv;
+    }
+
+    function Saldo() {
+        var mSaldo = 0;
+        jQuery.ajax({
+            url: "@Url.Action("SaldoPresup", "Funciones")",
+            success: function (result) {
+                mSaldo=result;
+            },
+            async: false
+        });
+        return mSaldo;
+    }
+
+
+</script>

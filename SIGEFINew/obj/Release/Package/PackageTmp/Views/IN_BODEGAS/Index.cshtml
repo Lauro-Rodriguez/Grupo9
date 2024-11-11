@@ -1,0 +1,281 @@
+﻿@model IEnumerable<SIGEFINew.Models.Inventarios.IN_BODEGAS>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1">
+            <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","IN_BODEGAS")+ "'")" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Nuevo
+            </button>
+        </div>
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-primary" onclick="addNewOrder()">
+                <span class="glyphicon glyphicon-user"></span> Usuarios
+            </button>
+        </div>
+
+        <div class="col-md-5 col-lg-offset-5">
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+
+    </div>
+
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Bodegas</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:10%">
+                        Código
+                    </th>
+                    <th style="width:25%">
+                        @Html.DisplayNameFor(model => model.NOM_BODEGA)
+                    </th>
+                    <th style="width:20%">
+                       Tipo
+                    </th>
+                    <th style="width:25%">
+                        @Html.DisplayNameFor(model => model.DIR_BODEGA)
+                    </th>
+                    <th style="width:10%">
+                        @Html.DisplayNameFor(model => model.TELF_BODEGA)
+                    </th>
+
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+            
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.ID_BODEGA)
+                    </td>
+                    <td style="width:25%">
+                        @Html.DisplayFor(modelItem => item.NOM_BODEGA)
+                    </td>
+                    <td style="width:20%">
+                        @Html.DisplayFor(modelItem => item.TIPO_BODEGA)
+                    </td>
+                    <td style="width:25%">
+                        @Html.DisplayFor(modelItem => item.DIR_BODEGA)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.TELF_BODEGA)
+                    </td>
+
+                    <td style="width:10%">
+                        @Html.ActionLink(" ", "Create", new { id = item.ID_BODEGA }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Editar" }) |
+                        @*@Html.ActionLink(" ", "Details", new { id = item.ID_BODEGA }, new { @class = "btn btn-primary glyphicon glyphicon-user btn-xs", data_toggle = "tooltip", title = "Editar" }) |*@
+                        @Html.ActionLink(" ", "Delete", new { id = item.ID_BODEGA }, new { @class = "btn btn-danger glyphicon glyphicon-trash btn-xs", data_toggle = "tooltip", title = "Eliminar" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="newOrderModal">
+    <br />
+    <br />
+    <div class="modal-dialog modal-lg" style=" width 900px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>Usuarios por Bodega</h4>
+            </div>
+            <form id="NewOrderForm">
+                <div class="modal-body">
+                    <div id="Recursos">
+
+                    </div>
+                    @*Customer Details*@
+                    @*<h5 style="color:#ff6347">Customer Details</h5>
+                        <hr />*@
+                    @*<div class="form-horizontal">
+                            <input type="hidden" id="CustomerId" />
+                            <div class="form-group">
+                                <label class="control-label col-md-2">
+                                    Customer Name
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" id="name" name="name" placeholder="Customer Name" class="form-control" />
+                                </div>
+                                <label class="control-label col-md-2">
+                                    Address
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" id="address" name="address" placeholder="Customer Address" class="form-control" />
+                                </div>
+                            </div>
+                        </div>*@
+
+                    @*Order Details*@
+                    @*<h5 style="margin-top:10px;color:#ff6347">Datos</h5>
+                        <hr />*@
+                    <div class="form-horizontal">
+                        <input type="hidden" id="OrderId" />
+                        <div class="form-group">
+                            <label class="control-label col-md-1">
+                                Bodega
+                            </label>
+                            <div class="col-md-4">
+                                @Html.DropDownList("ID_BODEGA", new SelectList(" "), "Bodegas", new { @class = "form-control input-sm" })
+                                @*<input type="text" id="productName" name="productName" placeholder="Nombre" class="form-control" />*@
+                            </div>
+                            <label class="control-label col-md-1">
+                                Usuario
+                            </label>
+                            <div class="col-md-4">
+                                @Html.DropDownList("USUA_LOGIN", new SelectList(" "), "Usuarios", new { @class = "form-control input-sm" })
+                            </div>
+                            <div class="col-md-2">
+                                <a id="addToList" class="btn btn-primary">Agregar</a>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="width:40%">Bodega</th>
+                                    <th style="width:50%">Usuario</th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailsTable"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="saveOrder" type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        //Show Modal.
+        var url = "@Url.Action("FillBodegas", "Funciones")";
+        var data = { };
+        $("#ID_BODEGA").empty();
+        $.post(url, data).done(function (data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_BODEGA").append("<option value='" + row.ID_BODEGA + "'>" + row.NOM_BODEGA + "</option>")
+                });
+        });
+
+        var url = "@Url.Action("FillUsuarios", "Funciones")";
+        var data = { };
+        $("#USUA_LOGIN").empty();
+        $.post(url, data).done(function (data) {
+                 $.each(data, function (index, row) {
+                     $("#USUA_LOGIN").append("<option value='" + row.USER_NAME + "'>" + row.USER_NOMBRE + "</option>")
+                });
+        });
+
+        function addNewOrder() {
+            var url = "@Url.Action("FillUsersxBod", "Funciones")";
+            var data = { };
+            $("#detailsTable").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    BODEGA = row.NOM_BODEGA;
+                    USUARIO = row.FullName;
+                    $("#detailsTable").append("<tr><td hidden>" + row.ID_BODEGA + "</td><td>" + BODEGA + "</td><td hidden>" + row.USUA_LOGIN + "</td><td>" + USUARIO + "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                });
+
+            });
+
+            $("#newOrderModal").modal();
+
+            $("#addToList").click(function (e) {
+            e.preventDefault();
+            if ($.trim($("#ID_BODEGA").val()) == "" || $.trim($("#USUA_LOGIN").val()) == "") return;
+                BODEGA = $('select[name="ID_BODEGA"] option:selected').text();
+                USUARIO = $('select[name="USUA_LOGIN"] option:selected').text();
+                $("#detailsTable").append("<tr><td hidden>" + $("#ID_BODEGA").val() + "</td><td>" + BODEGA + "</td><td hidden>" + $("#USUA_LOGIN").val() + "</td><td>" + USUARIO+ "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                //$("#detailsTable").append("<tr><td>" + "<input type='text' placeholder='Nombre' class='form-control'/>" + "</td><td>" + $("#cargo").val() + "</td><td>" +"<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>"+"</td></tr>");
+            clearItem();
+            });
+        }
+
+        // After Add A New Order In The List, If You Want, You Can Remove It.
+         $(document).on('click', 'a.deleteItem', function (e) {
+             e.preventDefault();
+             var $self = $(this);
+                    if ($(this).attr('data-itemId') == "0") {
+                        $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
+                        $(this).remove();
+                    });
+            }
+         });
+
+        function clearItem() {
+            $("#ID_BODEGA").val('');
+            $("#USUA_LOGIN").val('');
+        }
+
+        //Collect Multiple Order List For Pass To Controller
+        $("#saveOrder").click(function (e) {
+            e.preventDefault();
+            var orderArr = [];
+
+            orderArr.length = 0;
+             $.each($("#detailsTable tr"), function () {
+                 orderArr.push({
+                     ID_BODEGA: $(this).find('td:eq(0)').html(),
+                     USUA_LOGIN: $(this).find('td:eq(2)').html()
+                 });
+             });
+
+            var data = JSON.stringify({
+                    order: orderArr
+            });
+
+            $.when(saveOrder(data)).then(function (response) {
+                    console.log(response);
+                }).fail(function (err) {
+                    console.log(err);
+                });
+
+        });
+
+        //After Click Save Button Pass All Data View To Controller For Save Database
+        function saveOrder(data) {
+            return $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: "/Funciones/SaveUserxBod",
+                data: data,
+                success: function (result) {
+                    //alert(result);
+                    location.reload();
+                },
+                error: function () {
+                    alert("Error!")
+                }
+            });
+        }
+    </script>
+}

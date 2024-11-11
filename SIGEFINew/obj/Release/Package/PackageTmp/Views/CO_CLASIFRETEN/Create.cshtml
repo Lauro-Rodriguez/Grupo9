@@ -1,0 +1,117 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CLASIFRETEN
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="content">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                @if (ViewBag.EsNuevo == 1)
+                {
+                    <h3 class="box-title">Clasif. de Retenciones (Nuevo)</h3>
+                }
+                else
+                {
+                    <h3 class="box-title">Clasif. de Retenciones (Editar)</h3>
+                }
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="panel-body">
+                        @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+                        @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CODIGO_RET, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.CODIGO_RET, new { htmlAttributes = new { @class = "form-control", placeholder = "(*)" } })
+                                @Html.ValidationMessageFor(model => model.CODIGO_RET, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DESCRIP_RET, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.DESCRIP_RET, new { htmlAttributes = new { @class = "form-control", placeholder = "(*)" } })
+                                @Html.ValidationMessageFor(model => model.DESCRIP_RET, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TIPO_RET, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-3">
+                                @Html.DropDownList("TIPO_RET", null, htmlAttributes: new { @class = "form-control " })
+                                @Html.ValidationMessageFor(model => model.TIPO_RET, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PORCENTAJE, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-1">
+                                @Html.EditorFor(model => model.PORCENTAJE, new { htmlAttributes = new { @class = "form-control", placeholder = "(*)" } })
+                                @Html.ValidationMessageFor(model => model.PORCENTAJE, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TIPO_GASTO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EnumDropDownListFor(model => model.TIPO_GASTO, "(*)", htmlAttributes: new { @class = "form-control", placeholder = "(*)" })
+                                @Html.ValidationMessageFor(model => model.TIPO_GASTO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TIPO_CONTRIB, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("TIPO_CONTRIB", null, htmlAttributes: new { @class = "form-control " })
+                                @Html.ValidationMessageFor(model => model.TIPO_CONTRIB, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-9 col-md-10">
+                            @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                            <button type="submit" onclick="@("location.href='"+ Url.Action("Create","CO_CLASIFRETEN")+ "'")" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Aceptar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $('#DESCRIP_RET').keyup(function () {
+        var datos = new String($('#DESCRIP_RET').val());
+        datos = datos.toUpperCase(datos);
+        $('#DESCRIP_RET').val(datos);
+    })
+</script>

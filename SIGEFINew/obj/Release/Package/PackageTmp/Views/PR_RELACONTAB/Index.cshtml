@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SIGEFINew.Models.Presupuesto.PR_RELACONTAB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Periodos.PERI_DESCRIPCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_PARTIDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_CG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_CGB)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Periodos.PERI_DESCRIPCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_PARTIDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_CG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_CGB)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

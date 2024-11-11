@@ -1,0 +1,192 @@
+﻿@model SIGEFINew.Models.Presupuesto.PR_MOVGASTO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PR_MOVGASTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_TRANSAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_TRANSAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_TRANSAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_TRANSAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_COMPROMISO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_COMPROMISO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_ASIENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_ASIENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_DISPONIB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_DISPONIB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BENEFICIARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BENEFICIARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DETALLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DETALLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_DOCUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_DOCUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROG_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROG_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUBP_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUBP_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROY_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROY_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACTI_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACTI_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CERRADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CERRADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANULADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANULADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMEXTERNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUMEXTERNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

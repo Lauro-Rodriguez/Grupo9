@@ -1,0 +1,343 @@
+﻿@model SIGEFINew.Models.POA.POA_PLANOBJETIVOS
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo, @CodPlan = ViewBag.CodPlan }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Proyecto (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Proyecto (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            <div class="form-horizontal">
+                <div class="container">
+                    <section class="card2">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">Información General</a></li>
+                            <li><a data-toggle="tab" href="#Meta">Otros</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <div class="form-horizontal">
+                                    <br />
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    @Html.HiddenFor(model => model.COD_PLAN, new { @Value = ViewBag.CodPlan })
+                                    @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+                                    @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+                                    @Html.HiddenFor(model => model.ESTADO_PY, new { @Value = ViewBag.EstadoPY })
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.COD_PLANOBJTVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-2">
+                                            @if (ViewBag.EsNuevo == 1)
+                                            {
+                                                @Html.EditorFor(model => model.COD_PLANOBJTVO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            }
+                                            else
+                                            {
+                                                @Html.EditorFor(model => model.COD_PLANOBJTVO, new { htmlAttributes = new { @class = "form-control input-sm", @Readonly = "readonly" } })
+                                            }
+                                            @Html.ValidationMessageFor(model => model.COD_PLANOBJTVO, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ORG_CODIGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.DropDownList("ORG_CODIGO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                            @Html.ValidationMessageFor(model => model.ORG_CODIGO, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ID_EMPLEADO, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.DropDownList("ID_EMPLEADO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                            @Html.ValidationMessageFor(model => model.ID_EMPLEADO, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.Label("Tipo Proyecto", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.DropDownList("COD_TIPOPROY", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                            @Html.ValidationMessageFor(model => model.COD_TIPOPROY, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.COD_OE_PLANIF, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.DropDownList("COD_OE_PLANIF", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                            @Html.ValidationMessageFor(model => model.COD_OE_PLANIF, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        @*<div class="form-group">*@
+                                        @Html.LabelFor(model => model.FECHA_INICIAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-2">
+                                            @Html.EditorFor(model => model.FECHA_INICIAL, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            @Html.ValidationMessageFor(model => model.FECHA_INICIAL, "", new { @class = "text-danger" })
+                                        </div>
+
+                                        @Html.LabelFor(model => model.FECHA_FINAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-2">
+                                            @Html.EditorFor(model => model.FECHA_FINAL, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            @Html.ValidationMessageFor(model => model.FECHA_FINAL, "", new { @class = "text-danger" })
+                                        </div>
+                                        @*</div>*@
+
+                                        <div class="form-group">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DESC_OBJETIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.DESC_OBJETIVO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            @Html.ValidationMessageFor(model => model.DESC_OBJETIVO, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.OBS_OBJETIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.OBS_OBJETIVO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            @Html.ValidationMessageFor(model => model.OBS_OBJETIVO, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        @Html.LabelFor(model => model.ID_PARROQUIA, "Parroquia", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                @Html.DropDownList("ID_PARROQUIA", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                                                @Html.ValidationMessageFor(model => model.ID_PARROQUIA, "", new { @class = "text-danger" })
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            @Html.LabelFor(model => model.ID_BARRIO, "Barrio", htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                <div class="input-group">
+                                                    @Html.DropDownList("ID_BARRIO", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                                                    @Html.ValidationMessageFor(model => model.ID_BARRIO, "", new { @class = "text-danger" })
+                                                    <span class="input-group-btn">
+                                                        <button id="prog" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                                            <span class="fa fa-plus"></span>
+                                                        </button>
+
+                                                        <button id="editProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                                            <span class="fa fa-edit"></span>
+                                                        </button>
+
+                                                        <button id="borraProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                                            <span class="fa fa-remove"></span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div id="Program">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.Label("Estado", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-2">
+                                            @Html.EnumDropDownListFor(model => model.ESTADO, htmlAttributes: new { @class = "form-control input-sm" })
+                                            @Html.ValidationMessageFor(model => model.ESTADO, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="col-md-offset-9 col-md-10">
+                                        @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+
+                                        @if (ViewBag.EsNuevo == 0)
+                                        {
+                                            if (Model.ESTADO_PY == "GE" || Model.ESTADO_PY == "DS" || Model.ESTADO_PY == "DA")
+                                            {
+                                                <button type="submit" onclick="@("location.href='" + Url.Action("Create", "CO_CLASIFRETEN") + "'")" class="btn btn-primary">
+                                                    <span class="glyphicon glyphicon-ok"></span> Aceptar
+                                                </button>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <button type="submit" onclick="@("location.href='" + Url.Action("Create", "CO_CLASIFRETEN") + "'")" class="btn btn-primary">
+                                                <span class="glyphicon glyphicon-ok"></span> Aceptar
+                                            </button>
+
+                                        }
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="Meta" class="tab-pane fade">
+                                <div class="form-horizontal">
+                                    <h4>Meta</h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.CANTIDAD_META, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-1">
+                                            @Html.EditorFor(model => model.CANTIDAD_META, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            @Html.ValidationMessageFor(model => model.CANTIDAD_META, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DESCRIPCION_META, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-9">
+                                            @Html.EditorFor(model => model.DESCRIPCION_META, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                            @Html.ValidationMessageFor(model => model.DESCRIPCION_META, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <h4>Fondos</h4>
+                                    <hr />
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <table>
+                                                <tr>
+                                                    @{
+                                                        int cnt = 0;
+                                                        List<SIGEFINew.ViewModels.AssignedFondosData> Fondos = ViewBag.Fondos;
+                                                        List<SIGEFINew.Models.POA.POA_FONDOXOBJTVO> Fondos2 = ViewBag.Fondos2;
+                                                        foreach (var course in Fondos)
+                                                        {
+                                                            if (cnt++ % 3 == 0)
+                                                            {
+                                                            @:</tr><tr>
+                                                            }
+                                                            @:<td>
+                                                                @course.DESCRIPCION
+
+                                                                <input type="number"
+                                                                       name="Fondos"
+                                                                       value="@course.VALOR"
+                                                                       @*@(Html.Raw(course.Assigned ? course.VALOR : 0))*@ />
+
+
+                                                                <input hidden type="text"
+                                                                       name="Fondos2"
+                                                                       value="@course.ID_FONDO"
+                                                                       @*@(Html.Raw(course.Assigned ? course.VALOR : 0))*@ />
+
+                                                            @:</td>
+                                                        }
+                                                    @:</tr>
+                                                    }
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<script>
+    //$(document).ready(function () {
+    $('.select2').select2();
+    //CargaBarrios();
+
+    $("#ID_PARROQUIA").change(function () {
+        CargaBarrios();
+     });
+
+     //Proceso de Barrios
+    $('#prog').click(function () {
+        var IdProg = $("#ID_PARROQUIA").val();
+        var url = "@Url.Action("_CreateBarrio", "POA_PLANOBJETIVOS")";
+        var data = { prog: IdProg, EsNuevo: 1 };
+        if (IdProg >= 0) {
+            $.get(url, data).done(function (data) {
+                $('#prog').prop("disabled", true);
+                $('#editProg').prop("disabled", true);
+                $('#borraProg').prop("disabled", true);
+                $("#Program").append(data);
+
+             });
+         }
+
+    });
+
+    function HideSP(id, Nuevo) {
+        var url = "@Url.Action("GuardaSubProg", "POA_PLANOBJETIVOS")";
+        var CodProg = $("#ID_PARROQUIA").val();
+        var CodSubProg = $("#pc").val();
+        var NomProg = $("#DESCRIPCION").val();
+        var data = { prog: CodProg, EsNuevo: Nuevo, SUBP_CODIGO: CodSubProg, PROG_CODIGO: CodProg, DESCRIPCION: NomProg }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                HideSubProg();
+                CargaSubProgramas();
+                break;
+        }
+    }
+
+     //Proceso de Carga de Barrios
+    function CargaBarrios() {
+        var progcod = $("#ID_PARROQUIA").val();
+        var url = "@Url.Action("LLenaBarrios", "POA_PLANOBJETIVOS")";
+        var data = { CodProg: progcod }
+        $("#ID_BARRIO").empty();
+        $.post(url, data).done(function(data) {
+              $.each(data, function (index, row) {
+                     $("#ID_BARRIO").append("<option value='" + row.ID_BARRIO + "'>" + row.DESCRIPCION + "</option>")
+              });
+
+        });
+    }
+
+    function HideSubProg() {
+        $("#Program").empty();
+        $('#AddSubProg').prop("disabled", false);
+        $('#EditSubProg').prop("disabled", false);
+        $('#BorraSubProg').prop("disabled", false);
+    }
+</script>
+

@@ -1,0 +1,118 @@
+﻿@Html.ActionLink("Inventarios", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<style>
+    .dropdown-submenu {
+        position: relative;
+    }
+
+        .dropdown-submenu > .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu > a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #ccc;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover > a:after {
+            border-left-color: #fff;
+        }
+
+        .dropdown-submenu.pull-left {
+            float: none;
+        }
+
+            .dropdown-submenu.pull-left > .dropdown-menu {
+                left: -100%;
+                margin-left: 10px;
+                -webkit-border-radius: 6px 0 6px 6px;
+                -moz-border-radius: 6px 0 6px 6px;
+                border-radius: 6px 0 6px 6px;
+            }
+</style>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        @*@foreach (var item in Model)
+            {
+               if (item.SUB_NIVEL.ToString() == "1")
+                   {*@
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Inicio
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Parámetros", "Create", "IN_PARAM", new { area = "" }, new { @id = "M01_01" })</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Bodegas", "Index", "IN_BODEGAS")</li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Características</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Generales", "Index", "IN_CARACGEN", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Presentación", "Index", "IN_PRESENTA", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Productos</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Estructura", "Index", "IN_CLASES", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Administración de Productos", "Index", "IN_ITEMS", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Productos entre Bodegas", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Carga Inicial", "Index", "Actividads")</li>
+                <li>@Html.ActionLink("Cuentas Contables", "Index", "Actividads")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Unidades Operativas", "Index", "Actividads")</li>
+                <li>@Html.ActionLink("Proveedores", "Index", "Actividads")</li>
+                <li>@Html.ActionLink("Tipos de Documentos", "Index", "Actividads")</li>
+                <li>@Html.ActionLink("Objetos Receptores", "Index", "Actividads")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Tipos de Transacciones", "Index", "IN_TIPOSTRAN")</li>
+            </ul>
+
+
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Transacciones
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Registro de Facturas de Compra", "Index", "IN_COMPRAS", new { area = "" }, new { @id = "M01_01" })</li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Ingresos</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Compras y Otros", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Por Devolución", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        @*<li>@Html.ActionLink(item.DESC_MENU, "", "", new { area = "" }, new { @class = "navbar-brand", @id = item.NOM_MENU })</li>*@
+        @*}
+            }*@
+    </ul>
+    @Html.Partial("_LoginPartial")
+</div>
+

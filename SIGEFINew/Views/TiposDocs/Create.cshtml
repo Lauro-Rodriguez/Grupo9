@@ -1,0 +1,98 @@
+﻿@model SIGEFINew.Models.TiposDoc
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-8">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                @if (ViewBag.EsNuevo == 1)
+                {
+                    <h3 class="box-title">Tipo de Documento (Nuevo)</h3>
+                }
+                else
+                {
+                    <h3 class="box-title">Tipo de Documento (Editar)</h3>
+                }
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.COD_TIPO_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.COD_TIPO_DOC, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.COD_TIPO_DOC, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TIPO_SRI, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownList("TIPO_SRI", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TIPO_SRI, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-horizontal" role="form">
+                        <div class="col-md-offset-9 col-md-10">
+                            @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Aceptar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+}
+
+
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+   
+    $(document).ready(function () {
+        $('.select2').select2();
+    });
+
+    $('#COD_TIPO_DOC').keyup(function () {
+        var datos = new String($('#COD_TIPO_DOC').val());
+        datos = datos.toUpperCase(datos);
+        $('#COD_TIPO_DOC').val(datos);
+    })
+
+    $('#DESCRIPCION').keyup(function () {
+        var datos = new String($('#DESCRIPCION').val());
+        datos = datos.toUpperCase(datos);
+        $('#DESCRIPCION').val(datos);
+    })
+</script>
+

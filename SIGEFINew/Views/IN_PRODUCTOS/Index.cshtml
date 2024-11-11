@@ -1,0 +1,95 @@
+﻿@model IEnumerable<SIGEFINew.Models.Inventarios.IN_PRODUCTOS>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1">
+            <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","IN_PRODUCTOS")+ "'")" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Nuevo
+            </button>
+        </div>
+
+        <div class="col-md-2">
+            <button type="submit" onclick="@("location.href='"+ Url.Action("GenerarExcel","IN_PRODUCTOS", new {IdBodega=ViewBag.IdB})+ "'")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-export"></span> a Excel
+            </button>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @*<div class="col-md-3">
+                @Html.DropDownList("IdBodega", ViewBag.ID_BODEGA as SelectList, new { @class = "form-control input-sm", onchange = "this.form.submit();" })
+            </div>*@
+            <div class="col-md-4 col-lg-offset-6">
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            </div>
+
+        }
+    </div>
+
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Productos</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:10%">
+                        @Html.DisplayNameFor(model => model.COD_ITEM)
+                    </th>
+
+                    @*<th>
+                            U. de Medida
+                        </th>
+
+                        <th>
+                            Presentación
+                        </th>*@
+
+                    <th style="width:80%">
+                        @Html.DisplayNameFor(model => model.NOM_ITEM)
+                    </th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.COD_ITEM)
+                    </td>
+
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.IN_CARACGEN.DESCRIP_CAGEN)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IN_PRESENTA.DESCRIP_CAGEN)
+                        </td>*@
+
+                    <td style="width:80%">
+                        @Html.DisplayFor(modelItem => item.NOM_ITEM)
+                    </td>
+                    <td style="width:10%">
+                        @Html.ActionLink(" ", "Create", new {id2 = item.COD_ITEM }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Editar" }) |
+                        @*@Html.ActionLink(" ", "Details", new { id = item.ID_CLASE }, new { @class = "btn btn-primary glyphicon glyphicon-collapse-down btn-xs", data_toggle = "tooltip", title = "Familias" }) |*@
+                        @Html.ActionLink(" ", "Delete", new {id2 = item.COD_ITEM }, new { @class = "btn btn-danger glyphicon glyphicon-trash btn-xs", data_toggle = "tooltip", title = "Eliminar" })
+                    </td>
+                </tr>
+
+            }
+        </table>
+    </div>
+</div>
+

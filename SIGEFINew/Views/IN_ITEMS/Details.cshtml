@@ -1,0 +1,306 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_ITEMS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IN_ITEMS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_BODEGAS.NOM_BODEGA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_BODEGAS.NOM_BODEGA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_CARACGEN.DESCRIP_CAGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_CARACGEN.DESCRIP_CAGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_CLASES.DESRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_CLASES.DESRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_PRESENTA.DESCRIP_CAGEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_PRESENTA.DESCRIP_CAGEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_SUBTIPOS.NOM_SUBTIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_SUBTIPOS.NOM_SUBTIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IN_TIPOS.NOM_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IN_TIPOS.NOM_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAT_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAT_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_ITEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_ITEM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MARCA_ITEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MARCA_ITEM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APLIC_ITEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APLIC_ITEM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_COSTEO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_COSTEO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COSTO_PROD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COSTO_PROD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APLICA_IVA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APLICA_IVA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROD_PERE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROD_PERE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROD_DESC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROD_DESC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROD_NUM_SERIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROD_NUM_SERIE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROD_NUM_GAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROD_NUM_GAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERCHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERCHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FILA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FILA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COLUMNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLUMNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STOCK_MIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STOCK_MIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STOCK_MAX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STOCK_MAX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PUNTO_REORDEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PUNTO_REORDEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_ULT_COMPRA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_ULT_COMPRA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_CONSIG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_CONSIG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_CGDB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_CGDB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_CGCR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_CGCR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_LINEA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_LINEA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_SUBLINEA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_SUBLINEA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

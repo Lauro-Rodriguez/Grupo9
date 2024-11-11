@@ -1,0 +1,155 @@
+﻿@model SIGEFINew.Models.Nomina.RP_OTROSMOV
+
+@{
+    /**/
+
+    ViewBag.Title = "Gastos Personales";
+}
+
+<style>
+    .toast-top-right {
+        top: 60px;
+        right: 12px;
+    }
+</style>
+    <section class="connectedSortable">
+        <input type="hidden" id="success"
+               value="@TempData["success"]" />
+        <input type="hidden" id="info"
+               value="@TempData["info"]" />
+        <input type="hidden" id="warning"
+               value="@TempData["warning"]" />
+        <input type="hidden" id="error"
+               value="@TempData["error"]" />
+        <div class="content">
+            <div class="box box-success">
+                <div class="box-header with-border box-solid">
+                    <i class="fa fa-server"></i>
+                    <h3 class="box-title">Parámetros </h3>
+                    <div class="panel-body">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            @*@Html.HiddenFor(model => model.ANIO_CODIGO)*@
+                            <div class="form-horizontal">
+                                <div class="container">
+                                    <div class=row>
+                                        <div class="col-md-6">
+                                            <div class="panel panel-success">
+                                                <div class="panel-heading">Gastos Personales</div>
+                                                <br />
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.VALOR, htmlAttributes: new { @class = "control-label col-md-5" })
+                                                    <div class="col-md-6">
+                                                        @Html.EditorFor(model => model.VALOR, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                                        @Html.ValidationMessageFor(model => model.VALOR, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    @Html.LabelFor(model => model.VALOR1, htmlAttributes: new { @class = "control-label col-md-5" })
+                                                    <div class="col-md-6">
+                                                        @Html.EditorFor(model => model.VALOR1, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                                        @Html.ValidationMessageFor(model => model.VALOR1, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       
+                                        </div>
+                                      
+                                    </div>
+
+                                </div>
+       
+
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Guardar" class="btn btn-success" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+@*<div class="table-fixed">
+        <div class="panel-heading clearfix">
+            <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Panel header</h4>
+            <div class="btn-group pull-right">
+                <a href="#" class="btn btn-default btn-sm">## Lock</a>
+                <a href="#" class="btn btn-default btn-sm">## Delete</a>
+                <a href="#" class="btn btn-default btn-sm">## Move</a>
+            </div>
+        </div>
+        ...
+    </div>*@
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+@*<script src="~/Scripts/toastr.min.js"></script>*@
+<script>
+    $('.select2').select2();
+    
+    $(document).ready(function () {
+         if (@ViewBag.EsNuevo==1) {
+             $("#COMPDIAR").val(0);
+             $("#COMPEGRE").val(0);
+             $("#COMPINGRE").val(0);
+             $("#NUMASIEN").val(0);
+             $("#NUM_TRANSAC").val(0);
+             $("#NUM_CERTDISP").val(0);
+             $("#NUM_COMPROMISO").val(0);
+             $("#NUM_TRANSFER").val(0);
+             $("#NUM_DEVEN").val(0);
+          }
+    });
+
+    $(function () {
+        var displayMessage = function (message, msgType) {
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+            toastr[msgType](message);
+        };
+
+        @*if (@ViewBag.OK== 1) {
+            displayMessage($('#success').val(), 'success');
+        }
+        else {
+            displayMessage($('#error').val(), 'error');
+        }*@
+
+        if ($('#success').val()) {
+            displayMessage($('#success').val(), 'success');
+        }
+
+        if ($('#info').val()) {
+            displayMessage($('#info').val(), 'info');
+        }
+        if ($('#warning').val()) {
+            displayMessage($('#warning').val(), 'warning');
+        }
+        if ($('#error').val()) {
+            displayMessage($('#error').val(), 'error');
+        }
+    });
+</script>

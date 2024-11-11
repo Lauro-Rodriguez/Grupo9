@@ -1,0 +1,49 @@
+﻿@model SIGEFINew.Models.Presupuesto.Catalogos
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="col-md-8">
+    <div class="box box-warning">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-remove"></i>
+            <h3 class="box-title">Borrar Catálogo</h3>
+        </div>
+        <div class="box-body">
+            <h4>Está seguro de borrar este registro?</h4>
+            <div>
+
+                <dl class="dl-horizontal">
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CAT_CODIGO)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CAT_CODIGO)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CAT_NOMBRE)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CAT_NOMBRE)
+                    </dd>
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+                        @Html.ActionLink("Regresar a la Lista", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

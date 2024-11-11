@@ -1,0 +1,152 @@
+﻿@model SIGEFINew.Models.Nomina.RP_PORCAPORTACION
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+<br />
+<br />
+
+
+
+@{
+    @*if (ViewBag.EsNuevo == 1)
+    {
+        <div class="alert alert-info" style="font-size:medium">
+            <strong>Porc. Aport. por Sección</strong> / Nuevo
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info" style="font-size:medium">
+            <strong>Porc. Aport. por Sección</strong> / Editar
+        </div>
+    }*@
+
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    List<SIGEFINew.ViewModels.AsignaProductos> Productos = ViewBag.Prods;
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="container">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <i class="glyphicon glyphicon-edit"></i>
+                    @if (ViewBag.EsNuevo == 1)
+                    {
+                        <h3 class="box-title">Porc. Aport. por Sección (Nuevo)</h3>
+                    }
+                    else
+                    {
+                        <h3 class="box-title">Porc. Aport. por Sección (Editar)</h3>
+                    }
+                </div>
+                <div class="box-body">
+                    @if (@ViewBag.MsgError != null)
+                    {
+                        <div class="col-md-12">
+                            <div class="alert alert-danger alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                                <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                                @ViewBag.MsgError
+                            </div>
+                        </div>
+                    }
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ID_PORCENT, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @if (ViewBag.EsNuevo == 1)
+                            {
+                                @Html.EditorFor(model => model.ID_PORCENT, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @Value = "0" } })
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.ID_PORCENT, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                            }
+                            @Html.ValidationMessageFor(model => model.ID_PORCENT, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.DropDownList("TIPO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                            @*@Html.DropDownListFor(model => model.TIPO, ViewBag.TIPO as SelectList, new { @class = "form-control input-sm" })*@
+                            @Html.ValidationMessageFor(model => model.TIPO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ID_TIPOSEGURO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownList("ID_TIPOSEGURO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                            @*@Html.DropDownListFor(model => model.ID_TIPOSEGURO, ViewBag.ID_TIPOSEGURO as SelectList, new { @class = "form-control input-sm" })*@
+                            @Html.ValidationMessageFor(model => model.ID_TIPOSEGURO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.APORTE_PERS, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.APORTE_PERS, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.APORTE_PERS, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.APORTE_PATRO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.APORTE_PATRO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.APORTE_PATRO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SEGURO_CESANTIA, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.SEGURO_CESANTIA, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.SEGURO_CESANTIA, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SECAP, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.SECAP, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.SECAP, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IECE, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.IECE, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.IECE, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

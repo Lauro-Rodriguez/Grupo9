@@ -1,0 +1,203 @@
+﻿@model SIGEFINew.Models.Presupuesto.PartIngreso
+
+@{
+    ViewBag.Title = "Editar";
+}
+<br />
+<br />
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <section class="card2">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Información General</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="form-horizontal">
+                        <h4>Partida de Ingreso</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID_INSTITUCION)
+
+                        @Html.HiddenFor(model => model.PAIN_CODIGO)
+                        @Html.HiddenFor(model => model.PAIN_NOMBRE)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PROY_CODIGO, "Proyecto", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.PROY_CODIGO, new SelectList(" "), "Eija un Proyecto", new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.PROY_CODIGO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PROG_CODIGO, "Programa", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("PROG_CODIGO", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.PROG_CODIGO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ACTI_CODIGO, "Actividad", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(model => model.ACTI_CODIGO, new SelectList(" "), "Eija una Actividad", new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.ACTI_CODIGO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.GRUP_CODIGO, "Grupo", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("GRUP_CODIGO", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.GRUP_CODIGO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                            @Html.LabelFor(model => model.GRUP_CODIGO, "GRUP_CODIGO", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("GRUP_CODIGO", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.GRUP_CODIGO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-group">
+                            @Html.LabelFor(model => model.PAIN_CLAVE, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.PAIN_CLAVE, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PAIN_CLAVE, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        @*<div class="form-group">
+                            @Html.LabelFor(model => model.PAIN_NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.PAIN_NOMBRE, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PAIN_NOMBRE, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ITEM_CLAVE,"Item", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.ITEM_CLAVE, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ITEM_CLAVE, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="row">
+                            @Html.LabelFor(model => model.ITEM_FINANC, "Financiamiento", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.ITEM_FINANC, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ITEM_FINANC, "", new { @class = "text-danger" })
+                            </div>
+                            @Html.LabelFor(model => model.ORGANISMO, "Organismo", htmlAttributes: new { @class = "control-label col-md-1" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.ORGANISMO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ORGANISMO, "", new { @class = "text-danger" })
+                            </div>
+                            @Html.LabelFor(model => model.CORRELAT, "Correlativo", htmlAttributes: new { @class = "control-label col-md-1" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.CORRELAT, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CORRELAT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                        </div>*@
+                        @*<div class="form-group">
+                        </div>*@
+                        <div class="form-group">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Guardar" class="btn btn-success" />
+                            </div>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Regresar a la Lista", "Index")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+}
+
+
+<script>
+    $(document).ready(function () {
+        //$("#PAIN_CLAVE").val("0");
+
+        $("#PROG_CODIGO").click(function () {
+            var progcod = $("#PROG_CODIGO").val();
+            var url = "@Url.Action("LLenaSubProgramas", "Proyectoes")";
+            var data = { CodProg: progcod }
+            $("#SUBP_CODIGO").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#SUBP_CODIGO").append("<option value='" + row.SUBP_CODIGO + "'>" + row.PROG_NOMBRE + "</option>")
+                });
+
+            });
+        });
+    });
+
+    $("#SUBP_CODIGO").click(function () {
+            var subpcod = $("#SUBP_CODIGO").val();
+            var url = "@Url.Action("LLenaProyectos", "Actividads")";
+            var data = { SubPCod: subpcod }
+            $("#PROY_CODIGO").empty();
+            $.post(url, data).done(function (data) {
+                 $.each(data, function (index, row) {
+                     $("#PROY_CODIGO").append("<option value='" + row.PROY_CODIGO + "'>" + row.PROY_NOMBRE + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + $("#PROY_CODIGO").PROY_CODIGO);
+    });
+
+    $("#PROY_CODIGO").click(function () {
+            var subpcod = $("#PROY_CODIGO").val();
+            var url = "@Url.Action("LLenaActividades", "Actividads")";
+            var data = { Proyec: subpcod }
+            $("#ACTI_CODIGO").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#ACTI_CODIGO").append("<option value='" + row.ACTI_CODIGO + "'>" + row.ACTI_NOMBRE + "</option>")
+                });
+
+            });
+           //alert("Hola Mundo con jQuery!" + " "+subpcod);
+    });
+
+     $("#GRUP_CODIGO").click(function () {
+            var subpcod = $("#GRUP_CODIGO").val();
+            var url = "@Url.Action("LLenaItems", "Funciones")";
+            var data = { Grupo: subpcod }
+            $("#ITEM_CLAVE").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#ITEM_CLAVE").append("<option value='" + row.ITEM_CLAVE + "'>" + row.ITEM_NOMBRE + "</option>")
+                });
+
+            });
+           //alert("Hola Mundo con jQuery!" + " "+subpcod);
+     });
+
+    $("#ITEM_CLAVE").click(function () {
+        var progcod = $("#PROG_CODIGO").val();
+        var subpcod = $("#ITEM_CLAVE option:selected").text();
+        $("#PAIN_NOMBRE").val(subpcod);
+        $("#PAIN_CLAVE").val("0");
+           //alert("Hola Mundo con jQuery!" + " "+subpcod);
+    });
+
+</script>

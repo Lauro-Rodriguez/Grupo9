@@ -1,0 +1,273 @@
+﻿@model SIGEFINew.Models.Presupuesto.Catalogos
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Catálogo (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Catálogo (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.TIPO)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TRE_CODIGO, "Tipo de Recurso", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("TRE_CODIGO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.TRE_CODIGO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.Label("TIPO", "Tipo", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        <label class="radio-inline"><input type="radio" name="optradio" id="opc1" checked>Grupo</label>
+                        <label class="radio-inline"><input type="radio" name="optradio" id="opc2">Detalle</label>
+                    </div>
+
+                    @Html.Label("Grupo", htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-6">
+                        @Html.DropDownList("GRUP_CODIGO", ViewBag.GRUP_CODIGO as SelectList, new { @class = "form-control input-sm" })
+                        @Html.ValidationMessage("GRUP_CODIGO", "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.CAT_CODIGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @if (ViewBag.EsNuevo == 1)
+                        {
+                            @Html.EditorFor(model => model.CAT_CODIGO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                        }
+                        else
+                        {
+                            @Html.EditorFor(model => model.CAT_CODIGO, new { htmlAttributes = new { @class = "form-control input-sm", @Readonly = "readonly" } })
+                        }
+                        @Html.ValidationMessageFor(model => model.CAT_CODIGO, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.CAT_NOMBRE, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.CAT_NOMBRE, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                        @Html.ValidationMessageFor(model => model.CAT_NOMBRE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+
+    <div id="Panel2" class="box box-success">
+        <br />
+        <div class="form-horizontal">
+            <div class="row">
+                @Html.LabelFor(model => model.CAT_VALOR, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.EditorFor(model => model.CAT_VALOR, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.CAT_VALOR, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.TIPO_GASTO, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-2">
+                    @Html.EnumDropDownListFor(model => model.TIPO_GASTO, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.TIPO_GASTO, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.NORMALIZADO, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-1">
+                    @Html.EnumDropDownListFor(model => model.NORMALIZADO, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.NORMALIZADO, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.ESTADO, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-2">
+                    @Html.EnumDropDownListFor(model => model.ESTADO, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.ESTADO, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+            <div class="form-group">
+
+            </div>
+
+            <div class="row">
+                @Html.LabelFor(model => model.TIPO_CALCULO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.EnumDropDownListFor(model => model.TIPO_CALCULO, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.TIPO_CALCULO, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.APLICA_SOLPAGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.EnumDropDownListFor(model => model.APLICA_SOLPAGO, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.APLICA_SOLPAGO, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.PERTENECE_PAC, htmlAttributes: new { @class = "control-label col-md-1" })
+                <div class="col-md-1">
+                    @Html.EnumDropDownListFor(model => model.PERTENECE_PAC, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.PERTENECE_PAC, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.CONSOLIDA_PAC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-1">
+                    @Html.EnumDropDownListFor(model => model.CONSOLIDA_PAC, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.CONSOLIDA_PAC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ITEM_CLAVE, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.DropDownList("ITEM_CLAVE", null, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.ITEM_CLAVE, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ORG_CODIGO, "Dirección o Area", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.DropDownList("ORG_CODIGO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.ORG_CODIGO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.COD_CPC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.COD_CPC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.COD_CPC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-offset-9 col-md-10">
+        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+        <button type="submit" class="btn btn-primary">
+            <span class="glyphicon glyphicon-ok"></span> Aceptar
+        </button>
+    </div>
+    <br />
+    <br />
+}
+
+
+
+<!-- jQuery 3 -->
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+
+    SetOrg();
+
+    $(document).ready(function () {
+        if (@ViewBag.EsNuevo== 1) {
+            $("#TIPO").val("G");
+        }
+        else {
+            if ($("#TIPO").val() == "G") {
+                Habilita(false);
+            }
+            else {
+                $("#opc2").prop("checked", true);
+                Habilita(true);
+            }
+        }
+    });
+
+    function SetOrg() {
+            var trecod = $("#TRE_CODIGO").val();
+            var url = "@Url.Action("GetOrgCod", "Funciones")";
+            var data = { TRECod: trecod }
+
+        $.post(url, data).done(function (data) {
+            $("#ORG_CODIGO").val(data);
+        });
+        @*if (@ViewBag.EsNuevo== 1) {
+            $("#TIPO").val("G");
+        }*@
+     };
+    //$(document).ready(function () {
+
+        $("#GRUP_CODIGO").change(function () {
+            var Grupo = $("#GRUP_CODIGO").val();
+            $("#CAT_CODIGO").val(Grupo);
+        });
+
+        Habilita(false);
+        $("#TRE_CODIGO").change(function () {
+            SetOrg();
+        });
+
+        $("#opc1").click(function () {
+            $("#TIPO").val("G");
+            Habilita(false);
+        });
+
+        $("#opc2").click(function () {
+            $("#TIPO").val("D");
+            Habilita(true);
+         });
+
+
+
+        function Habilita(Habil) {
+            //$("#CAT_VALOR").attr("readonly", !Habil);
+            if (Habil) {
+                $("#Panel2").show();
+            }
+            else {
+                $("#Panel2").hide();
+                $("#CAT_VALOR").val(0);
+                $("#TIPO_GASTO").val(0);
+                $("#NORMALIZADO").val(1);
+                $("#ESTADO").val(0);
+                $("#TIPO_CALCULO").val(0);
+                $("#APLICA_SOLPAGO").val(1);
+                $("#PERTENECE_PAC").val(1);
+                $("#CONSOLIDA_PAC").val(1);
+            }
+
+        };
+    //});
+    $('#CAT_NOMBRE').keyup(function () {
+        var datos = new String($('#CAT_NOMBRE').val());
+        datos = datos.toUpperCase(datos);
+        $('#CAT_NOMBRE').val(datos);
+    })
+</script>

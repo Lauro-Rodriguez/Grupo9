@@ -1,0 +1,322 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_RETENCIONES
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CO_RETENCIONES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ASIENTO_NUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASIENTO_NUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUC_CI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUC_CI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_DOCUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_DOCUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_EMISION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_EMISION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_TIPO_DOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_TIPO_DOC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODICLASRET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODICLASRET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_PTOEMIRET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_PTOEMIRET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PTOEMIRET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_PTOEMIRET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_RETENCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_RETENCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PORC_RET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PORC_RET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_RET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_RET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_DOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_DOC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BASE_IMP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BASE_IMP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_RET)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_RET)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_EMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_EMI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_COMPROMISO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_COMPROMISO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMITIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMITIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAGADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAGADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASIENTO_PAGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASIENTO_PAGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_PAGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_PAGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHECK_PAGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHECK_PAGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CADUCA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CADUCA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_SUSTENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_SUSTENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_TRANSAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_TRANSAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_CUENTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_CUENTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CODIGO_CUENTACP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CODIGO_CUENTACP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANULADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANULADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GENERADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENERADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIRMADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIRMADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AUTORIZADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AUTORIZADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLAVE_ACCESO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLAVE_ACCESO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AUTORIZACION_SRI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AUTORIZACION_SRI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_AUTORIZA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_AUTORIZA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AMBIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMBIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMISION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMISION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CUENTAXPAGAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CUENTAXPAGAR)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

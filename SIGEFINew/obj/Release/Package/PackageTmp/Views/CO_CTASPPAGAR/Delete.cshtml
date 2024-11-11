@@ -1,0 +1,136 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CTASPPAGAR
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CO_CTASPPAGAR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proveedores.NUMCEDRUC_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proveedores.NUMCEDRUC_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_TRANSAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_TRANSAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_TRANSAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_TRANSAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_COMPROMISO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_COMPROMISO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DETALLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DETALLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APLICADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APLICADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_MOV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_MOV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ANTICIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ANTICIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TM_FDO_TER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TM_FDO_TER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

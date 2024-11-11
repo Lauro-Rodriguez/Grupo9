@@ -1,0 +1,138 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_COMPRAS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IN_COMPRAS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Periodos.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proveedores.NUMCEDRUC_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proveedores.NUMCEDRUC_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_COMPROMISO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_COMPROMISO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_COMPRA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_COMPRA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_TIPO_DOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_TIPO_DOC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DETALLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DETALLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_SRI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_SRI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_DOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_DOC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUM_DOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUM_DOC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AUTORIZACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AUTORIZACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHACAD_DOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHACAD_DOC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

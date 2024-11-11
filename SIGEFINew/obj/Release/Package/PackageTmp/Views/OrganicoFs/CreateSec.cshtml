@@ -1,0 +1,101 @@
+﻿@model SIGEFINew.Models.Presupuesto.OrganicoF
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-8">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                <h3 class="box-title">Elemento @ViewBag.Elemento (Nuevo)</h3>
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ACTI_CODIGO)
+                    @Html.HiddenFor(model => model.NIV_PADRE)
+                    @*@Html.Editor("ACTI_CODIGO2", new { htmlAttributes = new { @class = "form-control" } })*@
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ORG_CLAVE, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-3">
+                            @Html.EditorFor(model => model.ORG_CLAVE, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.Elemento } })
+                            @Html.ValidationMessageFor(model => model.ORG_CLAVE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ORG_NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.ORG_NOMBRE, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ORG_NOMBRE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.ACTI_CODIGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("ACTI_CODIGO", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                                @Html.ValidationMessageFor(model => model.ACTI_CODIGO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    @*<div class="form-group">
+                        @Html.Label("Nivel", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-3">
+                            @Html.EditorFor(model => model.NIV_PADRE, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.Padre, @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.NIV_PADRE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+                </div>
+
+                <div class="form-group">
+
+                </div>
+
+                <div class="col-md-offset-8 col-md-10">
+                    @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                    <button id="saveOrder" type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $("#ACTI_CODIGO").val(@ViewBag.Actividad);
+    $("#NIV_PADRE").val(@ViewBag.Padre);
+
+    $('#ORG_CLAVE').keyup(function () {
+        var datos = new String($('#ORG_CLAVE').val());
+        datos = datos.toUpperCase(datos);
+        $('#ORG_CLAVE').val(datos);
+    })
+
+    $('#ORG_NOMBRE').keyup(function () {
+        var datos = new String($('#ORG_NOMBRE').val());
+        datos = datos.toUpperCase(datos);
+        $('#ORG_NOMBRE').val(datos);
+    })
+</script>
+

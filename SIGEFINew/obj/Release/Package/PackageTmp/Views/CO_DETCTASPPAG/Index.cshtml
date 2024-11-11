@@ -1,0 +1,237 @@
+﻿@model IEnumerable<SIGEFINew.Models.Contabilidad.CO_DETCTASPPAG>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CO_CTASPPAGAR.COD_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_TIPO_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPOSRI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IVA_PORC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOT_IVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CTA_X_PAG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CTA_DEBITO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASIENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RFIVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PORC_APLICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AUTORIZACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHACAD_DOC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPOSICION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_SUSTENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_MOV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APLICADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANULADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMT_CONTAB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FORMA_PAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ORIGEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANTICIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TM_FDO_TER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_FDO_TER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CO_CTASPPAGAR.COD_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_TIPO_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPOSRI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALOR_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IVA_PORC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOT_IVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CTA_X_PAG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CTA_DEBITO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RFIVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PORC_APLICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AUTORIZACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHACAD_DOC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPOSICION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ICE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_SUSTENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_MOV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APLICADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANULADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMT_CONTAB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FORMA_PAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ORIGEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANTICIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TM_FDO_TER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_FDO_TER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_CREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_CREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_MODIF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_MODIF)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

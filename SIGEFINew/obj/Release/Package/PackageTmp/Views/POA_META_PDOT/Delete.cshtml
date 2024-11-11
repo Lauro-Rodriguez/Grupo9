@@ -1,0 +1,50 @@
+﻿@model SIGEFINew.Models.POA.POA_META_PDOT
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<br />
+<br />
+<h2>Borrar</h2>
+
+<h3>Está seguro que desea eliminar este registro?</h3>
+<div>
+    <h4>Meta PDOT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.POA_POL_PDOT.NOM_POL_PDOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POA_POL_PDOT.NOM_POL_PDOT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_POL_PDOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_POL_PDOT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_IND_PDOT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_IND_PDOT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </div>
+    }
+</div>

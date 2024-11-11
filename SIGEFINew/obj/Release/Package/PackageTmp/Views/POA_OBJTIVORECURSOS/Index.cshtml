@@ -1,0 +1,194 @@
+﻿@model IEnumerable<SIGEFINew.Models.POA.POA_OBJTIVORECURSOS>
+
+@{
+    ViewBag.Title = "Recursos";
+}
+
+<div class="form-group">
+    <div class="row">
+        @if (ViewBag.EstPY == "GE" || ViewBag.EstPY == "DS" || ViewBag.EstPY == "DA")
+        {
+            <div class="col-md-1">
+                <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","POA_OBJTIVORECURSOS",new {@id=ViewBag.CodPlan,@id3=ViewBag.CodPlanObj })+ "'")" class="btn btn-primary">
+                    <span class="fa fa-plus"></span> Nuevo
+                </button>
+            </div>
+        }
+
+        @*<div class="col-md-1">
+            <button type="submit" onclick="@("location.href='"+ Url.Action("Print","PartIngresoes")+ "'")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-print"></span> Imprimir
+            </button>
+        </div>*@
+        <div class="col-md-6 col-lg-offset-5">
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+
+    </div>
+
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Recursos</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    @*<th style="width:5%">
+                        @Html.DisplayNameFor(model => model.POA_PLANOBJETIVOS.COD_OE_PLANIF)
+                    </th>*@
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.CANTIDAD)
+                    </th>
+                    @*<th style="width:15%">
+                        @Html.DisplayNameFor(model => model.CARACTERISITCAS)
+                    </th>*@
+                    <th style="width:7%">
+                        @Html.DisplayNameFor(model => model.FECHA_INI)
+                    </th>
+                    @*<th style="width:10%">
+                        T. Recurso
+                    </th>*@
+                    <th style="width:5%">
+                        Item
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_ENERO)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_FEBRERO)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_MARZO)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_ABRIL)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_MAYO)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_JUNIO)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_JULIO)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_AGOSTO)
+                    </th>
+                    <th style="width:8%">
+                        @Html.DisplayNameFor(model => model.VAL_SEPTIEMBRE)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.VAL_OCTUBRE)
+                    </th>
+                    <th style="width:7%">
+                        @Html.DisplayNameFor(model => model.VAL_NOVIEMBRE)
+                    </th>
+                    <th style="width:7%">
+                        @Html.DisplayNameFor(model => model.VAL_DICIEMBRE)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.TOTAL)
+                    </th>
+                    <th style="width:10%"></th>
+                </tr>
+
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.POA_PLANOBJETIVOS.COD_OE_PLANIF)
+                    </td>*@
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.CANTIDAD)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CARACTERISITCAS)
+                    </td>*@
+                    <td style="width:7%">
+                        @Html.DisplayFor(modelItem => item.FECHA_INI)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.TipoRecursos.TRE_NOMBRE)
+                    </td>*@
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.Catalogos.CAT_NOMBRE)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.TIPO_ASIGPAC)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OBSERVACIONES)
+                    </td>*@
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_ENERO)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_FEBRERO)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_MARZO)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_ABRIL)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_MAYO)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_JUNIO)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_JULIO)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_AGOSTO)
+                    </td>
+                    <td style="width:7%">
+                        @Html.DisplayFor(modelItem => item.VAL_SEPTIEMBRE)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.VAL_OCTUBRE)
+                    </td>
+                    <td style="width:7%">
+                        @Html.DisplayFor(modelItem => item.VAL_NOVIEMBRE)
+                    </td>
+                    <td style="width:7%">
+                        @Html.DisplayFor(modelItem => item.VAL_DICIEMBRE)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.TOTAL)
+                    </td>
+                    <td style="width:10%">
+                        @Html.ActionLink("Editar", "Create", new { id = item.COD_PLAN, id3 = item.COD_PLANOBJTVO, id2 = item.TRE_CODIGO, TRec = item.CAT_CODIGO }) |
+                        @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                        @if (ViewBag.EstPY == "GE" || ViewBag.EstPY == "DS" || ViewBag.EstPY == "DA")
+                        {
+                            @Html.ActionLink("Borrar", "Delete", new { id = item.COD_PLAN, id3 = item.COD_PLANOBJTVO, id2 = item.TRE_CODIGO, TRec = item.CAT_CODIGO })
+                        }
+
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

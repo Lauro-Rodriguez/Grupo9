@@ -1,0 +1,217 @@
+﻿@model SIGEFINew.Models.POA.POA_PLANOBJETIVOS
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<br />
+<br />
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <section class="card2">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Información General</a></li>
+                <li><a data-toggle="tab" href="#Meta">Otros</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="form-horizontal">
+                        <h4>Proyecto</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID_INSTITUCION)
+
+                        @Html.HiddenFor(model => model.PERI_CODIGO)
+
+                        @Html.HiddenFor(model => model.COD_PLAN)
+                        @Html.HiddenFor(model => model.ORG_CODIGO)
+
+                        @Html.HiddenFor(model => model.COD_PLANOBJTVO)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ID_EMPLEADO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("ID_EMPLEADO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.ID_EMPLEADO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Tipo Proyecto", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("COD_TIPOPROY", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.COD_TIPOPROY, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_OE_PLANIF, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("COD_OE_PLANIF", null, htmlAttributes: new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.COD_OE_PLANIF, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FECHA_INICIAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.FECHA_INICIAL, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FECHA_INICIAL, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FECHA_FINAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.FECHA_FINAL, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FECHA_FINAL, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DESC_OBJETIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.DESC_OBJETIVO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DESC_OBJETIVO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.OBS_OBJETIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.OBS_OBJETIVO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.OBS_OBJETIVO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ESTADO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EnumDropDownListFor(model => model.ESTADO, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ESTADO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                    @Html.LabelFor(model => model.USER_CREA, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.USER_CREA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.USER_CREA, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+                        @*<div class="form-group">
+                    @Html.LabelFor(model => model.FECHA_CREA, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FECHA_CREA, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FECHA_CREA, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+                        @*<div class="form-group">
+                    @Html.LabelFor(model => model.USER_MODIF, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.USER_MODIF, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.USER_MODIF, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+                        @*<div class="form-group">
+                    @Html.LabelFor(model => model.FECHA_MODIF, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FECHA_MODIF, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FECHA_MODIF, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+
+                        
+
+
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Guardar" class="btn btn-success" />
+                                </div>
+                            </div>
+
+                            <div>
+                                @Html.ActionLink("Regresar a la Lista", "Index")
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="Meta" class="tab-pane fade">
+                        <div class="form-horizontal">
+                            <h4>Meta</h4>
+                            <hr />
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CANTIDAD_META, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-1">
+                                    @Html.EditorFor(model => model.CANTIDAD_META, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                    @Html.ValidationMessageFor(model => model.CANTIDAD_META, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DESCRIPCION_META, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.DESCRIPCION_META, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                                    @Html.ValidationMessageFor(model => model.DESCRIPCION_META, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <br />
+                            <h4>Fondos</h4>
+                            <hr />
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <table>
+                                        <tr>
+                                            @{
+                                                int cnt = 0;
+                                                List<SIGEFINew.ViewModels.AssignedFondosData> Fondos = ViewBag.Fondos;
+                                                List<SIGEFINew.Models.POA.POA_FONDOXOBJTVO> Fondos2 = ViewBag.Fondos2;
+                                                foreach (var course in Fondos)
+                                                {
+                                                    if (cnt++ % 3 == 0)
+                                                    {
+                                                    @:</tr><tr>
+                                                    }
+                                                    @:<td>
+                                                        @course.DESCRIPCION
+
+                                                        <input type="number"
+                                                               name="Fondos"
+                                                               value="@course.VALOR"
+                                                               @*@(Html.Raw(course.Assigned ? course.VALOR : 0))*@ />
+
+
+                                                        <input hidden type="text"
+                                                               name="Fondos2"
+                                                               value="@course.ID_FONDO"
+                                                               @*@(Html.Raw(course.Assigned ? course.VALOR : 0))*@ />
+
+                                                    @:</td>
+                                                }
+                                            @:</tr>
+                                            }
+                                        </table>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+        </section>
+    </div>
+    
+    }
+

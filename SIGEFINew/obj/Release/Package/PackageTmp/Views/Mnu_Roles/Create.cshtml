@@ -1,0 +1,61 @@
+﻿@model SIGEFINew.Models.Mnu_Roles
+
+@{
+    ViewBag.Title = "Crear";
+}
+
+<h2>Nuevo</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Roles</h4>s
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(model => model.ID_INSTITUCION, new { @class = "form-control",Value=Session["IdInst"] })
+    @Html.HiddenFor(model => model.USUA_CREA, new { @class = "form-control",Value=Session["Usuario"] })
+    @*@Html.HiddenFor(model => model.FECHA_CREA, new { @class = "form-control",Value="01/01/2019" })*@
+    @*@Html.HiddenFor(model => model.USUA_MODIF, new { @class = "form-control" })*@
+    @Html.HiddenFor(model => model.FECHA_MODIF, new { @class = "form-control",Value="01/01/1900" })
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PERI_CODIGO, "PERI_CODIGO", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("PERI_CODIGO", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ID_INSTITUCION, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NOMBRE_ROL, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.NOMBRE_ROL, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NOMBRE_ROL, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.CERRADO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.CERRADO)
+                    @Html.ValidationMessageFor(model => model.CERRADO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>*@
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

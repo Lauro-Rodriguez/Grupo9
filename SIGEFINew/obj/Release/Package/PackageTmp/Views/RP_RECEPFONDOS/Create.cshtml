@@ -1,0 +1,193 @@
+﻿@model SIGEFINew.Models.Nomina.RP_RECEPFONDOS
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+<style>
+    #pcontent {
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    thead, tbody, tr, td, th {
+        display: block;
+    }
+
+        tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        thead th {
+            height: 30px;
+            text-align: left;
+        }
+
+    tbody {
+        height: 140px;
+        overflow-y: auto;
+    }
+
+    thead {
+        background: #E5E7E9;
+        /*fallback*/
+    }
+
+
+        tbody td, thead th {
+            width: 19.2%;
+            float: left;
+        }
+
+    .thah {
+        text-align: right;
+    }
+
+    .FColor {
+        background-color: #fcf3cf;
+    }
+</style>
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Receptor de Fondos (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Receptor de Fondos (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            @Html.HiddenFor(model => model.RUC_RECEPFONDO)
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ID_RECEPFONDO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @if (ViewBag.EsNuevo == 1)
+                        {
+                            @Html.EditorFor(model => model.ID_RECEPFONDO, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @Value = "0" } })
+                        }
+                        else
+                        {
+                            @Html.EditorFor(model => model.ID_RECEPFONDO, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                        }
+                        @Html.ValidationMessageFor(model => model.ID_RECEPFONDO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_PROV, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("COD_PROV", null, htmlAttributes: new { @class = "form-control select2", @style = "width: 90%;" })
+                        @*@Html.EditorFor(model => model.RUC_RECEPFONDO, new { htmlAttributes = new { @class = "form-control input-sm" } })*@
+                        @Html.ValidationMessageFor(model => model.COD_PROV, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ID_PORCENT, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("ID_PORCENT", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.ID_PORCENT, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NUM_PATRONAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @Html.EditorFor(model => model.NUM_PATRONAL, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                        @Html.ValidationMessageFor(model => model.NUM_PATRONAL, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-10 col-md-offset-1">
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <tr>
+                                <th style="width:15%">
+                                </th>
+
+                                <th style="width:85%">
+                                    Nombres
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width:15%">
+                                    Rpresentante
+                                </td>
+                                <td style="width:70%">
+                                    @Html.DropDownList("NUMDOC_REPLEGAL", null, htmlAttributes: new { @class = "form-control select2", @style = "width: 100%;" })
+                                    @Html.ValidationMessageFor(model => model.NUMDOC_REPLEGAL, "", new { @class = "text-danger" })
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:15%">
+                                    Oficial Pagador
+                                </td>
+                                <td style="width:70%">
+                                    @Html.DropDownList("NUMDOC_OFIPAGADOR", null, htmlAttributes: new { @class = "form-control select2", @style = "width: 100%;" })
+                                    @Html.ValidationMessageFor(model => model.NUMDOC_OFIPAGADOR, "", new { @class = "text-danger" })
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+
+<script>
+   
+
+    $('#COD_PROV').change(function () {
+        $("#RUC_RECEPFONDO").val($('#COD_PROV').val());
+    });
+
+
+
+</script>
+

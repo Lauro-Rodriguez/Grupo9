@@ -1,0 +1,124 @@
+﻿@model IEnumerable<SIGEFINew.Models.Periodos>
+
+@{
+    ViewBag.Title = "Periodos";
+}
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1">
+            <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","Periodos")+ "'")" class="btn btn-primary">
+                <span class="fa fa-plus"></span> Nuevo
+            </button>
+        </div>
+        <div class="col-md-1">
+            <button type="submit" onclick="@("location.href='"+ Url.Action("Print","PartIngresoes")+ "'")" class="btn btn-primary">
+                <span class="glyphicon glyphicon-print"></span> Imprimir
+            </button>
+        </div>
+        <div class="col-md-5 col-lg-offset-5">
+            @*<p>
+                <select asp-for="Peri_Descripcion" asp-items="Models.Periodos">
+                    <option value="">Todo</option>
+                </select>
+            </p>*@
+
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+
+    </div>
+
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Periodos</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:58%">
+                        @Html.DisplayNameFor(model => model.INSITUCIONES.NOM_INSTITUCION)
+                    </th>
+                    <th style="width:20%">
+                        @Html.DisplayNameFor(model => model.PERI_DESCRIPCION)
+                    </th>
+                    <th style="width:7%">
+                        @Html.DisplayNameFor(model => model.ACTIVO)
+                    </th>
+                    <th style="width:10%">
+                        @Html.DisplayNameFor(model => model.FECHA_CREA)
+                    </th>
+                    @*<th>
+                @Html.DisplayNameFor(model => model.CERRADO)
+            </th>*@
+                    <th style="width:5%"></th>
+                </tr>
+            </thead>
+            
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:58%">
+                        @Html.DisplayFor(modelItem => item.INSITUCIONES.NOM_INSTITUCION)
+                    </td>
+                    <td style="width:20%">
+                        @Html.DisplayFor(modelItem => item.PERI_DESCRIPCION)
+                    </td>
+                    <td style="width:7%">
+                        @Html.DisplayFor(modelItem => item.ACTIVO)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.FECHA_CREA)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.CERRADO)
+                    </td>*@
+                <td style="width:5%">
+                    @Html.ActionLink(" ", "Create", new { id = item.PERI_CODIGO }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Editar" })
+                    
+                </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+@*<div class="row">
+    <div class="col-md-1">
+        <p>
+            <input type="button" value="Nuevo" onclick="@("location.href='"+ Url.Action("Create","Periodos")+ "'")" class="btn btn-primary" />
+        </p>
+
+    </div>
+    <div class="col-md-6 col-md-offset-4">
+        <p>
+            <select asp-for="Peri_Descripcion" asp-items="Models.Periodos">
+                <option value="">Todo</option>
+            </select>
+            Descripción : <input type="text" asp-for="SearchString" />
+            <input type="submit" value="Filtrar" class="btn btn-default" />
+        </p>
+
+    </div>
+</div>*@
+
+
+
+@*<p>
+        @Html.ActionLink("Nuevo", "Create")
+    </p>*@
+

@@ -1,0 +1,145 @@
+﻿@model SIGEFINew.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Registrarse";
+}
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-8">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                <h3 class="box-title">Registro de Usuarios</h3>
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+            <div class="form-horizontal">
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NumIdentif, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(m => m.NumIdentif, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Login, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(m => m.Login, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-3">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-3">
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    @*<div class="form-group">*@
+                    @Html.LabelFor(m => m.TypeUser, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-3">
+                        <select class="form-control input-sm" data-val="true" data-val-required="El campo Tipo es obligatorio." id="TypeUser" name="TypeUser">
+                            <option value="AD">Administrador</option>
+                            <option value="OP">Operador</option>
+                        </select>
+
+                    </div>
+                    @*</div>*@
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Active, new { @class = "col-md-1 control-label" })
+                        <div class="col-md-3">
+                            @Html.CheckBoxFor(m => m.Active)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ID_EMPLEADO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("ID_EMPLEADO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.ID_EMPLEADO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+
+                </div>
+
+                <div class="col-md-offset-9 col-md-10">
+                    @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                    <button id="saveOrder" type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> Aceptar
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        @*$(document).ready(function () {
+            var url = "@Url.Action(" FillEmpleados", "Funciones")";
+            //$("#ID_EMPLEADO").empty();
+            var data = { IdEmp: 0 }
+            $.post(url, data).done(function (data) {
+                 alert("Hola Mundo con jQuery!" );
+                 $.each(data, function (index, row) {
+                     $("#ID_EMPLEADO").append("<option value='" + row.ID_EMPLEADO + "'>" + row.APELLIDOS + "</option>")
+                });
+
+            });*@
+
+        @*$("#ID_PROVINCIA").change(function () {
+            var idprov = $("#ID_PROVINCIA").val();
+            var url = "@Url.Action("LLenaCantones", "Instituciones")";
+            var data = { IdProv: idprov }
+            $("#ID_CANTON").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_CANTON").append("<option value='" + row.ID_CANTON + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+        });*@
+    });
+    </script>
+
+}

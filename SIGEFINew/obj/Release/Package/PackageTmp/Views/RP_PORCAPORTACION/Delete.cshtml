@@ -1,0 +1,50 @@
+﻿@model SIGEFINew.Models.Nomina.RP_PORCAPORTACION
+@{
+    ViewBag.Title = "Eliminar";
+}
+<br />
+<br />
+<h2>Eliminar</h2>
+
+<h3>Está Seguro de Eliminar este Registro?</h3>
+<div>
+    <h4>Porcentaje de Aportación</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_PORCENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_PORCENT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RP_TIPOSEGURO.NOMBRE_TIPOSEGURO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RP_TIPOSEGURO.NOMBRE_TIPOSEGURO)
+        </dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Regrsar a la Lista", "Index")
+        </div>
+    }
+</div>
+

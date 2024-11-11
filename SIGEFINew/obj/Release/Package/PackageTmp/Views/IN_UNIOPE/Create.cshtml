@@ -1,0 +1,102 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_UNIOPE
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+<br />
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="col-md-8">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <i class="glyphicon glyphicon-edit"></i>
+                    @if (ViewBag.EsNuevo == 1)
+                    {
+                        <h3 class="box-title">Unidad Operativa (Nuevo)</h3>
+                    }
+                    else
+                    {
+                        <h3 class="box-title">Unidad Operativa (Editar)</h3>
+                    }
+                </div>
+                <div class="box-body">
+                    @*@Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+        @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })*@
+
+                    @if (ViewBag.EsNuevo == 1)
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ID_UNIDOPERATIVA, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.ID_UNIDOPERATIVA, new { htmlAttributes = new { @class = "form-control input-sm", @Readonly = "readonly", @Value = 0 } })
+                                @Html.ValidationMessageFor(model => model.ID_UNIDOPERATIVA, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ID_UNIDOPERATIVA, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EditorFor(model => model.ID_UNIDOPERATIVA, new { htmlAttributes = new { @class = "form-control input-sm", @Readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.ID_UNIDOPERATIVA, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    }
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ORG_CODIGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownList("ORG_CODIGO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.ORG_CODIGO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button type="submit" onclick="@("location.href='"+ Url.Action("Create","IN_UNIOPE")+ "'")" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script type="text/javascript" src="/Scripts/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.8.3.min.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $('#DESCRIPCION').keyup(function () {
+            var datos = new String($('#DESCRIPCION').val());
+            datos = datos.toUpperCase(datos);
+            $('#DESCRIPCION').val(datos);
+        })
+    </script>
+}
+

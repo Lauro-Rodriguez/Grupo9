@@ -1,0 +1,347 @@
+﻿@Html.ActionLink("Contabilidad", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <style>
+        .dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+    </style>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        @*@foreach (var item in Model)
+        {
+           if (item.SUB_NIVEL.ToString() == "1")
+               {*@
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Inicio
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Parámetros", "Create", "CO_PARAMETROS", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Tipos de Documentos", "Index", "TiposDocs")</li>
+                <li>@Html.ActionLink("Instituciones Financieras", "Index", "BANCOS")</li>
+                <li>@Html.ActionLink("Cuentas Contables", "Index", "CO_CUENTASCONT")</li>
+                <li>@Html.ActionLink("Proveedores", "Index", "Proveedores")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Importar de Planificación Presupuestaria", "Index", "Cargaini")</li>
+                <li>@Html.ActionLink("Partidas Presupuestarias de Ingresos", "Index", "PR_PARTINGRESOS")</li>
+                <li>@Html.ActionLink("Partidas Presupuestarias de Egresos", "Index", "PR_PARTEGRESOS")</li>
+                <li>@Html.ActionLink("Relación Presupuesto - Contabilidad", "Index", "CO_RELACION")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Clasificador de Retenciones", "Index", "CO_CLASIFRETEN")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Cuentas Bancarias", "Index", "CO_CUENBANCOS")</li>
+                <li>@Html.ActionLink("Líneas de Crédito", "Index", "CO_LINEACREDITO")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Asiento Inicial", "Index", "OrganicoFs")</li>
+            </ul>
+
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Presupuesto
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Disponibilidad Presupuestaria -> Solic. Disp. Presup.", "Index", "DISPPRES_SOLICPRES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Disponibilidad Presupuestaria - Nueva", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Compromisos", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Devengados de Ingresos", "Index", "POA_PLAN")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Reforma de Ingresos", "Index", "DETALLEGRESOS")</li>
+                <li>@Html.ActionLink("Reforma de Gastos", "Index", "PR_SOLICDISPPRESUP")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Movimiento de Fondos", "Index", "PartIngresoes")</li>
+                <li>@Html.ActionLink("Recaudaciones", "Index", "PartEgresoes")</li>
+            </ul>
+
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Contabilidad
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Comprobantes de Diario", "Index", "DISPPRES_SOLICPRES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Comprobantes de Pago", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Comprobantes de Ingreso", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+            </ul>
+
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Cartera
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Cuentas por Pagar", "Index", "DISPPRES_SOLICPRES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Depósitos de Terceros", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Devolución de Cobros Recibidos", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Pagos", "Index", "PartIngresoes")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Cuentas por Cobrar", "Index", "PartIngresoes")</li>
+                <li>@Html.ActionLink("Anticipo de Fondos", "Index", "PartEgresoes")</li>
+                <li>@Html.ActionLink("Devolución de Pagos Efectuados", "Index", "DISPPRES_SOLICPRES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Cobros", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Carga Inicial", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+            </ul>
+
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Procesos
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Marcaje de Documentos Bancarios", "Index", "DISPPRES_SOLICPRES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Conciliación Bancaria", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Retenciones Anuladas", "Index", "PartIngresoes")</li>
+                <li>@Html.ActionLink("Clasificación de Retenciones", "Index", "PartIngresoes")</li>
+                <li>@Html.ActionLink("Liberar Transacciones", "Index", "PartEgresoes")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Validación de Transacciones", "Index", "DISPPRES_SOLICPRES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Diferencias Contabilidad - Presupuesto", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Cierres</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Cierre Transacciones", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Cierre Mensual", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Cierre Anual - Donaciones", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Cierre Anual - Cuentas por Cobrar", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Cierre Anual - Cuentas por Pagar", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Cierre Anual - Acumulación de Proyectos y Programas", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Cierre Anual - Ingresos y Gastos de Gestión", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        @*<li class="dropdown-submenu">
+                            <a href="#">Even More..</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">3rd level</a></li>
+                                <li><a href="#">3rd level</a></li>
+                            </ul>
+                        </li>*@
+                        @*<li><a href="#">Second level</a></li>
+                        <li><a href="#">Second level</a></li>*@
+                    </ul>
+                </li>
+                @*<li>@Html.ActionLink("Cierres", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>*@
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Ordenes de Pago", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Pagos S.P.I.", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+            </ul>
+
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Anexos Financieros
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Servicio de Rentas Internas</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Compras Locales", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Ventas Locales", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Comprobantes Anulados", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Anexar Especificaciones", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Generar Diskette de Especificaciones", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Formulario 103", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Formulario 104", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Formulario 101", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        @*<li class="dropdown-submenu">
+                            <a href="#">Even More..</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">3rd level</a></li>
+                                <li><a href="#">3rd level</a></li>
+                            </ul>
+                        </li>*@
+                        @*<li><a href="#">Second level</a></li>
+                        <li><a href="#">Second level</a></li>*@
+                    </ul>
+                </li>
+                @*<li>@Html.ActionLink("Cierres", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>*@
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">SIGEF</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Presupuesto Inicial", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Asiento de Apertura", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Ejecución Presupuestaria", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Balance de Comprobación (Sumas y Saldos)", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Transferencias", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        @*<li class="dropdown-submenu">
+                            <a href="#">Even More..</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">3rd level</a></li>
+                                <li><a href="#">3rd level</a></li>
+                            </ul>
+                        </li>*@
+                        @*<li><a href="#">Second level</a></li>
+                        <li><a href="#">Second level</a></li>*@
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Reportes
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Contables</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Balance de Comprobación", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Estado de Resultados", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Estado de Situación Financiera", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Estado de Evolución del Patrimonio Institucional", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Diario General", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Mayor General", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Mayor Auxiliar", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Saldos de Cuentas", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Presupuestarios</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Cédulas Presupuestarias de Egresos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Auxiliar de Gastos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Resumen Cédula de Egresos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Cédulas Presupuestarias de Ingresos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Auxiliar de Ingresos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Resumen Cédula de Ingresos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Estado de Ejecución Presupuestaria", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Transacciones Presupuestarias", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Saldos Presupuestarios de Egresos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink("Saldos de Fondos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Tesorería</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Estado de Flujo del Efectivo", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Libro Bancos", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Comprobantes</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Emisión de Retenciones", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+
+                <li>@Html.ActionLink("Docum. Pend. Contabilizar", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Cartera</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a href="#">Cuentas por Pagar</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Saldos Pendientes de Pago</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Cuentas por Cobrar</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Saldos Pendientes de Cobro</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>@Html.ActionLink("Anexos Financieros", "Index", "PR_MOVGASTO", new { area = "" }, new { @id = "M01_01" })</li>
+            </ul>
+
+        </li>
+    </ul>
+    @Html.Partial("_LoginPartial")
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $("#xxx").click(function () {
+            @*var idprov = $("#ID_PROVINCIA").val();
+             var idcanton = $("#ID_CANTON").val();
+            var url = "@Url.Action("LLenaParroquias", "Instituciones")";
+            var data = { IdProv: idprov, IdCanton: idcanton }
+            $("#ID_PARROQUIA").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#ID_PARROQUIA").append("<option value='" + row.ID_PARROQUIA + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });*@
+            alert("Hola Mundo con jQuery!" );
+        });
+    }
+
+    
+</script>

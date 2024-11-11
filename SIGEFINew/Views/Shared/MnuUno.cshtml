@@ -1,0 +1,76 @@
+﻿@*@model IEnumerable<SIGEFINew.Models.Mnu_Opciones>*@
+@Html.ActionLink("Planif. Presup.", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        @*@foreach (var item in Model)
+        {
+           if (item.SUB_NIVEL.ToString() == "1")
+               {*@
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Inicio
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Programas", "Index", "Programas", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Subprogramas", "Index", "SubProgramas")</li>
+                <li>@Html.ActionLink("Proyectos", "Index", "Proyectoes")</li>
+                <li>@Html.ActionLink("Actividades", "Index", "Actividads")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Grupos", "Index", "Grupoes")</li>
+                <li>@Html.ActionLink("Items", "Index", "Items")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Partidas Presupuestarias de Ingresos", "Index", "PartIngresoes")</li>
+                <li>@Html.ActionLink("Partidas Presupuestarias de Egresos", "Index", "PartEgresoes")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Orgánico Funcional", "Index", "OrganicoFs")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("POA-Plan Nacional del Buen Vivir", "Index", "POA_PNBV")</li>
+                <li>@Html.ActionLink("POA-Objetivos Estratégicos Institucionales", "Index", "POA_OEI")</li>
+                <li>@Html.ActionLink("POA-Ejes de Desarrolo PDOT", "Index", "POA_ED_PDOT")</li>
+                <li>@Html.ActionLink("POA-Objetivos Estratégicos PDOT", "Index", "POA_OE_PDOT")</li>
+                <li>@Html.ActionLink("POA-Programas del PDOT", "Index", "POA_PR_PDOT")</li>
+                <li>@Html.ActionLink("POA-Ejes del Plan de Gobierno", "Index", "POA_EPG")</li>
+                <li>@Html.ActionLink("Tipos de Recursos", "Index", "TipoRecursos")</li>
+                <li>@Html.ActionLink("Catálogos", "Index", "Catalogos")</li>
+                <li>@Html.ActionLink("Tipos de Proyectos", "Index", "POA_TIPOPROYECTOS")</li>
+                <li>@Html.ActionLink("Fuentes de Financiamiento", "Index", "PR_FONDOS")</li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Planificación
+                @*@Html.Label(item.DESC_MENU)*@
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Carga Inicial - Ingresos", "Index", "DETALLEINGRESOS", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Techos Presupuestarios", "Index", "TECHOSPRESUPS", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Planificación Estratégica", "Index", "POA_OE_PLANIF", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Planificación Operativa", "Index", "POA_PLAN")</li>
+                <li>@Html.ActionLink("Carga Inicial - Egresos", "Index", "DETALLEGRESOS")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Solicitud de Disponibilidad Presupuestaria", "Index", "PR_SOLICDISPPRESUP")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Partidas Presupuestarias de Ingresos", "Index", "PartIngresoes")</li>
+                <li>@Html.ActionLink("Partidas Presupuestarias de Egresos", "Index", "PartEgresoes")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("POA-Plan Nacional del Buen Vivir", "Index", "POA_PNBV")</li>
+                <li>@Html.ActionLink("POA-Objetivos Estratégicos Institucionales", "Index", "POA_OEI")</li>
+                <li>@Html.ActionLink("POA-Ejes de Desarrolo PDOT", "Index", "POA_ED_PDOT")</li>
+                <li>@Html.ActionLink("POA-Objetivos Estratégicos PDOT", "Index", "POA_OE_PDOT")</li>
+                <li>@Html.ActionLink("POA-Programas del PDOT", "Index", "POA_PR_PDOT")</li>
+                <li>@Html.ActionLink("POA-Ejes del Plan de Gobierno", "Index", "POA_EPG")</li>
+                <li>@Html.ActionLink("Tipos de Recursos", "Index", "TipoRecursos")</li>
+                <li>@Html.ActionLink("Catálogos", "Index", "Catalogos")</li>
+            </ul>
+
+        </li>
+        @*<li>@Html.ActionLink(item.DESC_MENU, "", "", new { area = "" }, new { @class = "navbar-brand", @id = item.NOM_MENU })</li>*@
+        @*}
+        }*@
+    </ul>
+    @Html.Partial("_LoginPartial")
+</div>

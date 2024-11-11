@@ -1,0 +1,80 @@
+﻿@model SIGEFINew.Models.POA.POA_CPTOEJECUCION
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-9">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                @if (ViewBag.EsNuevo == 1)
+                {
+                    <h3 class="box-title">Concepto de Ejecución (Nuevo)</h3>
+                }
+                else
+                {
+                    <h3 class="box-title">Concepto de Ejecución (Editar)</h3>
+                }
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+                <div class="form-horizontal">
+                    @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+                    @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+                    @Html.HiddenFor(model => model.COD_CPTO)
+
+                    @Html.HiddenFor(model => model.USER_MODIF, new { @Value = ViewBag.UserModif })
+                    @Html.HiddenFor(model => model.FECHA_MODIF, new { @Value = ViewBag.FechaModif })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-8 col-md-10">
+                        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button id="saveOrder" type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<script>
+    $('#DESCRIPCION').keyup(function () {
+        var datos = new String($('#DESCRIPCION').val());
+        datos = datos.toUpperCase(datos);
+        $('#DESCRIPCION').val(datos);
+    })
+</script>

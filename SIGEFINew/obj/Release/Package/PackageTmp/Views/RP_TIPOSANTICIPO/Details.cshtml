@@ -1,0 +1,106 @@
+﻿@model SIGEFINew.Models.Nomina.RP_TIPOSANTICIPO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RP_TIPOSANTICIPO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_ANTICIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION_ANTICIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIMITE_CUOTAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIMITE_CUOTAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PORC_DESCDIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PORC_DESCDIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LIMITE_MONTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LIMITE_MONTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_SUELDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_SUELDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_TIPONOMINA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_TIPONOMINA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

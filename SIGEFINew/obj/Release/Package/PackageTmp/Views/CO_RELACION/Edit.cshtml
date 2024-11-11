@@ -1,0 +1,83 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_RELACION
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<br />
+
+@*<div class="alert alert-info" style="font-size:medium">
+    <strong>Relación Presupuesto - Contabilidad</strong> / Editar
+</div>*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID_INSTITUCION)
+
+        @Html.HiddenFor(model => model.PERI_CODIGO)
+
+        @Html.HiddenFor(model => model.CODIGO_CG)
+
+        @Html.HiddenFor(model => model.EJERCICIO)
+
+        <div class="col-md-7">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <i class="glyphicon glyphicon-edit"></i>
+                    <h4 class="box-title">
+                        Datos de la Cuenta - (@Html.DisplayFor(model => model.CO_CUENTASCONT.CODIGO_CG) -
+                        @Html.DisplayFor(model => model.CO_CUENTASCONT.NOMBRE_CG)) (Editar)
+                    </h4>
+                    
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PPDEBITO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-5">
+                            @Html.EditorFor(model => model.PPDEBITO, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PPDEBITO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PPCREDITO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-5">
+                            @Html.EditorFor(model => model.PPCREDITO, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PPCREDITO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CUENTA_COBRO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-5">
+                            @Html.EditorFor(model => model.CUENTA_COBRO, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CUENTA_COBRO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CUENTA_PAGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-5">
+                            @Html.EditorFor(model => model.CUENTA_PAGO, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CUENTA_PAGO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+}

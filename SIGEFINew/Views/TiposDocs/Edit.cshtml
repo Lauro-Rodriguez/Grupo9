@@ -1,0 +1,68 @@
+﻿@model SIGEFINew.Models.TiposDoc
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<br />
+<br />
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <section class="card2">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Información General</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="form-horizontal">
+                        <h4>Tipo de Documento</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.COD_TIPO_DOC)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TIPO_SRI, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @*@Html.DropDownListFor(model => model.TIPO_SRI, new SelectList(" "), "Tipo SRI", new { @class = "form-control input-sm" })*@
+                                @Html.DropDownList("TIPO_SRI", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.TIPO_SRI, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Guardar" class="btn btn-success" />
+                            </div>
+                        </div>
+
+                        <div>
+                            @Html.ActionLink("Regresar a la Lista", "Index")
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+}
+
+<script>
+    $(document).ready(function () {
+         $("#TIPO_SRI").val(@ViewBag.TipoSRI);
+    });
+
+</script>

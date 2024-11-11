@@ -1,0 +1,156 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_TIPOSTRAN
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+@*@Html.AntiForgeryToken()*@
+<div class="col-md-8">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Tipos de Transacción (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Tipos de Transacción (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            <div class="form-horizontal">
+                @using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+                {
+                    @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+                    @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+                    @if (ViewBag.EsNuevo == 0)
+                    {
+                        @Html.HiddenFor(model => model.COD_TIPOTRAN)
+                    }
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TIPO_MOV, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownList("TIPO_MOV", null, htmlAttributes: new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.TIPO_MOV, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DESCRIP_TIPOTRAN, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.DESCRIP_TIPOTRAN, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIP_TIPOTRAN, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ENV_CO_CC, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-8">
+                            @Html.RadioButtonFor(model => model.ENV_CO_CC, 1, new { htmlAttributes = new { @class = "form-control" }, id = "Opc1" }) @Html.Label("Contabilidad", htmlAttributes: new { id = "lblOpc1" })
+                            @Html.RadioButtonFor(model => model.ENV_CO_CC, 2, new { htmlAttributes = new { @class = "form-control" }, id = "Opc2" }) @Html.Label("Cuenta por Pagar", htmlAttributes: new { id = "lblOpc2" })
+                            @Html.ValidationMessageFor(model => model.ENV_CO_CC, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CON_IVA, htmlAttributes: new { @class = "control-label col-md-2", id = "lblCiva" })
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.CON_IVA)
+                                @Html.ValidationMessageFor(model => model.CON_IVA, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CON_DONANTE, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.CON_DONANTE)
+                                @Html.ValidationMessageFor(model => model.CON_DONANTE, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button id="saveOrder" type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                        </button>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+        
+        }
+
+
+        <script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="~/Scripts/select2.min.js"></script>
+        @section Scripts{
+            <script>
+                $('#DESCRIP_TIPOTRAN').keyup(function () {
+                    var datos = new String($('#DESCRIP_TIPOTRAN').val());
+                    datos = datos.toUpperCase(datos);
+                    $('#DESCRIP_TIPOTRAN').val(datos);
+                })
+
+                $("#TIPO_MOV").change(function () {
+                    if ($("#TIPO_MOV").val() == "CO" || $("#TIPO_MOV").val() == "CE" || $("#TIPO_MOV").val() == "CR") {
+                        $("#lblOpc1").show();
+                        $("#Opc1").show();
+                        $("#lblOpc2").show();
+                        $("#Opc2").show();
+                        $("#lblCiva").show();
+                        $("#CON_IVA").show();
+                        $("#CON_DONANTE").show();
+                        //alert($("#TIPO_MOV").val());
+                    }
+                    else {
+                        $("#lblOpc1").show();
+                        $("#Opc1").show();
+                        $("#lblOpc2").hide();
+                        $("#Opc2").val(0);
+                        $("#Opc2").hide();
+                        $("#lblCiva").hide();
+                        $("#CON_IVA").val(0);
+                        $("#CON_IVA").hide();
+                        $("#CON_DONANTE").show();
+                    }
+                });
+
+            </script>
+        }
+
+
+

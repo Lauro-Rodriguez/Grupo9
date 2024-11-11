@@ -1,0 +1,91 @@
+﻿@model IEnumerable<SIGEFINew.Models.Nomina.RP_EMPLEADOS>
+<div class="form-group">
+    <div class="row">
+        @if (ViewBag.IdRol > 0)
+        {
+            <div class="col-md-1">
+                <button id="buttonnew" type="submit" onclick="@("location.href='"+ Url.Action("Create","RP_EMPLEADOS")+ "'")" class="btn btn-primary">
+                    <span class="fa fa-plus"></span> Nuevo
+                </button>
+            </div>
+            <div class="col-md-1">
+                <button type="submit" onclick="@("location.href='"+ Url.Action("Print","PartIngresoes")+ "'")" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-print"></span> Imprimir
+                </button>
+            </div>
+
+            <div class="col-md-5 col-lg-offset-5">
+                @using (Html.BeginForm())
+                {
+                    <div class="input-group">
+                        @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-warning" style="font-size:medium">
+                <strong>Aún no ha Elegido un Rol</strong>
+            </div>
+        }
+    </div>   
+</div>
+<div class="box box-primary">
+    <div class="box-header">
+        <i class="ion ion-clipboard"></i>
+        <h3 class="box-title">Empleados</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:10%">
+                        @Html.DisplayNameFor(model => model.ID_EMPLEADO)
+                    </th>
+                    <th style="width:10%">
+                        @Html.DisplayNameFor(model => model.NUM_CEDULA)
+                    </th>
+                    <th style="width:65%"> 
+                        @Html.DisplayNameFor(model => model.APELLIDOSNOMBRES)
+                    </th>
+                    <th style="width:5%">
+                        @Html.DisplayNameFor(model => model.ACTIVO)
+                    </th>
+                    <th style="width:10%"></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.ID_EMPLEADO)
+                    </td>
+                    <td style="width:10%">
+                        @Html.DisplayFor(modelItem => item.NUM_CEDULA)
+                    </td>
+                    <td style="width:65%">
+                        @Html.DisplayFor(modelItem => item.APELLIDOSNOMBRES)
+                    </td>
+                    <td style="width:5%">
+                        @Html.DisplayFor(modelItem => item.ACTIVO)
+                    </td>
+                    <td style="width:10%">
+                        @Html.ActionLink(" ", "Create", new { id = item.ID_EMPLEADO }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Editar" })
+                        @Html.ActionLink(" ", "Details", new { id = item.ID_EMPLEADO }, new { @class = "btn btn-primary glyphicon glyphicon-edit btn-xs", data_toggle = "tooltip", title = "Gastos Personales" })
+                        @Html.ActionLink(" ", "Delete", new { id = item.ID_EMPLEADO }, new { @class = "btn btn-danger glyphicon glyphicon-trash btn-xs", data_toggle = "tooltip", title = "Eliminar" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+

@@ -1,0 +1,79 @@
+﻿@model PagedList.IPagedList<SIGEFINew.Models.Presupuesto.Actividad>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Actividades";
+}
+<br />
+<br />
+<h2>Actividades</h2>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-1">
+            <input type="button" value="Nuevo" onclick="@("location.href='"+ Url.Action("Create","Actividads")+ "'")" class="btn btn-primary" />
+        </div>
+        <div class="col-md-5">
+            @using (Html.BeginForm())
+            {
+                <div class="input-group">
+                    @Html.Editor("SearchString", ViewBag.CurrentFilter as string, new { htmlAttributes = new { @class = "form-control", placeholder = "Buscar por Nombre" } })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+
+                </div><!-- /input-group -->
+            }
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-print"></span> Imprimir
+            </button>
+        </div>
+    </div>
+
+</div>
+<table class="table table-striped table-bordered table-hover table-condensed">
+    <tr>
+        <th>
+            Proyecto
+        </th>
+        <th>
+            @Html.ActionLink("Código", "Index", new { sortOrder = ViewBag.Acti_Codigo, currentFilter = ViewBag.CurrentFilter })
+            @*@Html.DisplayNameFor(model => model.PROG_CODIGO)*@
+        </th>
+        <th>
+            @Html.ActionLink("Descripción", "Index", new { sortOrder = ViewBag.Acti_Nombre, currentFilter = ViewBag.CurrentFilter })
+            @*@Html.DisplayNameFor(model => model.PROG_NOMBRE)*@
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proyectos.PROY_NOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACTI_CODIGO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ACTI_NOMBRE)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ACTI_CODIGO, subpcod = item.SUBP_CODIGO, progcod = item.PROG_CODIGO, ProyCod=item.PROY_CODIGO }) |
+                @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ACTI_CODIGO, subpcod = item.SUBP_CODIGO, progcod = item.PROG_CODIGO, ProyCod=item.PROY_CODIGO })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@*<br />
+    Pag. @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount*@
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

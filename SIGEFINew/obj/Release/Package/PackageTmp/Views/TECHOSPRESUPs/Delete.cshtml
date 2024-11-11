@@ -1,0 +1,80 @@
+﻿@model SIGEFINew.Models.Presupuesto.TECHOSPRESUP
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TECHOSPRESUP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganicoF.ORG_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganicoF.ORG_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_CANTIDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_CANTIDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_PORCENTAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_PORCENTAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_MODIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_MODIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_MODIF)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

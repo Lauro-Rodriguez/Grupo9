@@ -1,0 +1,43 @@
+﻿
+@model SIGEFINew.Models.Presupuesto.Grupo
+<div class="panel-info">
+    <div class="panel-heading">
+        Datos del Grupo
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.PROG_CODIGO, htmlAttributes: new { @class = "control-label col-md-2" })*@
+
+            <div class="col-md-2">
+                @Html.Editor("GRUP_CODIGO", new { htmlAttributes = new { @class = "form-control input-sm", id = "pc" } })
+                @Html.ValidationMessage("GRUP_CODIGO", "", new { @class = "text-danger" })
+            </div>
+
+            @*@Html.LabelFor(model => model.PROG_NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-8">
+                @Html.Editor("GRUP_NOMBRE", new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessage("GRUP_NOMBRE", "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <button onclick="HideGR(1,@ViewBag.EsNuevo)" type="button" class="btn btn-success btn-sm" data-toggle="tooltip" title="Aceptar">
+                    <span class="fa fa-check"></span>
+                </button>
+
+                <button onclick="HideGrupo()" type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Cancelar">
+                    <span class="fa fa-remove"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#GRUP_NOMBRE').keyup(function () {
+        var datos = new String($('#GRUP_NOMBRE').val());
+        datos = datos.toUpperCase(datos);
+        $('#GRUP_NOMBRE').val(datos);
+    })
+</script>
+
+

@@ -1,0 +1,42 @@
+﻿@model SIGEFINew.Models.Presupuesto.TipoRecursos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoRecursos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIODOS.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIODOS.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRE_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRE_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORG_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORG_CODIGO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

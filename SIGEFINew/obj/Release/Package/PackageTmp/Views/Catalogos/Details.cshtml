@@ -1,0 +1,122 @@
+﻿@model SIGEFINew.Models.Presupuesto.Catalogos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Catalogos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ORGANICOF.ORG_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORGANICOF.ORG_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPORECURSOS.TRE_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPORECURSOS.TRE_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAT_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAT_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAT_VALOR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAT_VALOR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_CALCULO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_CALCULO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_GASTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_GASTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NORMALIZADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NORMALIZADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APLICA_SOLPAGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APLICA_SOLPAGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERTENECE_PAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERTENECE_PAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONSOLIDA_PAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONSOLIDA_PAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

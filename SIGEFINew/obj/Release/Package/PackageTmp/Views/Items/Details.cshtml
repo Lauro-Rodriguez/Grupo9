@@ -1,0 +1,58 @@
+﻿@model SIGEFINew.Models.Presupuesto.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRUP_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRUP_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_SUBITEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_SUBITEM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

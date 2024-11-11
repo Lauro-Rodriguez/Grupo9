@@ -1,0 +1,114 @@
+﻿@model SIGEFINew.Models.Presupuesto.PartIngreso
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PartIngreso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividades.ACTI_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividades.ACTI_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grupos.GRUP_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grupos.GRUP_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Programas.PROG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programas.PROG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proyectos.PROY_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proyectos.PROY_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subprogramas.PROG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subprogramas.PROG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAIN_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAIN_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAIN_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAIN_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_FINANC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_FINANC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORGANISMO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORGANISMO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CORRELAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CORRELAT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

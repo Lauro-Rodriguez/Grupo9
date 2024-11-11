@@ -1,0 +1,89 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CLASIFRETEN
+
+@{
+    ViewBag.Title = "Ctas. Contab";
+}
+
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">Cuentas Contables</div>
+        <div class="panel-body">
+            <div>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CODIGO_RET)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.CODIGO_RET)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DESCRIP_RET)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DESCRIP_RET)
+                    </dd>
+                </dl>
+            </div>
+
+            <div>
+                <table class="table ">
+                    <thead style="background:white">
+                        @using (Html.BeginForm(new { CodRecurso = @ViewBag.Codrecur }))
+                        {
+                            <tr>
+                                <th style="width:50%">
+                                    @Html.DropDownList("CODIGO_CG", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                                    @*@Html.Editor("CODIGO_CG", new { htmlAttributes = new { @class = "form-control input-sm", list = "datalist1" } })*@
+                                    @*<datalist id="datalist1">
+                                    </datalist>*@
+                                </th>
+                                <th>
+                                    <button type="submit" class="btn btn-success btn-sm">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </th>
+                            </tr>
+                        }
+                    </thead>
+                   
+                </table>
+            </div>
+            <div id="Recursos">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+
+<script>
+    $('.select2').select2();
+
+    $(document).ready(function () {
+        var idprov = $("#CODIGO_RET").val();
+        var url = "@Url.Action("FillCuentasCont", "CO_CLASIFRETEN")";
+
+            var data = { CodRecurso: @ViewBag.Codrecur}
+            @*alert("Hola Mundo con jQuery!" + @ViewBag.Codrecur);*@
+            //$("#RecTable").empty();
+            //$("#COD_PLANOBJTVO").attr("disabled","disabled");
+            $.get(url, data).done(function (data) {
+                $("#Recursos").append(data);
+            });
+
+        var url = "@Url.Action("FillCuentasAux", "Funciones")";
+            var data = {  }
+            //$("#ID_CANTON").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#datalist1").append("<option value='" + row.CODIGO_CG + "'>" + row.NOMBRE_CG + "</option>")
+                });
+
+            });
+    });
+</script>

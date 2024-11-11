@@ -1,0 +1,225 @@
+﻿@model SIGEFINew.Models.Presupuesto.PR_SOLICDISPPRESUP
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Solicitud de Disponibilidad Presupuestaria (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Solicitud de Disponibilidad Presupuestaria (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.CODIGO_DOC, new { @Value = 100 })
+            @Html.HiddenFor(model => model.ORG_CODIGO, new { @Value = ViewBag.Direc })
+            @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+            @Html.HiddenFor(model => model.USER_ACTUAL, new { @Value = ViewBag.UserActual })
+            @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NUM_SOLIC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.NUM_SOLIC, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @Value = "0" } })
+                    @Html.ValidationMessageFor(model => model.NUM_SOLIC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_EMPLEADO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.DropDownList("ID_EMPLEADO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                    @Html.ValidationMessageFor(model => model.ID_EMPLEADO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FECHA_SOLICITA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.FECHA_SOLICITA, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.FECHA_SOLICITA, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DETALLE, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.TextAreaFor(model => model.DETALLE, new { @class = "form-control input-sm textarea-editor", placeholder = "Detalle (*)" })
+                    @Html.ValidationMessageFor(model => model.DETALLE, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CON_PAC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.CON_PAC)
+                        @Html.ValidationMessageFor(model => model.CON_PAC, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default" id="Panel2" style="margin-left:20px auto" hi>
+                <br />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_PLANOBJTVO, "Proyecto", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("COD_PLANOBJTVO", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.COD_PLANOBJTVO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                @*<div id="Recursos">
+
+                </div>*@
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.VALOR, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.VALOR, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.VALOR, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="panel panel-default" id="Panel2" style="margin-left:20px auto" hi>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                    </div>
+                </div>
+
+                <div id="Recursos">
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </div>
+}
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <br />
+    <br />
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Recursos</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        Habilita(false);
+
+        $("#CON_PAC").on("click", function () {
+            if (this.checked) {
+                Habilita(true);
+                 //$("#VALOR").attr("readonly","readonly");
+            }
+            else {
+                Habilita(false);
+                //$("#VALOR").removeAttr("readonly");
+                $("#VALOR").val(0);
+            }
+        });
+
+
+        function Habilita(Habil) {
+            if (Habil) {
+                $("#Panel2").show();
+            }
+            else {
+                $("#Panel2").hide();
+                $("#Recursos").empty();
+            }
+        };
+
+        $("#COD_PLANOBJTVO").change(function () {
+            var idprov = $("#COD_PLANOBJTVO").val();
+            var url = "@Url.Action("FillRecursosProy", "PR_SOLICDISPPRESUP")";
+
+            //var data = { CodRecurso: idprov }
+
+            //$.get(url, data).done(function (data) {
+            //    $("#Recursos").append(data);
+            //});
+
+            var url = "@Url.Action("TotRecursosProy", "Funciones")";
+            var data = {CodRecurso: idprov }
+            $.post(url, data).done(function (data) {
+               $("#VALOR").val(data);
+            });
+
+        });
+
+    });
+
+    $('#DETALLE').keyup(function () {
+        var datos = new String($('#DETALLE').val());
+        datos = datos.toUpperCase(datos);
+        $('#DETALLE').val(datos);
+    })
+</script>
+
+<script type="text/javascript">
+    $("#add").click(function () {
+      $.ajax({
+        url: "@Url.Action("BlankChRow")",
+        cache: false,
+        success: function (html) {
+          $("#child_table").append(html);
+        }
+      });
+    return false;
+    });
+    $("#rem").click(function () {
+      $("#child_table tbody tr:last")
+        .remove();
+      return false;
+    });
+</script>

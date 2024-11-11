@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SIGEFINew.Models.Mnu_Roles>
+
+@{
+    ViewBag.Title = "Roles";
+}
+<link rel="stylesheet" href="~/Content/Style.css">
+<br />
+<br />
+<br />
+<h4>Roles</h4>
+
+<p>
+    <input type="button" value="Nuevo" onclick="@("location.href='"+ Url.Action("Create","Mnu_Roles")+ "'")" class="btn btn-primary" />
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Institución
+            @*@Html.DisplayNameFor(model => model.PERIODOS.INSITUCIONES.NOM_INSTITUCION)*@
+        </th>
+        <th>
+            Periodo
+            @*@Html.DisplayNameFor(model => model.PERIODOS.PERI_DESCRIPCION)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_ROL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_ROL)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PERIODOS.INSITUCIONES.NOM_INSTITUCION)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PERIODOS.PERI_DESCRIPCION)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CODIGO_ROL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NOMBRE_ROL)
+    </td>
+    <td>
+        @*<input type="button" title="Editar" value="Editar" onclick="location.href='@Url.Action("Edit", "Instituciones", new { id = item.ID_INSTITUCION})'" class="btn btn-primary btn-sm" />
+            <input type="button" title="Editar" value="Borrar" onclick="location.href='@Url.Action("Delete", "Instituciones", new { id = item.ID_INSTITUCION})'" class="btn btn-danger btn-sm" />*@
+        @*<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Claves</button>*@
+
+        @Html.ActionLink("Editar", "Edit", new { id = item.ID_INSTITUCION, IdPer = item.PERI_CODIGO, CodRol = item.CODIGO_ROL }) |
+        @Html.ActionLink("Privilegios", "Delete", new { id = item.ID_INSTITUCION })
+    </td>
+</tr>
+    }
+
+</table>

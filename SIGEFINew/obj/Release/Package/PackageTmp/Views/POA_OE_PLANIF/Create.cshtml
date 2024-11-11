@@ -1,0 +1,645 @@
+﻿@model SIGEFINew.Models.POA.POA_OE_PLANIF
+
+@{
+    ViewBag.Title = "Nuevo";
+}
+<style>
+        #pcontent {
+            margin-top: 50px;
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        thead, tbody, tr, td, th {
+            display: block;
+        }
+
+            tr:after {
+                content: ' ';
+                display: block;
+                visibility: hidden;
+                clear: both;
+            }
+
+            thead th {
+                height: 30px;
+                text-align: left;
+            }
+
+        tbody {
+            height: 280px;
+            overflow-y: auto;
+        }
+
+        thead {
+            background: #E5E7E9;
+            /*fallback*/
+        }
+
+
+            tbody td, thead th {
+                width: 19.2%;
+                float: left;
+            }
+
+        .thah {
+            text-align: right;
+        }
+
+        .FColor {
+            background-color: #fcf3cf;
+        }
+
+    </style>
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+<div class="col-md-9">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Objetivo Estratégico (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Objetivo Estratégico (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @if (ViewBag.EsNuevo == 0)
+                {
+                    @Html.HiddenFor(model => model.ID_INSTITUCION)
+                    @Html.HiddenFor(model => model.PERI_CODIGO)
+                    @Html.HiddenFor(model => model.COD_OE_PLANIF)
+                }
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_OE_PLANIF, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @Html.EditorFor(model => model.COD_OE_PLANIF, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                        @Html.ValidationMessageFor(model => model.COD_OE_PLANIF, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UNI_MEDIDA, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @Html.EnumDropDownListFor(model => model.UNI_MEDIDA, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.UNI_MEDIDA, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_PNVB, "Plan Nac. B. Vivir", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            @Html.DropDownList("COD_PNVB", null, htmlAttributes: new { @class = "form-control select2 input-sm" })
+                            @Html.ValidationMessageFor(model => model.COD_PNVB, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="prog" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_OEI, "Obtvo. Est. Institut.", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            @Html.DropDownList("COD_OEI", null, htmlAttributes: new { @class = "form-control select2 input-sm" })
+                            @Html.ValidationMessageFor(model => model.COD_OEI, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="prog2" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_OE_PDOT, "Obtvo. Est. PDOT", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("COD_OE_PDOT", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.COD_OE_PDOT, "", new { @class = "text-danger" })
+                        @*<div class="input-group">
+                                <span class="input-group-btn">
+                                    <button id="prog3" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                        <span class="fa fa-plus"></span>
+                                    </button>
+                                </span>
+                            </div>*@
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.COD_POL_PDOT, "Política PDOT", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownListFor(model => model.COD_POL_PDOT, new SelectList(" "), "Eija una Política", new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.COD_POL_PDOT, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.COD_META_PDOT, "Meta PDOT", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.DropDownListFor(model => model.COD_META_PDOT, new SelectList(" "), "Eija una Meta", new { @class = "form-control input-sm" })
+                            @Html.ValidationMessageFor(model => model.COD_META_PDOT, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COD_EPG, "Eje Plan Gbno.", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("COD_EPG", null, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.COD_EPG, "", new { @class = "text-danger" })
+                        @*<div class="input-group">
+                                <span class="input-group-btn">
+                                    <button id="prog" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                        <span class="fa fa-plus"></span>
+                                    </button>
+                                </span>
+                            </div>*@
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                        @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.IND_MEDIO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.IND_MEDIO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.IND_MEDIO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.MIN_BASE, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.MIN_BASE, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.MIN_BASE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.MET_GTON_OBJTVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.MET_GTON_OBJTVO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.MET_GTON_OBJTVO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ACTIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @Html.EnumDropDownListFor(model => model.ACTIVO, htmlAttributes: new { @class = "form-control input-sm" })
+                        @Html.ValidationMessageFor(model => model.ACTIVO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-offset-8 col-md-10">
+                    @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                    <button id="saveOrder" type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+}
+
+<div class="modal fade" id="newOrderModal">
+    <br />
+    <br />
+    <div class="modal-dialog modal-lg" style=" width 900px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>Plan Nacional para el Buen Vivir</h4>
+            </div>
+            <form id="NewOrderForm">
+                <div class="modal-body">
+                    <div id="Recursos">
+
+                    </div>
+                    <div class="form-horizontal">
+                        <input type="hidden" id="OrderId" />
+                        <div class="form-group">
+                            <label class="control-label col-md-1">
+                                Descripción
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="productName" name="productName" placeholder="Descripción" class="form-control" />
+                            </div>
+                            @*<label class="control-label col-md-1">
+                                Cargo
+                            </label>
+                            <div class="col-md-4">
+                                <input id="cargo" name="cargo" placeholder="Cargo" class="form-control" />
+                            </div>*@
+                            <div class="col-md-2">
+                                <a id="addToList" class="btn btn-primary">Agregar</a>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="width:10%">Código</th>
+                                    <th style="width:80%">Descripción</th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailsTable"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="saveOrder" type="submit" onclick="fn()" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newOrderModal2">
+    <br />
+    <br />
+    <div class="modal-dialog modal-lg" style=" width 900px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>POA-Objetivos Estratégicos Institucionales</h4>
+            </div>
+            <form id="NewOrderForm">
+                <div class="modal-body">
+                    <div id="Recursos">
+
+                    </div>
+                    <div class="form-horizontal">
+                        <input type="hidden" id="OrderId" />
+                        <div class="form-group">
+                            <label class="control-label col-md-1">
+                                Descripción
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="productName2" name="productName" placeholder="Descripción" class="form-control" />
+                            </div>
+                            @*<label class="control-label col-md-1">
+                                    Cargo
+                                </label>
+                                <div class="col-md-4">
+                                    <input id="cargo" name="cargo" placeholder="Cargo" class="form-control" />
+                                </div>*@
+                            <div class="col-md-2">
+                                <a id="addToList2" class="btn btn-primary">Agregar</a>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="width:10%">Código</th>
+                                    <th style="width:80%">Descripción</th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailsTable2"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="saveOrder" type="submit" onclick="fn2()" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newOrderModal3">
+    <br />
+    <br />
+    <div class="modal-dialog modal-lg" style=" width 900px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>POA-Ejes de Desarrolo PDOT</h4>
+            </div>
+            <form id="NewOrderForm">
+                <div class="modal-body">
+                    <div id="Recursos">
+
+                    </div>
+                    <div class="form-horizontal">
+                        <input type="hidden" id="OrderId" />
+                        <div class="form-group">
+                            <label class="control-label col-md-1">
+                                Descripción
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="productName3" name="productName" placeholder="Descripción" class="form-control" />
+                            </div>
+                            @*<label class="control-label col-md-1">
+                                    Cargo
+                                </label>
+                                <div class="col-md-4">
+                                    <input id="cargo" name="cargo" placeholder="Cargo" class="form-control" />
+                                </div>*@
+                            <div class="col-md-2">
+                                <a id="addToList3" class="btn btn-primary">Agregar</a>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="width:10%">Código</th>
+                                    <th style="width:80%">Descripción</th>
+                                    <th style="width:10%"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="detailsTable3"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="saveOrder" type="submit" onclick="fn3()" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#COD_OE_PDOT").click(function () {
+            var idprov = $("#COD_OE_PDOT").val();
+            var url = "@Url.Action("FillPoliticaPDOT", "Funciones")";
+            var data = { Id: idprov }
+            $("#COD_POL_PDOT").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#COD_POL_PDOT").append("<option value='" + row.COD_POL_PDOT + "'>" + row.NOM_POL_PDOT + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+        });
+
+        $("#COD_POL_PDOT").click(function () {
+            var idprov = $("#COD_OE_PDOT").val();
+            var id2 = $("#COD_POL_PDOT").val();
+            var url = "@Url.Action("FillMetaPDOT", "Funciones")";
+            var data = { Id: idprov, Id2:id2 }
+            $("#COD_META_PDOT").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#COD_META_PDOT").append("<option value='" + row.COD_META_PDOT + "'>" + row.NOM_POL_PDOT + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+         });
+    });
+
+    //Proceso de Plan Nacional para el buen vivir
+    $('#prog').click(function () {
+        var url = "@Url.Action("FillPNBV", "Funciones")";
+
+            var data = { };
+
+            $("#detailsTable").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    //$("#detailsTable").append("<tr><td> <input class='form-control input-sm' type='text' value="+ row.NOMBRE+"/>" + "</td><td>" + row.CARGO + "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                    $("#detailsTable").append("<tr><td style='width:10%'>" + row.COD_PNVB + "</td><td style='width:80%'>" + row.NOM_PNVB + "</td><td style='width:10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                    @*<input align="right" type="number" value="@item.VALOR_TOTAL" style="display:none" class="form-control input-sm" />*@
+                });
+
+            });
+        $("#newOrderModal").modal();
+
+    });
+
+    $("#addToList").click(function (e) {
+        e.preventDefault();
+        if ($.trim($("#productName").val()) == "") return;
+        //$("#detailsTable").append("<tr><td style='width: 10%'>" + '0' + "</td><td style='width: 80%'>" + $("#productName").val() + "</td><td 'width:10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+        $("#detailsTable").append("<tr><td style='width: 10%'>" + '0' + "</td><td style='width: 80%'>" + $("#productName").val() + "</td><td style='width: 10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+        //$("#detailsTable").append("<tr><td>" + "<input type='text' placeholder='Nombre' class='form-control'/>" + "</td><td>" + $("#cargo").val() + "</td><td>" +"<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>"+"</td></tr>");
+        clearItem();
+    });
+
+    function clearItem() {
+        $("#productName").val('');
+        $("#productName2").val('');
+    }
+
+    function fn() {
+        //e.preventDefault();
+        var orderArr = [];
+        orderArr.length = 0;
+        $.each($("#detailsTable tr"), function () {
+            orderArr.push({
+                COD_PNVB: $(this).find('td:eq(0)').html(),
+                NOM_PNVB: $(this).find('td:eq(1)').html()
+            });
+        });
+
+        var data = JSON.stringify({
+             order: orderArr
+        });
+
+        $.when(saveOrder(data)).then(function (response) {
+            console.log(response);
+        }).fail(function (err) {
+            console.log(err);
+        });
+    }
+
+    //After Click Save Button Pass All Data View To Controller For Save Database
+    function saveOrder(data) {
+        return $.ajax({
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            type: 'POST',
+            url: "/Funciones/SavePNBV",
+            data: data,
+            success: function (result) {
+                //alert(result);
+                location.reload();
+            },
+            error: function () {
+                alert("Error!")
+            }
+        });
+    }
+
+
+    //Proceso POA - Objetivos Estratégicos Institucionales 2
+    $('#prog2').click(function () {
+        var url = "@Url.Action("FillOEI", "Funciones")";
+
+            var data = { };
+
+            $("#detailsTable").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#detailsTable2").append("<tr><td style='width:10%'>" + row.COD_OEI + "</td><td style='width:80%'>" + row.NOM_OEI + "</td><td style='width:10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                });
+
+            });
+        $("#newOrderModal2").modal();
+
+    });
+
+    $("#addToList2").click(function (e) {
+        e.preventDefault();
+        if ($.trim($("#productName2").val()) == "") return;
+        $("#detailsTable2").append("<tr><td style='width: 10%'>" + '0' + "</td><td style='width: 80%'>" + $("#productName2").val() + "</td><td style='width: 10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+        //$("#detailsTable").append("<tr><td>" + "<input type='text' placeholder='Nombre' class='form-control'/>" + "</td><td>" + $("#cargo").val() + "</td><td>" +"<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>"+"</td></tr>");
+        clearItem();
+    });
+
+    function fn2() {
+        //e.preventDefault();
+        var orderArr = [];
+        orderArr.length = 0;
+        $.each($("#detailsTable2 tr"), function () {
+            orderArr.push({
+                COD_OEI: $(this).find('td:eq(0)').html(),
+                NOM_OEI: $(this).find('td:eq(1)').html()
+            });
+        });
+
+        var data = JSON.stringify({
+            order: orderArr
+        });
+
+        $.when(saveOrder2(data)).then(function (response) {
+            console.log(response);
+        }).fail(function (err) {
+            console.log(err);
+        });
+    }
+
+    function saveOrder2(data) {
+        return $.ajax({
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            type: 'POST',
+            url: "/Funciones/SaveOEI",
+            data: data,
+            success: function (result) {
+                //alert(result);
+                location.reload();
+            },
+            error: function () {
+                alert("Error!")
+            }
+        });
+    }
+
+    //Proceso Ejes de Desarrolo PDOT 3
+     $('#prog3').click(function () {
+        var url = "@Url.Action("FillED_PDOT", "Funciones")";
+
+            var data = { };
+
+            $("#detailsTable3").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#detailsTable3").append("<tr><td style='width:10%'>" + row.COD_ED_PDOT + "</td><td style='width:80%'>" + row.NOM_ED_PDOT + "</td><td style='width:10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                });
+
+            });
+        $("#newOrderModal3").modal();
+
+    });
+
+    $("#addToList3").click(function (e) {
+        e.preventDefault();
+        if ($.trim($("#productName3").val()) == "") return;
+        $("#detailsTable3").append("<tr><td style='width: 10%'>" + '0' + "</td><td style='width: 80%'>" + $("#productName3").val() + "</td><td style='width: 10%'>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+        //$("#detailsTable").append("<tr><td>" + "<input type='text' placeholder='Nombre' class='form-control'/>" + "</td><td>" + $("#cargo").val() + "</td><td>" +"<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>"+"</td></tr>");
+        clearItem();
+    });
+
+    function fn3() {
+        //e.preventDefault();
+        var orderArr = [];
+        orderArr.length = 0;
+        $.each($("#detailsTable3 tr"), function () {
+            orderArr.push({
+                COD_ED_PDOT: $(this).find('td:eq(0)').html(),
+                NOM_ED_PDOT: $(this).find('td:eq(1)').html()
+            });
+        });
+
+        var data = JSON.stringify({
+            order: orderArr
+        });
+
+        $.when(saveOrder2(data)).then(function (response) {
+            console.log(response);
+        }).fail(function (err) {
+            console.log(err);
+        });
+    }
+
+    function saveOrder2(data) {
+        return $.ajax({
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            type: 'POST',
+            url: "/Funciones/SaveED_PDOT",
+            data: data,
+            success: function (result) {
+                //alert(result);
+                location.reload();
+            },
+            error: function () {
+                alert("Error!")
+            }
+        });
+    }
+</script>

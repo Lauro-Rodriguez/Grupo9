@@ -1,0 +1,66 @@
+﻿@model SIGEFINew.Models.Presupuesto.OrganicoF
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrganicoF</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIODOS.PERI_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIODOS.PERI_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIV_PADRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIV_PADRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIV_HIJO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIV_HIJO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORG_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORG_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACTI_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACTI_CODIGO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

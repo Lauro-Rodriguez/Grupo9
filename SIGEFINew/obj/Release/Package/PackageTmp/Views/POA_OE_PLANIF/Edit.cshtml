@@ -1,0 +1,181 @@
+﻿@model SIGEFINew.Models.POA.POA_OE_PLANIF
+
+@{
+    ViewBag.Title = "Editar";
+}
+<br />
+<br />
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <section class="card2">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Información General</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <div class="form-horizontal">
+                        <h4>Objetivo Estratégico (Planificación)</h4>
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID_INSTITUCION)
+
+                        @Html.HiddenFor(model => model.PERI_CODIGO)
+
+                        @Html.HiddenFor(model => model.COD_OE_PLANIF)
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.UNI_MEDIDA, "Unidad de medida", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-2">
+                                @Html.EnumDropDownListFor(model => model.UNI_MEDIDA, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.UNI_MEDIDA, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_PNVB, "Plan Nac. B. Vivir", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("COD_PNVB", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.COD_PNVB, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_OEI, "Obtvo. Est. Institut.", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("COD_OEI", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.COD_OEI, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_OE_PDOT, "Obtvo. Est. PDOT", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("COD_OE_PDOT", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.COD_OE_PDOT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_POL_PDOT, "Política PDOT", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @*@Html.DropDownList("COD_POL_PDOT", null, htmlAttributes: new { @class = "form-control" })*@
+                                @Html.DropDownListFor(model => model.COD_POL_PDOT, new SelectList(" "), "Eija una Política", new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.COD_POL_PDOT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_META_PDOT, "Meta PDOT", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @*@Html.DropDownList("COD_META_PDOT", null, htmlAttributes: new { @class = "form-control" })*@
+                                @Html.DropDownListFor(model => model.COD_META_PDOT, new SelectList(" "), "Eija una Meta", new { @class = "form-control input-sm" })
+                                @Html.ValidationMessageFor(model => model.COD_META_PDOT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.COD_EPG, "Eje Plan Gbno.", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.DropDownList("COD_EPG", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.COD_EPG, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DESCRIPCION, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.DESCRIPCION, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DESCRIPCION, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IND_MEDIO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.IND_MEDIO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.IND_MEDIO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MIN_BASE, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.MIN_BASE, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MIN_BASE, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MET_GTON_OBJTVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.MET_GTON_OBJTVO, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MET_GTON_OBJTVO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ACTIVO, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.EnumDropDownListFor(model => model.ACTIVO, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ACTIVO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Guardar" class="btn btn-success" />
+                            </div>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Regresar a la Lista", "Index")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+}
+
+
+<script>
+    $(document).ready(function () {
+        $("#COD_OE_PDOT").click(function () {
+            var idprov = $("#COD_OE_PDOT").val();
+            var url = "@Url.Action("FillPoliticaPDOT", "Funciones")";
+            var data = { Id: idprov }
+            $("#COD_POL_PDOT").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#COD_POL_PDOT").append("<option value='" + row.COD_POL_PDOT + "'>" + row.NOM_POL_PDOT + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+        });
+
+        $("#COD_POL_PDOT").click(function () {
+            var idprov = $("#COD_OE_PDOT").val();
+            var id2 = $("#COD_POL_PDOT").val();
+            var url = "@Url.Action("FillMetaPDOT", "Funciones")";
+            var data = { Id: idprov, Id2:id2 }
+            $("#COD_META_PDOT").empty();
+             $.post(url, data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#COD_META_PDOT").append("<option value='" + row.COD_META_PDOT + "'>" + row.NOM_POL_PDOT + "</option>")
+                });
+
+            });
+            //alert("Hola Mundo con jQuery!" + idprov);
+         });
+    });
+
+
+
+</script>

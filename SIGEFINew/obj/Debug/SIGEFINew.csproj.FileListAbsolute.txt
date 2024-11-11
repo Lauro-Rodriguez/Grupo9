@@ -1,0 +1,1194 @@
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.CoreCompileInputs.cache
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.dll.config
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.pdb
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.exe
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.exe.config
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.rsp
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.exe
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.exe.config
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.rsp
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.AppContext.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Collections.Immutable.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Console.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Globalization.Calendars.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.Compression.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.FileSystem.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Net.Http.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Net.Sockets.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Reflection.Metadata.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.ValueTuple.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XPath.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.exe
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.exe.config
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.rsp
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\VBCSCompiler.exe
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\VBCSCompiler.exe.config
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Antlr3.Runtime.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\BuscaPersona.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.SqlServer.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Modules.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Google.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.Common.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.DataVisualization.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.WebForms.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Web.Infrastructure.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Newtonsoft.Json.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Owin.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Helpers.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Mvc.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Optimization.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Razor.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Deployment.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Razor.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\WebGrease.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\BuscaPersona.pdb
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Helpers.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Mvc.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Optimization.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Razor.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Deployment.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Razor.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Newtonsoft.Json.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.pdb
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Antlr3.Runtime.pdb
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.SqlServer.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Google.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Helpers.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Mvc.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Optimization.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Razor.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\EntityFramework.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\EntityFramework.SqlServer.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Google.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.pdb
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd1.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.GenerateResource.cache
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Mono.Security.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.EntityFramework.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Buffers.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Memory.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Numerics.Vectors.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Encodings.Web.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Json.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Channels.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Tasks.Extensions.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.ValueTuple.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.EntityFramework.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Buffers.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Memory.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Numerics.Vectors.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Encodings.Web.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Json.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Channels.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Tasks.Extensions.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.ValueTuple.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\de\Npgsql.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Npgsql.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\fi\Npgsql.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\fr\Npgsql.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ja\Npgsql.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\zh-CN\Npgsql.resources.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.Mvc.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.Mvc.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd2.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd3.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd4.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd5.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd6.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd7.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd8.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd9.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd10.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd11.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd12.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd13.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd14.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd15.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd16.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd17.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd18.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\RdlCompile.cache
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\RdlCompile.compiled
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.SQLite.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Wpf.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Dynamic.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.Metadata.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Modules.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.SQLite.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Wpf.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Dynamic.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.Metadata.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\DocumentFormat.OpenXml.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ExcelNumberFormat.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.IO.Packaging.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.pdb
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\DocumentFormat.OpenXml.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ExcelNumberFormat.xml
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd19.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd20.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.AssemblyReference.cache
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd21.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd22.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Oracle.ManagedDataAccess.dll
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.dll.config
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.exe
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.exe.config
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.rsp
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.exe
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.exe.config
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.rsp
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.AppContext.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Collections.Immutable.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Console.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.Compression.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.FileSystem.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Net.Http.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Net.Sockets.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.ValueTuple.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XPath.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.exe
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.exe.config
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.rsp
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\VBCSCompiler.exe
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\VBCSCompiler.exe.config
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Antlr3.Runtime.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\DocumentFormat.OpenXml.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.SqlServer.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ExcelNumberFormat.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Modules.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.SQLite.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Wpf.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Dynamic.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Google.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.Common.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.Metadata.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Web.Infrastructure.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Mono.Security.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Newtonsoft.Json.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Oracle.ManagedDataAccess.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Owin.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.Mvc.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Buffers.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.IO.Packaging.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Memory.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Numerics.Vectors.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Encodings.Web.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Json.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Channels.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Tasks.Extensions.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.ValueTuple.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Helpers.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Mvc.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Optimization.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Razor.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Deployment.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Razor.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\WebGrease.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\BuscaPersona.pdb
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.pdb
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\DocumentFormat.OpenXml.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ExcelNumberFormat.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Modules.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.SQLite.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Wpf.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Dynamic.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.Metadata.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.Mvc.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Buffers.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Memory.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Numerics.Vectors.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Encodings.Web.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Json.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Channels.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Tasks.Extensions.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.ValueTuple.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Helpers.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Mvc.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Optimization.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Razor.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Deployment.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Razor.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Newtonsoft.Json.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.pdb
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Antlr3.Runtime.pdb
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.SqlServer.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Google.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\de\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\fi\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\fr\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ja\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\zh-CN\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Helpers.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Mvc.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Optimization.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Razor.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\EntityFramework.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\EntityFramework.SqlServer.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd1.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd2.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd3.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd4.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd5.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd6.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd7.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd8.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd9.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd10.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd11.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd12.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd13.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd14.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd15.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd16.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd17.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd18.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd19.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd20.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd21.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd22.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.GenerateResource.cache
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.CoreCompileInputs.cache
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.dll
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd23.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd24.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd25.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd23.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd24.resources
+D:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd25.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd26.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd27.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd28.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd29.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.AssemblyReference.cache
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\RdlCompile.cache
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\RdlCompile.compiled
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.CopyComplete
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd30.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd31.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd32.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd33.resources
+C:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd34.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.dll.config
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\SIGEFINew.pdb
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.exe
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.exe.config
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csc.rsp
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.exe
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.exe.config
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\csi.rsp
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.AppContext.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Collections.Immutable.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Console.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Globalization.Calendars.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.Compression.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.FileSystem.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Net.Http.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Net.Sockets.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Reflection.Metadata.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.ValueTuple.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XPath.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.exe
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.exe.config
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\vbc.rsp
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\VBCSCompiler.exe
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\roslyn\VBCSCompiler.exe.config
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Antlr3.Runtime.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\BuscaPersona.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\DocumentFormat.OpenXml.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.SqlServer.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ExcelNumberFormat.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Modules.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.SQLite.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Wpf.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Dynamic.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Google.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.Common.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.DataVisualization.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.ReportViewer.WebForms.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.Metadata.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Web.Infrastructure.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Mono.Security.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Newtonsoft.Json.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.EntityFramework.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Oracle.ManagedDataAccess.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Owin.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.Mvc.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Buffers.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.IO.Packaging.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Memory.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Numerics.Vectors.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Encodings.Web.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Json.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Channels.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Tasks.Extensions.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.ValueTuple.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Helpers.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Mvc.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Optimization.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Razor.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Deployment.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Razor.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\WebGrease.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\BuscaPersona.pdb
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.pdb
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ClosedXML.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\DocumentFormat.OpenXml.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ExcelNumberFormat.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Modules.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.SQLite.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\IronPython.Wpf.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Dynamic.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Scripting.Metadata.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Npgsql.EntityFramework.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\PagedList.Mvc.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Buffers.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Memory.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Numerics.Vectors.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Encodings.Web.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Text.Json.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Channels.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Threading.Tasks.Extensions.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.ValueTuple.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Helpers.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Mvc.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Optimization.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.Razor.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Deployment.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\System.Web.WebPages.Razor.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Newtonsoft.Json.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.pdb
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ValidaDoc.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Antlr3.Runtime.pdb
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\EntityFramework.SqlServer.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Google.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\de\Npgsql.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Npgsql.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\fi\Npgsql.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\fr\Npgsql.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\ja\Npgsql.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\zh-CN\Npgsql.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Helpers.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Mvc.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Optimization.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.Razor.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.Deployment.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\System.Web.WebPages.Razor.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\EntityFramework.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\EntityFramework.SqlServer.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Google.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.AssemblyReference.cache
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd1.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd2.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd3.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd4.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd5.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd6.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd7.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd8.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd9.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd10.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd11.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd12.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd13.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd14.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd15.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd16.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd17.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd18.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd19.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd20.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd21.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd22.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd23.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd24.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd25.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd26.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd27.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd28.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd29.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd30.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd31.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd32.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd33.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd34.resources
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.GenerateResource.cache
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\RdlCompile.cache
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\RdlCompile.compiled
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.CoreCompileInputs.cache
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.csproj.CopyComplete
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.dll
+E:\ProyectosVS2019\SIGEFINew\SIGEFINew\obj\Debug\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFINew.dll.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFINew.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\csc.exe
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\csc.exe.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\csc.rsp
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\csi.exe
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\csi.exe.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\csi.rsp
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.AppContext.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Collections.Immutable.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Console.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.IO.Compression.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.IO.FileSystem.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Net.Http.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Net.Sockets.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.ValueTuple.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Xml.XPath.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\vbc.exe
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\vbc.exe.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\vbc.rsp
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\VBCSCompiler.exe
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\roslyn\VBCSCompiler.exe.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Antlr3.Runtime.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ClosedXML.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\DocumentFormat.OpenXml.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\EntityFramework.SqlServer.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ExcelNumberFormat.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.Modules.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.SQLite.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.Wpf.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Dynamic.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Google.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.ReportViewer.Common.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Scripting.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Scripting.Metadata.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Web.Infrastructure.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Mono.Security.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Newtonsoft.Json.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Npgsql.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Npgsql.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Oracle.ManagedDataAccess.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Owin.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\PagedList.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\PagedList.Mvc.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Buffers.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.IO.Packaging.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Memory.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Numerics.Vectors.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Text.Encodings.Web.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Text.Json.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Threading.Channels.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Threading.Tasks.Extensions.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.ValueTuple.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Helpers.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Mvc.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Optimization.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Razor.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.WebPages.Deployment.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.WebPages.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.WebPages.Razor.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\WebGrease.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\BuscaPersona.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ClosedXML.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ClosedXML.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\DocumentFormat.OpenXml.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ExcelNumberFormat.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.Modules.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.SQLite.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IronPython.Wpf.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Dynamic.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Scripting.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Scripting.Metadata.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Npgsql.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Npgsql.EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\PagedList.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\PagedList.Mvc.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Buffers.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Memory.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Numerics.Vectors.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Text.Encodings.Web.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Text.Json.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Threading.Channels.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Threading.Tasks.Extensions.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.ValueTuple.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Helpers.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Mvc.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Optimization.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.Razor.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.WebPages.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.WebPages.Deployment.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\System.Web.WebPages.Razor.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Newtonsoft.Json.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ValidaDoc.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ValidaDoc.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Antlr3.Runtime.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\EntityFramework.SqlServer.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Google.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.Security.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\de\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\fi\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\fr\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\ja\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\zh-CN\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.Helpers.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.Mvc.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.Optimization.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.Razor.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.WebPages.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\EntityFramework.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\EntityFramework.SqlServer.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.csproj.AssemblyReference.cache
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd1.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd2.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd3.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd4.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd5.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd6.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd7.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd8.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd9.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd10.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd11.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd12.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd13.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd14.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd15.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd16.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd17.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd18.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd19.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd20.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd21.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd22.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd23.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd24.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd25.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd26.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd27.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd28.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd29.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd30.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd31.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd32.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd33.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd34.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd35.resources
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.csproj.GenerateResource.cache
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.csproj.CoreCompileInputs.cache
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.csproj.CopyComplete
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\RdlCompile.cache
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\obj\Debug\RdlCompile.compiled
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFIDataManagerOra.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFIDataManagerOra.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFIDataManagerOra.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SIGEFIDataManagerOra.dll.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\DataOracle.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\DataOracle.pdb
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\DataOracle.xml
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\DataOracle.dll.config
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\SRIFactElect.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IKVM.OpenJDK.Core.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\MITyCLibXADES-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IKVM.OpenJDK.XML.API.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\MITyCLibAPI-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\MITyCLibTrust-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\MITyCLibPolicy-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\facturaE_additional.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\MITyCLibCert-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IKVM.Runtime.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IKVM.OpenJDK.Util.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IKVM.OpenJDK.Security.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\IKVM.OpenJDK.Text.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\commons-logging-1.1.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\xmlsec-1.4.2-ADSI-1.0.dll
+C:\ProyectosVS2019\SIGEFINewx\SIGEFINew\bin\MITyCLibTSA-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFINew.dll.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFINew.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\csc.exe
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\csc.exe.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\csc.rsp
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\csi.exe
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\csi.exe.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\csi.rsp
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.Managed.Core.targets
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.AppContext.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Collections.Immutable.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Console.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Globalization.Calendars.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.IO.Compression.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.IO.FileSystem.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Net.Http.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Net.Sockets.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Reflection.Metadata.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.ValueTuple.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Xml.XmlDocument.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Xml.XPath.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\vbc.exe
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\vbc.exe.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\vbc.rsp
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\VBCSCompiler.exe
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\roslyn\VBCSCompiler.exe.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Antlr3.Runtime.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ClosedXML.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\DataOracle.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\DocumentFormat.OpenXml.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\EntityFramework.SqlServer.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ExcelNumberFormat.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.Modules.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.SQLite.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.Wpf.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Dynamic.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Google.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.ReportViewer.Common.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.ReportViewer.WebForms.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Scripting.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Scripting.Metadata.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Web.Infrastructure.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Mono.Security.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Newtonsoft.Json.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Npgsql.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Npgsql.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Oracle.ManagedDataAccess.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Owin.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\PagedList.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\PagedList.Mvc.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFIDataManagerOra.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Buffers.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.IO.Packaging.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Memory.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Numerics.Vectors.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Text.Encodings.Web.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Text.Json.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Threading.Channels.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Threading.Tasks.Extensions.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.ValueTuple.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Helpers.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Mvc.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Optimization.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Razor.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.WebPages.Deployment.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.WebPages.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.WebPages.Razor.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\WebGrease.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SRIFactElect.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IKVM.OpenJDK.Core.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\MITyCLibXADES-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IKVM.OpenJDK.XML.API.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\MITyCLibAPI-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\MITyCLibTrust-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\MITyCLibPolicy-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\facturaE_additional.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\MITyCLibCert-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IKVM.Runtime.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IKVM.OpenJDK.Util.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IKVM.OpenJDK.Security.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IKVM.OpenJDK.Text.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\commons-logging-1.1.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\xmlsec-1.4.2-ADSI-1.0.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\MITyCLibTSA-1.0.4.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\BuscaPersona.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ClosedXML.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ClosedXML.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\DataOracle.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\DataOracle.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\DataOracle.dll.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\DocumentFormat.OpenXml.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ExcelNumberFormat.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.Modules.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.SQLite.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\IronPython.Wpf.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Dynamic.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Scripting.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Scripting.Metadata.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Npgsql.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Npgsql.EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\PagedList.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\PagedList.Mvc.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFIDataManagerOra.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFIDataManagerOra.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\SIGEFIDataManagerOra.dll.config
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Buffers.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Memory.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Numerics.Vectors.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Text.Encodings.Web.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Text.Json.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Threading.Channels.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Threading.Tasks.Extensions.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.ValueTuple.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Helpers.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Mvc.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Optimization.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.Razor.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.WebPages.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.WebPages.Deployment.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\System.Web.WebPages.Razor.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Newtonsoft.Json.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ValidaDoc.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ValidaDoc.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Antlr3.Runtime.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\EntityFramework.SqlServer.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.AspNet.Identity.Core.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Facebook.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Cookies.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Google.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.Twitter.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.Owin.Security.OAuth.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.Security.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\de\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\fi\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\fr\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\ja\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\zh-CN\Npgsql.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.Helpers.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.Mvc.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.Optimization.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.Razor.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.WebPages.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\EntityFramework.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\EntityFramework.SqlServer.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.Security.Facebook.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.Security.Google.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.csproj.AssemblyReference.cache
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd1.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd2.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd3.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd4.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd5.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd6.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd7.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd8.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd9.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd10.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd11.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd12.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd13.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd14.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd15.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd16.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd17.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd18.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd19.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd20.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd21.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd22.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd23.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd24.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd25.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd26.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd27.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd28.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd29.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd30.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd31.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd32.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd33.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd34.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.Migrations.Upd35.resources
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.csproj.GenerateResource.cache
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.csproj.CoreCompileInputs.cache
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.dll
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.pdb
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\RdlCompile.cache
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\RdlCompile.compiled
+C:\ProyectosVS2019\SIGEFINewx - copia\SIGEFINew\obj\Debug\SIGEFINew.csproj.CopyComplete

@@ -1,0 +1,178 @@
+﻿@model SIGEFINew.Models.Presupuesto.PartEgreso
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PartEgreso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividades.ACTI_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividades.ACTI_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grupos.GRUP_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grupos.GRUP_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instituciones.NOM_INSTITUCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Programas.PROG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programas.PROG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proyectos.PROY_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proyectos.PROY_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subprogramas.PROG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subprogramas.PROG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAEG_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAEG_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAEG_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAEG_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_CLAVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_CLAVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_FINANC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_FINANC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_ORGAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_ORGAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_CORRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_CORRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_FUNC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_FUNC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_ORIGTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_ORIGTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_UNIDOPTIVA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_UNIDOPTIVA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CTO_COSTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CTO_COSTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCTO_COSTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCTO_COSTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_PROVINCIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_PROVINCIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_CANTON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_CANTON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_PARROQUIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_PARROQUIA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

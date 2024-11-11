@@ -1,0 +1,53 @@
+﻿@model SIGEFINew.Models.Instituciones
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="col-md-8">
+    <div class="box box-warning">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-remove"></i>
+            <h3 class="box-title">Borrar Institución</h3>
+        </div>
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            <h4>Está seguro de borrar este registro?</h4>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.ID_INSTITUCION)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ID_INSTITUCION)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.NOM_INSTITUCION)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NOM_INSTITUCION)
+                </dd>
+            </dl>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Borrar" class="btn btn-danger" /> |
+                @Html.ActionLink("Regresar a la Lista", "Index")
+            </div>
+        }
+    </div>
+</div>
+

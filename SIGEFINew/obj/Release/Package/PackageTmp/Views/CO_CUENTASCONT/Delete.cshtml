@@ -1,0 +1,58 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CUENTASCONT
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<div class="col-md-8">
+    <div class="box box-warning">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-remove-sign"></i>
+            <h3 class="box-title">Borrar Cuenta Contable</h3>
+        </div>
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+            <h4>Está seguro de borrar este registro?</h4>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.CODIGO_CG)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CODIGO_CG)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.NOMBRE_CG)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.NOMBRE_CG)
+                </dd>
+            </dl>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    @if (ViewBag.OK == "1")
+                    {
+                        <input type="submit" value="Borrar" class="btn btn-danger" id="Borrar" /> 
+                    }
+                    @*@Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })*@
+                    @Html.ActionLink("Regresar", "Index")
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

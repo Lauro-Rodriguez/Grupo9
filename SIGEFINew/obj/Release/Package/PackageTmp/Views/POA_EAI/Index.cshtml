@@ -1,0 +1,81 @@
+﻿@model IEnumerable<SIGEFINew.Models.POA.POA_EAI>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.META_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REFE_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIOR_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAINI_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHAFIN_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBSERVA_EAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.META_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REFE_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIOR_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAINI_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHAFIN_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBSERVA_EAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_CREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_CREA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,524 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\controllers\\contabilidad\\co_clasifretencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\controllers\\contabilidad\\co_clasifretencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|c:\\proyectosvs2019\\sigefinewx - copia\\sigefinew\\views\\co_clasifreten\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\views\\co_clasifreten\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_clasifreten.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_clasifreten.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_relaretcont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_relaretcont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\controllers\\contabilidad\\co_cuenbancoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\controllers\\contabilidad\\co_cuenbancoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_detallebancos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_detallebancos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_lineacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_lineacredito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_cuenbancos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_cuenbancos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\tipossri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\tipossri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\tiposdoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\tiposdoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\controllers\\contabilidad\\co_cuentascontcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\controllers\\contabilidad\\co_cuentascontcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\controllers\\funcionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\controllers\\funcionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\formas_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\formas_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\sustentotribut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\sustentotribut.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\controllers\\contabilidad\\co_parametroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\controllers\\contabilidad\\co_parametroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\views\\co_parametros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\views\\co_parametros\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_cuentascont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_cuentascont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\views\\pr_movgasto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\views\\pr_movgasto\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\views\\proveedores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\views\\proveedores\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\presupuesto\\pr_partingresos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\presupuesto\\pr_partingresos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\contabilidad\\co_parametros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\contabilidad\\co_parametros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\presupuesto\\pr_proyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\presupuesto\\pr_proyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\documentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\documentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\presupuesto\\pr_actividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\presupuesto\\pr_actividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\poa\\poa_pyhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\poa\\poa_pyhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\firmas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\firmas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\tramites\\tr_historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\tramites\\tr_historial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\models\\presupuesto\\pr_solicdisppresup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\models\\presupuesto\\pr_solicdisppresup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|C:\\ProyectosVS2019\\SIGEFINewx - copia\\sigefinew\\controllers\\presupuesto\\organicofscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{226C96CC-AAC9-41EE-A210-2C8955FEC099}|SIGEFINew\\SIGEFINew.csproj|solutionrelative:sigefinew\\controllers\\presupuesto\\organicofscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CO_CLASIFRETEN.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_CLASIFRETEN.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_CLASIFRETEN.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_CLASIFRETEN.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_CLASIFRETEN.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAA5wE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T19:59:50.621Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\CO_CLASIFRETEN\\Index.cshtml",
+              "RelativeDocumentMoniker": "SIGEFINew\\Views\\CO_CLASIFRETEN\\Index.cshtml",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\CO_CLASIFRETEN\\Index.cshtml",
+              "RelativeToolTip": "SIGEFINew\\Views\\CO_CLASIFRETEN\\Index.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-26T19:07:34.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CO_CLASIFRETENController.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_CLASIFRETENController.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Controllers\\Contabilidad\\CO_CLASIFRETENController.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_CLASIFRETENController.cs",
+              "RelativeToolTip": "SIGEFINew\\Controllers\\Contabilidad\\CO_CLASIFRETENController.cs",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAcwMMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T15:16:33.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CO_RELARETCONT.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_RELARETCONT.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_RELARETCONT.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_RELARETCONT.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_RELARETCONT.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T14:51:44.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CO_CUENBANCOSController.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_CUENBANCOSController.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Controllers\\Contabilidad\\CO_CUENBANCOSController.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_CUENBANCOSController.cs",
+              "RelativeToolTip": "SIGEFINew\\Controllers\\Contabilidad\\CO_CUENBANCOSController.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAcwLYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T15:47:43.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CO_DETALLEBANCOS.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_DETALLEBANCOS.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_DETALLEBANCOS.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_DETALLEBANCOS.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_DETALLEBANCOS.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAqwHMAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:06:58.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CO_LINEACREDITO.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_LINEACREDITO.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_LINEACREDITO.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_LINEACREDITO.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_LINEACREDITO.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAACwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T16:08:10.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CO_CUENBANCOS.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_CUENBANCOS.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_CUENBANCOS.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_CUENBANCOS.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_CUENBANCOS.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAEQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T16:02:38.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TiposSRI.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\TiposSRI.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\TiposSRI.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\TiposSRI.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\TiposSRI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T13:37:20.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TiposDoc.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\TiposDoc.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\TiposDoc.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\TiposDoc.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\TiposDoc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T16:04:27.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FuncionesController.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\FuncionesController.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Controllers\\FuncionesController.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\FuncionesController.cs",
+              "RelativeToolTip": "SIGEFINew\\Controllers\\FuncionesController.cs",
+              "ViewState": "AQIAAKcBAAAAAAAAAIA6wH0BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T19:15:04.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CO_CUENTASCONTController.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_CUENTASCONTController.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Controllers\\Contabilidad\\CO_CUENTASCONTController.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_CUENTASCONTController.cs",
+              "RelativeToolTip": "SIGEFINew\\Controllers\\Contabilidad\\CO_CUENTASCONTController.cs",
+              "ViewState": "AQIAAM4AAAAAAAAAAAAmwOcAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T19:13:55.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FORMAS_PAGO.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\FORMAS_PAGO.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\FORMAS_PAGO.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\FORMAS_PAGO.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\FORMAS_PAGO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-14T16:16:55.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SUSTENTOTRIBUT.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\SUSTENTOTRIBUT.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\SUSTENTOTRIBUT.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\SUSTENTOTRIBUT.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\SUSTENTOTRIBUT.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-14T16:16:02.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CO_PARAMETROSController.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_PARAMETROSController.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Controllers\\Contabilidad\\CO_PARAMETROSController.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Contabilidad\\CO_PARAMETROSController.cs",
+              "RelativeToolTip": "SIGEFINew\\Controllers\\Contabilidad\\CO_PARAMETROSController.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAWwIcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-14T16:12:56.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CO_CUENTASCONT.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_CUENTASCONT.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_CUENTASCONT.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_CUENTASCONT.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_CUENTASCONT.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T20:51:01.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\PR_MOVGASTO\\Create.cshtml",
+              "RelativeDocumentMoniker": "SIGEFINew\\Views\\PR_MOVGASTO\\Create.cshtml",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\PR_MOVGASTO\\Create.cshtml",
+              "RelativeToolTip": "SIGEFINew\\Views\\PR_MOVGASTO\\Create.cshtml",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2024-02-09T16:12:24.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\Proveedores\\Index.cshtml",
+              "RelativeDocumentMoniker": "SIGEFINew\\Views\\Proveedores\\Index.cshtml",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\Proveedores\\Index.cshtml",
+              "RelativeToolTip": "SIGEFINew\\Views\\Proveedores\\Index.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAACoAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2024-02-09T15:51:50.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SIGEFINew\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SIGEFINew\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2024-02-09T13:45:08.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\CO_PARAMETROS\\Create.cshtml",
+              "RelativeDocumentMoniker": "SIGEFINew\\Views\\CO_PARAMETROS\\Create.cshtml",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Views\\CO_PARAMETROS\\Create.cshtml",
+              "RelativeToolTip": "SIGEFINew\\Views\\CO_PARAMETROS\\Create.cshtml",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAlwNEAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-08T19:44:43.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PR_PARTINGRESOS.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_PARTINGRESOS.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Presupuesto\\PR_PARTINGRESOS.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_PARTINGRESOS.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Presupuesto\\PR_PARTINGRESOS.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAuwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-08T15:22:56.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CO_PARAMETROS.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_PARAMETROS.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Contabilidad\\CO_PARAMETROS.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Contabilidad\\CO_PARAMETROS.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Contabilidad\\CO_PARAMETROS.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAKYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-08T13:32:23.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PR_PROYECTOS.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_PROYECTOS.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Presupuesto\\PR_PROYECTOS.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_PROYECTOS.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Presupuesto\\PR_PROYECTOS.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAACYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T21:54:42.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PR_ACTIVIDADES.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_ACTIVIDADES.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Presupuesto\\PR_ACTIVIDADES.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_ACTIVIDADES.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Presupuesto\\PR_ACTIVIDADES.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAC8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T21:36:26.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "POA_PYHISTORIAL.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\POA\\POA_PYHISTORIAL.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\POA\\POA_PYHISTORIAL.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\POA\\POA_PYHISTORIAL.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\POA\\POA_PYHISTORIAL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T21:24:49.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TR_HISTORIAL.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Tramites\\TR_HISTORIAL.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Tramites\\TR_HISTORIAL.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Tramites\\TR_HISTORIAL.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Tramites\\TR_HISTORIAL.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAmwAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T20:50:54.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FIRMAS.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\FIRMAS.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\FIRMAS.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\FIRMAS.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\FIRMAS.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T20:43:56.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Documentos.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Documentos.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Documentos.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Documentos.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Documentos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T20:31:48.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Web.config",
+              "RelativeDocumentMoniker": "SIGEFINew\\Web.config",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Web.config",
+              "RelativeToolTip": "SIGEFINew\\Web.config",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwAwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-02-07T20:27:52.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PR_SOLICDISPPRESUP.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_SOLICDISPPRESUP.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Models\\Presupuesto\\PR_SOLICDISPPRESUP.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Models\\Presupuesto\\PR_SOLICDISPPRESUP.cs",
+              "RelativeToolTip": "SIGEFINew\\Models\\Presupuesto\\PR_SOLICDISPPRESUP.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T20:06:15.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OrganicoFsController.cs",
+              "DocumentMoniker": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Presupuesto\\OrganicoFsController.cs",
+              "RelativeDocumentMoniker": "SIGEFINew\\Controllers\\Presupuesto\\OrganicoFsController.cs",
+              "ToolTip": "C:\\ProyectosVS2019\\SIGEFINewx - copia\\SIGEFINew\\Controllers\\Presupuesto\\OrganicoFsController.cs",
+              "RelativeToolTip": "SIGEFINew\\Controllers\\Presupuesto\\OrganicoFsController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-07T19:55:04.883Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,825 @@
+﻿@model SIGEFINew.Models.Presupuesto.PartEgreso
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Partida de Egreso (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Partida de Egreso (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @if (ViewBag.EsNuevo == 0)
+                {
+                    @Html.HiddenFor(model => model.PAEG_CODIGO)
+                }
+                @Html.HiddenFor(model => model.PAEG_CLAVE)
+                @Html.HiddenFor(model => model.PAEG_NOMBRE)
+
+                @*Programas*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROG_CODIGO, "Programa", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            @Html.DropDownList("PROG_CODIGO", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                            @Html.ValidationMessageFor(model => model.PROG_CODIGO, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="prog" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+
+                                <button id="editProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+
+                                <button id="borraProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <div id="Program">
+
+                        </div>
+                    </div>
+                </div>
+
+                @*SubProgramas*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SUBP_CODIGO, "Subprograma", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @*@Html.DropDownListFor(model => model.SUBP_CODIGO, new SelectList(" "), "Eija un Subprograma", new { @class = "form-control select2 input-sm" })*@
+                        <div class="input-group">
+                            @Html.DropDownList("SUBP_CODIGO", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                            @Html.ValidationMessageFor(model => model.SUBP_CODIGO, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="AddSubProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+
+                                <button id="EditSubProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+
+                                <button id="BorraSubProg" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <div id="SubProgram">
+
+                        </div>
+                    </div>
+                </div>
+
+                @*Proyectos*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROY_CODIGO, "Proyecto", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @*@Html.DropDownListFor(model => model.PROY_CODIGO, new SelectList(" "), "Eija un Proyecto", new { @class = "form-control select2 input-sm" })*@
+                        <div class="input-group">
+                            @Html.DropDownList("PROY_CODIGO", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                            @Html.ValidationMessageFor(model => model.PROY_CODIGO, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="AddProy" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+
+                                <button id="EditProy" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+
+                                <button id="BorraProy" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <div id="Proys">
+
+                        </div>
+                    </div>
+                </div>
+
+                @*Actividades*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ACTI_CODIGO, "Actividad", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @* @Html.DropDownListFor(model => model.ACTI_CODIGO, new SelectList(" "), "Eija una Actividad", new { @class = "form-control select2 input-sm" })*@
+                        <div class="input-group">
+                            @Html.DropDownList("ACTI_CODIGO", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                            @Html.ValidationMessageFor(model => model.ACTI_CODIGO, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="AddActiv" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+
+                                <button id="EditActiv" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+
+                                <button id="BorraActiv" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <div id="Activs">
+
+                        </div>
+                    </div>
+                </div>
+
+                @*Grupos*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GRUP_CODIGO, "Grupo", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            @Html.DropDownList("GRUP_CODIGO", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                            @Html.ValidationMessageFor(model => model.GRUP_CODIGO, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="AddGrupo" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+
+                                <button id="EditGrupo" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+
+                                <button id="BorraGrupo" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <div id="Grupos">
+
+                        </div>
+                    </div>
+                </div>
+
+                @*Items*@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ITEM_CLAVE, "Item", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            @Html.DropDownList("ITEM_CLAVE", null, htmlAttributes: new { @class = "form-control select2 input-sm", @style = "width: 100%;" })
+                            @Html.ValidationMessageFor(model => model.ITEM_CLAVE, "", new { @class = "text-danger" })
+                            <span class="input-group-btn">
+                                <button id="AddItem" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Nuevo">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+
+                                <button id="EditItem" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Editar">
+                                    <span class="fa fa-edit"></span>
+                                </button>
+
+                                <button id="BorraItem" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Borrar">
+                                    <span class="fa fa-remove"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <div id="Items">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.LabelFor(model => model.ITEM_FINANC, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.ITEM_FINANC, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ITEM_FINANC, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.ITEM_ORGAN, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.ITEM_ORGAN, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ITEM_ORGAN, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.ITEM_CORRE, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.ITEM_CORRE, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ITEM_CORRE, "", new { @class = "text-danger" })
+                    </div>
+                    @Html.LabelFor(model => model.ITEM_FUNC, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.ITEM_FUNC, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ITEM_FUNC, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(model => model.ITEM_ORIGTO, htmlAttributes: new { @class = "control-label col-md-1" })
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.ITEM_ORIGTO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ITEM_ORIGTO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                </div>
+
+                <div class="col-md-offset-9 col-md-10">
+                    @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- jQuery 3 -->
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+    $('.select2').select2();
+    //CargaGrupos();
+    //Proceso de Carga de Programas
+    function CargaProgramas() {
+        var url = "@Url.Action("LLenaProgramas", "Funciones")";
+
+             $("#PROG_CODIGO").empty();
+             $.post(url).done(function(data) {
+                 $.each(data, function (index, row) {
+                     $("#PROG_CODIGO").append("<option value='" + row.PROG_CODIGO + "'>" + row.PROG_NOMBRE + "</option>")
+                });
+
+            });
+    }
+
+    //Proceso de Carga de SubProgramas
+    function CargaSubProgramas() {
+        var progcod = $("#PROG_CODIGO").val();
+        var url = "@Url.Action("LLenaSubProgramas", "Proyectoes")";
+        var data = { CodProg: progcod }
+        $("#SUBP_CODIGO").empty();
+        $.post(url, data).done(function(data) {
+              $.each(data, function (index, row) {
+                     $("#SUBP_CODIGO").append("<option value='" + row.SUBP_CODIGO + "'>" + row.PROG_NOMBRE + "</option>")
+              });
+
+        });
+    }
+
+    //Proceso de Carga de Proyectos
+    function CargaProyectos() {
+        var subpcod = $("#SUBP_CODIGO").val();
+        var progcod = $("#PROG_CODIGO").val();
+        var url = "@Url.Action("LLenaProyectos", "Actividads")";
+        var data = { SubPCod: subpcod, ProgCod: progcod }
+        $("#PROY_CODIGO").empty();
+        $.post(url, data).done(function (data) {
+             $.each(data, function (index, row) {
+                 $("#PROY_CODIGO").append("<option value='" + row.PROY_CODIGO + "'>" + row.PROY_CODIGO + " " + row.PROY_NOMBRE  + "</option>")
+             });
+        });
+    }
+
+    //Proceso de Carga de Actividades
+    function CargaActividades() {
+        var subpcod = $("#PROY_CODIGO").val();
+            var url = "@Url.Action("LLenaActividades", "Actividads")";
+            var data = { Proyec: subpcod }
+            $("#ACTI_CODIGO").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#ACTI_CODIGO").append("<option value='" + row.ACTI_CODIGO + "'>" + row.ACTI_NOMBRE + "</option>")
+                });
+
+            });
+    }
+
+     //Proceso de Carga de Grupos
+    function CargaGrupos() {
+        var url = "@Url.Action("LLenaGrupos", "Funciones")";
+        var data = { Tipo: "E" }
+             $("#GRUP_CODIGO").empty();
+             $.post(url,data).done(function(data) {
+                 $.each(data, function (index, row) {
+                     //$("#GRUP_CODIGO").append("<option value='" + row.GRUP_CODIGO + "'>" + row.GRUP_NOMBRE + "</option>")
+                     if (row.NIVEL == 3 || row.GRUP_CODIGO=="") {
+                         $("#GRUP_CODIGO").append("<option value='" + row.GRUP_CODIGO + "'>" + row.GRUP_NOMBRE + "</option>")
+                     }
+                     else if (row.NIVEL >= 1 && row.NIVEL<=2){
+                         $("#GRUP_CODIGO").append("<option value='" + row.GRUP_CODIGO + "' disabled>" + row.GRUP_NOMBRE + "</option>")
+                     }
+
+                });
+            });
+    }
+
+    //Proceso de Carga de Items
+    function CargaItems(){
+        var subpcod = $("#GRUP_CODIGO").val();
+            var url = "@Url.Action("LLenaItems", "Funciones")";
+            var data = { Grupo: subpcod }
+            $("#ITEM_CLAVE").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#ITEM_CLAVE").append("<option value='" + row.ITEM_CLAVE + "'>" + row.ITEM_NOMBRE + "</option>")
+                });
+
+            });
+    }
+
+    $("#PROG_CODIGO").change(function () {
+        CargaSubProgramas();
+     });
+
+    $("#SUBP_CODIGO").change(function () {
+        CargaProyectos();
+    });
+
+    $("#PROY_CODIGO").change(function () {
+        CargaActividades();
+    });
+
+    $("#GRUP_CODIGO").change(function () {
+        CargaItems();
+    });
+
+    $("#ITEM_CLAVE").change(function () {
+        var progcod = $("#PROG_CODIGO").val();
+        var subpcod = $("#ITEM_CLAVE option:selected").text();
+        var res = subpcod.replace($("#ITEM_CLAVE").val(), '');
+        $("#PAEG_NOMBRE").val(res);
+        $("#PAEG_CLAVE").val("0");
+           //alert("Hola Mundo con jQuery!" + " "+subpcod);
+    });
+
+    //Proceso de Programas
+    $('#prog').click(function () {
+        $(this).prop("disabled", true);
+        $('#editProg').prop("disabled", true);
+        $('#borraProg').prop("disabled", true);
+        var url = "@Url.Action("_CreateProgram", "PartIngresoes")";
+        var data = {EsNuevo: 1 };
+        $.get(url, data).done(function (data) {
+             $("#Program").append(data);
+        });
+
+    });
+
+    $('#editProg').click(function () {
+        //$(this).prop("disabled",true);
+        var url = "@Url.Action("_CreateProgram", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var data = { id:IdProg, EsNuevo: 0 };
+        if (IdProg >= 0) {
+            $(this).prop("disabled", true);
+            $('#prog').prop("disabled", true);
+            $('#borraProg').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Program").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    $('#borraProg').click(function () {
+        //$(this).prop("disabled",true);
+        var url = "@Url.Action("_CreateProgram", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var data = { id:IdProg, EsNuevo: 2 };
+        if (IdProg >= 0) {
+            $(this).prop("disabled", true);
+            $('#prog').prop("disabled", true);
+            $('#editprog').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Program").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    function Hide(id, Nuevo) {
+        var url = "@Url.Action("GuardaProg", "PartIngresoes")";
+        var CodProg = $("#pc").val();
+        var NomProg = $("#PROG_NOMBRE").val();
+        var data = { EsNuevo: Nuevo, PROG_CODIGO: CodProg, PROG_NOMBRE: NomProg }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                $('#prog').prop("disabled", false);
+                $('#editProg').prop("disabled", false);
+                $('#borraProg').prop("disabled", false);
+                $("#Program").empty();
+                CargaProgramas();
+                break;
+        }
+    }
+
+    function HideProg() {
+        $("#Program").empty();
+        $('#prog').prop("disabled", false);
+        $('#editProg').prop("disabled", false);
+        $('#borraProg').prop("disabled", false);
+    }
+
+    //Proceso de SubProgramas
+    $('#AddSubProg').click(function () {
+        var IdProg = $("#PROG_CODIGO").val();
+        var url = "@Url.Action("_CreateSubProgram", "PartIngresoes")";
+        var data = { prog: IdProg, EsNuevo: 1 };
+        if (IdProg >= 0) {
+            $.get(url, data).done(function (data) {
+                $(this).prop("disabled", true);
+                $('#EditSubProg').prop("disabled", true);
+                $('#BorraSubProg').prop("disabled", true);
+                $("#SubProgram").append(data);
+             });
+         }
+
+    });
+
+    $('#EditSubProg').click(function () {
+        var url = "@Url.Action("_CreateSubProgram", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var data = { id: IdSubProg,prog:IdProg, EsNuevo: 0 };
+        if (IdProg >= 0 && IdSubProg >= 0) {
+            $(this).prop("disabled", true);
+            $('#AddSubProg').prop("disabled", true);
+            $('#BorraSubProg').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#SubProgram").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    $('#BorraSubProg').click(function () {
+        //$(this).prop("disabled",true);
+        var url = "@Url.Action("_CreateSubProgram", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var data = { id: IdSubProg, prog:IdProg, EsNuevo: 2 };
+        if (IdProg >= 0 && IdSubProg >= 0) {
+            $(this).prop("disabled", true);
+           $('#AddSubProg').prop("disabled", true);
+            $('#EditSubProg').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#SubProgram").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    function HideSP(id, Nuevo) {
+        var url = "@Url.Action("GuardaSubProg", "PartIngresoes")";
+        var CodProg = $("#PROG_CODIGO").val();
+        var CodSubProg = $("#pc").val();
+        var NomProg = $("#PROG_NOMBRE").val();
+        var data = { EsNuevo: Nuevo, SUBP_CODIGO: CodSubProg, PROG_CODIGO: CodProg, PROG_NOMBRE: NomProg }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                HideSubProg();
+                CargaSubProgramas();
+                break;
+        }
+    }
+
+    function HideSubProg() {
+        $("#SubProgram").empty();
+        $('#AddSubProg').prop("disabled", false);
+        $('#EditSubProg').prop("disabled", false);
+        $('#BorraSubProg').prop("disabled", false);
+    }
+
+//Proceso de Proyectos
+    $('#AddProy').click(function () {
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var url = "@Url.Action("_CreateProyectos", "PartIngresoes")";
+        var data = { subprog: IdSubProg, prog: IdProg, EsNuevo: 1 };
+        if (IdProg >= 0 && IdSubProg >= 0) {
+            $.get(url, data).done(function (data) {
+                $('#AddProy').prop("disabled", true);
+                $('#EditProy').prop("disabled", true);
+                $('#BorraProy').prop("disabled", true);
+                $("#Proys").append(data);
+             });
+         }
+
+    });
+
+    $('#EditProy').click(function () {
+        var url = "@Url.Action("_CreateProyectos", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var CodProy = $("#PROY_CODIGO").val();
+        var data = { id: CodProy, subprog: IdSubProg, prog: IdProg, EsNuevo: 0 };
+        if (IdProg >= 0 && IdSubProg >= 0 && CodProy != "") {
+            $('#EditProy').prop("disabled", true);
+            $('#AddProy').prop("disabled", true);
+            $('#BorraProy').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Proys").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    $('#BorraProy').click(function () {
+        //$(this).prop("disabled",true);
+        var url = "@Url.Action("_CreateProyectos", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var CodProy = $("#PROY_CODIGO").val();
+        var data = { id: CodProy, subprog: IdSubProg, prog: IdProg, EsNuevo: 2 };
+        if (IdProg >= 0 && IdSubProg >= 0 && CodProy != "") {
+            $('#BorraProy').prop("disabled", true);
+            $('#EditProy').prop("disabled", true);
+            $('#AddProy').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Proys").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    function HidePR(id, Nuevo) {
+        var url = "@Url.Action("Guardaproyectos", "PartIngresoes")";
+        var CodProg = $("#PROG_CODIGO").val();
+        var CodSubProg = $("#SUBP_CODIGO").val();
+        var CodProy = $("#pc").val();
+        var NomProy = $("#PROY_NOMBRE").val();
+        var data = { EsNuevo: Nuevo, SUBP_CODIGO: CodSubProg, PROG_CODIGO: CodProg, PROY_CODIGO: CodProy, PROY_NOMBRE: NomProy }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                HideSubProy();
+                CargaProyectos();
+                break;
+        }
+    }
+
+    function HideSubProy() {
+        $("#Proys").empty();
+        $('#AddProy').prop("disabled", false);
+        $('#EditProy').prop("disabled", false);
+        $('#BorraProy').prop("disabled", false);
+    }
+
+//Proceso de Actividades
+    $('#AddActiv').click(function () {
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var IdProy = $("#PROY_CODIGO").val();
+        var url = "@Url.Action("_CreateActividades", "PartIngresoes")";
+        var data = { subprog: IdSubProg, prog: IdProg, proy: IdProy, EsNuevo: 1 };
+        if (IdProg >= 0 && IdSubProg >= 0 && IdProy != "") {
+            $.get(url, data).done(function (data) {
+                $('#AddActiv').prop("disabled", true);
+                $('#EditActiv').prop("disabled", true);
+                $('#BorraActiv').prop("disabled", true);
+                $("#Activs").append(data);
+             });
+         }
+
+    });
+
+    $('#EditActiv').click(function () {
+        var url = "@Url.Action("_CreateActividades", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var CodProy = $("#PROY_CODIGO").val();
+        var CodAct = $("#ACTI_CODIGO").val();
+        var data = { id: CodAct, subprog: IdSubProg, prog: IdProg, proy: CodProy, EsNuevo: 0 };
+        if (IdProg >= 0 && IdSubProg >= 0 && CodProy != "" && CodAct != "" ) {
+            $('#EditActiv').prop("disabled", true);
+            $('#AddActiv').prop("disabled", true);
+            $('#BorraActiv').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Activs").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    $('#BorraActiv').click(function () {
+        var url = "@Url.Action("_CreateActividades", "PartIngresoes")";
+        var IdProg = $("#PROG_CODIGO").val();
+        var IdSubProg = $("#SUBP_CODIGO").val();
+        var CodProy = $("#PROY_CODIGO").val();
+        var CodAct = $("#ACTI_CODIGO").val();
+        var data = { id: CodAct, subprog: IdSubProg, prog: IdProg, proy: CodProy, EsNuevo: 2 };
+        if (IdProg >= 0 && IdSubProg >= 0 && CodProy != "" && CodAct != "") {
+            $('#BorraProy').prop("disabled", true);
+            $('#EditProy').prop("disabled", true);
+            $('#AddProy').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Activs").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    function HideAC(id, Nuevo) {
+        var url = "@Url.Action("GuardaActividades", "PartIngresoes")";
+        var CodProg = $("#PROG_CODIGO").val();
+        var CodSubProg = $("#SUBP_CODIGO").val();
+        var CodProy = $("#PROY_CODIGO").val();
+        var CodActiv = $("#pc").val();
+        var NomActiv = $("#ACTI_NOMBRE").val();
+        var data = { EsNuevo: Nuevo, SUBP_CODIGO: CodSubProg, PROG_CODIGO: CodProg, PROY_CODIGO: CodProy, ACTI_CODIGO: CodActiv, ACTI_NOMBRE: NomActiv }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                HideActivs();
+                CargaActividades();
+                break;
+        }
+    }
+
+    function HideActivs() {
+        $("#Activs").empty();
+        $('#AddActiv').prop("disabled", false);
+        $('#EditActiv').prop("disabled", false);
+        $('#BorraActiv').prop("disabled", false);
+    }
+
+     //Proceso de Grupos
+    $('#AddGrupo').click(function () {
+        $('#AddGrupo').prop("disabled", true);
+        $('#EditGrupo').prop("disabled", true);
+        $('#BorraGrupo').prop("disabled", true);
+        var url = "@Url.Action("_CreateGrupos", "PartIngresoes")";
+        var data = {EsNuevo: 1 };
+        $.get(url, data).done(function (data) {
+             $("#Grupos").append(data);
+        });
+
+    });
+
+    $('#EditGrupo').click(function () {
+        var url = "@Url.Action("_CreateGrupos", "PartIngresoes")";
+        var IdGrupo = $("#GRUP_CODIGO").val();
+        var data = { id: IdGrupo, EsNuevo: 0 };
+        if (IdGrupo != "") {
+            $('#EditGrupo').prop("disabled", true);
+            $('#AddGrupo').prop("disabled", true);
+            $('#BorraGrupo').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Grupos").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    $('#BorraGrupo').click(function () {
+        //$(this).prop("disabled",true);
+        var url = "@Url.Action("_CreateGrupos", "PartIngresoes")";
+        var IdGrupo = $("#GRUP_CODIGO").val();
+        var data = { id: IdGrupo, EsNuevo: 2 };
+        if (IdGrupo != "") {
+            $('#AddGrupo').prop("disabled", true);
+            $('#AddGrupo').prop("disabled", true);
+            $('#BorraGrupo').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Grupos").append(data);
+                $("#pc").prop("disabled", true);
+            });
+        }
+    });
+
+    function HideGR(id, Nuevo) {
+        var url = "@Url.Action("GuardaGrupos", "PartIngresoes")";
+        var CodGrupo = $("#pc").val();
+        var NomGrupo = $("#GRUP_NOMBRE").val();
+        var data = { EsNuevo: Nuevo, GRUP_CODIGO: CodGrupo, GRUP_NOMBRE: NomGrupo }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                $('#AddGrupo').prop("disabled", false);
+                $('#EditGrupo').prop("disabled", false);
+                $('#BorraGrupo').prop("disabled", false);
+                $("#Grupos").empty();
+                CargaGrupos();
+                break;
+        }
+    }
+
+    function HideGrupo() {
+        $("#Grupos").empty();
+        $('#AddGrupo').prop("disabled", false);
+        $('#EditGrupo').prop("disabled", false);
+        $('#BorraGrupo').prop("disabled", false);
+    }
+
+    //Proceso de Items
+    $('#AddItem').click(function () {
+        var IdGrup = $("#GRUP_CODIGO").val();
+        var url = "@Url.Action("_CreateItems", "PartIngresoes")";
+        var data = { Grupo: IdGrup, EsNuevo: 1 };
+        if (IdGrup != "") {
+            $.get(url, data).done(function (data) {
+                $(this).prop("disabled", true);
+                $('#EditItem').prop("disabled", true);
+                $('#BorraItem').prop("disabled", true);
+                $("#Items").append(data);
+             });
+         }
+
+    });
+
+    $('#EditItem').click(function () {
+        var url = "@Url.Action("_CreateItems", "PartIngresoes")";
+        var IdGrup = $("#GRUP_CODIGO").val();
+        var ItemClave = $("#ITEM_CLAVE").val();
+        var data = { id: ItemClave, Grupo: IdGrup, EsNuevo: 0 };
+        if (IdGrup != "" && ItemClave != "") {
+            $(this).prop("disabled", true);
+            $('#AddItem').prop("disabled", true);
+            $('#BorraItem').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Items").append(data);
+                $("#pc").prop("disabled", true);
+                $("#pc2").prop("disabled", true);
+            });
+        }
+    });
+
+    $('#BorraItem').click(function () {
+        var url = "@Url.Action("_CreateItems", "PartIngresoes")";
+        var IdGrup = $("#GRUP_CODIGO").val();
+        var ItemClave = $("#ITEM_CLAVE").val();
+        var data = { id: ItemClave, Grupo: IdGrup, EsNuevo: 2 };
+        if (IdGrup != "" && ItemClave != "") {
+            $(this).prop("disabled", true);
+            $('#AddItem').prop("disabled", true);
+            $('#BorraItem').prop("disabled", true);
+            $.get(url, data).done(function (data) {
+                $("#Items").append(data);
+                $("#pc").prop("disabled", true);
+                $("#pc2").prop("disabled", true);
+            });
+        }
+    });
+
+    function HideIT(id, Nuevo) {
+        var url = "@Url.Action("GuardaItems", "PartIngresoes")";
+        var GrupCod = $("#GRUP_CODIGO").val();
+        var ItemCod = $("#pc").val();
+        var ItemSub = $("#pc2").val();
+        var NomItem= $("#ITEM_NOMBRE").val();
+        var data = { EsNuevo: Nuevo, GRUP_CODIGO: GrupCod, ITEM_CODIGO: ItemCod, ITEM_SUBITEM: ItemSub, ITEM_NOMBRE: NomItem }
+        switch (id) {
+            case 1:
+                $.post(url, data).done(function (data) {
+
+                });
+                HideItem();
+                CargaItems();
+                break;
+        }
+    }
+
+    function HideItem() {
+        $("#Items").empty();
+        $('#AddItem').prop("disabled", false);
+        $('#EditItem').prop("disabled", false);
+        $('#BorraItem').prop("disabled", false);
+    }
+</script>

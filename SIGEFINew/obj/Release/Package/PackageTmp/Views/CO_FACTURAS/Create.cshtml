@@ -1,0 +1,373 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_FACTURAS
+@{
+    ViewBag.Title = "Facturas";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Factura (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Factura (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+            @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+            @Html.HiddenFor(model => model.COD_TIPO_DOC, new { @Value = ViewBag.CodTDoc })
+            @Html.HiddenFor(model => model.TIPOSRI, new { @Value = ViewBag.TipoSRI })
+            @Html.HiddenFor(model => model.FECHA, new { @Value = ViewBag.Fecha })
+            @*@Html.HiddenFor(model => model.CTA_X_PAG, new { @Value = 0 })*@
+            @*@Html.HiddenFor(model => model.CTA_DEBITO, new { @Value = 0 })*@
+            <div class="form-group">
+                @Html.LabelFor(model => model.COD_PROV, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("COD_PROV", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                    @Html.ValidationMessageFor(model => model.COD_PROV, "", new { @class = "text-danger" })
+                    <div>
+                        <div id="NIden"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.COD_TIPO_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("COD_TIPO_DOC", null, htmlAttributes: new { @class = "form-control input-sm", @onchange = "TipoDoc(this.value ,id)" })
+                    @Html.ValidationMessageFor(model => model.COD_TIPO_DOC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.NUM_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.NUM_DOC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.NUM_DOC, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.NUM_COMPROMISO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.DropDownList("NUM_COMPROMISO", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                    @Html.ValidationMessageFor(model => model.NUM_COMPROMISO, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div>
+                    <div id="SaldoComp"></div>
+                </div>
+            </div>
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.COD_TIPO_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.COD_TIPO_DOC, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.COD_TIPO_DOC, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.TIPOSRI, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TIPOSRI, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TIPOSRI, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.FECHA, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FECHA, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FECHA, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+            <div class="form-group">
+                @Html.LabelFor(model => model.FECHA_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.FECHA_DOC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.FECHA_DOC, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.LabelFor(model => model.FECHACAD_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.FECHACAD_DOC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.FECHACAD_DOC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.VALOR_DOC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.VALOR_DOC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.VALOR_DOC, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.IVA_PORC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.IVA_PORC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.IVA_PORC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TOT_IVA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.TOT_IVA, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.TOT_IVA, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.TOTAL, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.TOTAL, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.TOTAL, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.IG, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IG)
+                    @Html.ValidationMessageFor(model => model.IG, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>*@
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AUTORIZACION, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.AUTORIZACION, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.AUTORIZACION, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CTA_X_PAG, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("CTA_X_PAG", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                    @Html.ValidationMessageFor(model => model.CTA_X_PAG, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CTA_DEBITO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("CTA_DEBITO", null, htmlAttributes: new { @class = "form-control input-sm select2" })
+                    @Html.ValidationMessageFor(model => model.CTA_DEBITO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.COD_SUSTENTO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("COD_SUSTENTO", null, htmlAttributes: new { @class = "form-control input-sm " })
+                    @Html.ValidationMessageFor(model => model.COD_SUSTENTO, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.FORMA_PAGO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("FORMA_PAGO", null, htmlAttributes: new { @class = "form-control input-sm " })
+                    @Html.ValidationMessageFor(model => model.FORMA_PAGO, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+            @*<div class="form-group">
+            @Html.LabelFor(model => model.APLICADO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.APLICADO)
+                    @Html.ValidationMessageFor(model => model.APLICADO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>*@
+
+            <div class="form-group">
+                <div class="col-md-offset-6 col-md-6">
+                    @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                    <button id="saveOrder" type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span> Aceptar
+                    </button>
+                </div>
+                @*<div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>*@
+            </div>
+        </div>
+        </div>
+    </div>
+}
+
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="~/Scripts/select2.min.js"></script>
+<script>
+    $('.select2').select2();
+
+    $("#VALOR_DOC").focusout(function () {
+        Total();
+    });
+
+    $("#IVA_PORC").focusout(function () {
+        Total();
+    });
+
+    function Total() {
+        var ValorDoc = $("#VALOR_DOC").val();
+        var PorcIva = $("#IVA_PORC").val();
+
+        var ValIVA = (ValorDoc * PorcIva / 100);
+
+        var Total = parseFloat(ValorDoc) + parseFloat(ValIVA);
+
+        $("#TOT_IVA").val(ValIVA);
+        $("#TOTAL").val(Total);
+    }
+
+     $("#COD_PROV").change(function () {
+        var idprov = $("#COD_PROV").val();
+
+        var url = "@Url.Action("TipoIdentif", "Funciones")";
+        var url2 = "@Url.Action("FillCompromXProv", "Funciones")";
+
+        var data = { CodProv: idprov }
+        document.getElementById('NIden').innerHTML = "";
+        $.post(url, data).done(function (data) {
+            document.getElementById('NIden').innerHTML = data;
+
+        });
+
+        $("#NUM_COMPROMISO").empty();
+        if ($("#COD_PROV").val() != "0") {
+            $.post(url2, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    $("#NUM_COMPROMISO").append("<option value='" + row.NUM_COMPROMISO + "'>" + row.NUM_COMPROMISO + "</option>")
+                 });
+            });
+        }
+        //alert("Hola Mundo con jQuery!" + $("#NIden").val());
+    });
+
+    $("#NUM_COMPROMISO").change(function () {
+
+        GetSaldoComp();
+        CargaCuentasCxP();
+        //GetDetalleComp();
+    });
+
+    function GetSaldoComp() {
+    document.getElementById('SaldoComp').innerHTML ="Saldo : 0";
+        var idprov = $("#NUM_COMPROMISO").val();
+        var url = "@Url.Action("GetSaldoComprom", "Funciones")";
+        var data = { NumComp: idprov }
+        $.post(url, data).done(function (data) {
+            document.getElementById('SaldoComp').innerHTML ="Saldo : "+ data;
+            //alert("Hola Mundo con jQuery!" + data);
+        });
+    }
+
+    function GetDetalleComp() {
+        var idprov = $("#NUM_COMPROMISO").val();
+        var url = "@Url.Action("GetDetalleComprom", "Funciones")";
+        var data = { NumComp: idprov }
+        $.post(url, data).done(function (data) {
+            $("#DETALLE").val(data);
+
+        });
+    }
+
+    function TipoDoc(id, Nuevo) {
+        var url = "@Url.Action("GetTipoSRI", "Funciones")";
+        var url2 = "@Url.Action("GetPorcIVA", "Funciones")";
+        var data = { CodItem: id }
+        $.post(url, data).done(function (data) {
+            $("#TIPOSRI").val(data);
+             if (data == "01") {
+                $("#NUM_DOC").val("001001");
+
+                $.post(url2).done(function (data) {
+                    $("#IVA_PORC").val(data);
+
+                });
+                 $("#FECHA_DOC").focus();
+                 document.getElementById('NUM_DOC').minlength = 15;
+            }
+            else {
+                 $("#NUM_DOC").val("");
+                 $("#IVA_PORC").val("");
+            }
+
+        });
+    }
+
+    $("#CTA_X_PAG").change(function () {
+        if ($("#NUM_COMPROMISO").val() == 0) {
+            CargaCuentasDebito();
+        }
+        else {
+            CargaCuentasDebitoComp();
+        }
+    });
+
+    //Proceso de Carga de Cuentas por Pagar
+    function CargaCuentasCxP() {
+        var progcod = $("#NUM_COMPROMISO").val();
+        var url = "@Url.Action("LLenaCuentasCxP", "Funciones")";
+        var data = { NumC: progcod }
+        $("#CTA_X_PAG").empty();
+        $.post(url, data).done(function(data) {
+              $.each(data, function (index, row) {
+                  $("#CTA_X_PAG").append("<option value='" + row.CODIGO_CG + "'>" + row.NOMBRE_CG + "</option>")
+              });
+
+        });
+    }
+
+    //Proceso de Carga de Cuentas de Débito
+    function CargaCuentasDebito() {
+        var progcod = $("#CTA_X_PAG").val();
+        var url = "@Url.Action("LLenaCuentasDebito", "Funciones")";
+        var data = { CodCta: progcod }
+        $("#CTA_DEBITO").empty();
+        $.post(url, data).done(function(data) {
+              $.each(data, function (index, row) {
+                  $("#CTA_DEBITO").append("<option value='" + row.CODIGO_CG + "'>" + row.NOMBRE_CG + "</option>")
+              });
+
+        });
+    }
+
+     //Proceso de Carga de Cuentas de Débito con Compromiso
+    function CargaCuentasDebitoComp() {
+        var progcod = $("#CTA_X_PAG").val();
+        var NComp = $("#NUM_COMPROMISO").val();
+        var url = "@Url.Action("LLenaCuentasDebitoComp", "Funciones")";
+        var data = { CodCta: progcod, NumC:NComp }
+        $("#CTA_DEBITO").empty();
+        $.post(url, data).done(function(data) {
+              $.each(data, function (index, row) {
+                  $("#CTA_DEBITO").append("<option value='" + row.CODIGO_CG + "'>" + row.NOMBRE_CG + "</option>")
+              });
+
+        });
+    }
+</script>

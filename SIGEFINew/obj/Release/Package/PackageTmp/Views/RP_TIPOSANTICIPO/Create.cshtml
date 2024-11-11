@@ -1,0 +1,230 @@
+﻿@model SIGEFINew.Models.Nomina.RP_TIPOSANTICIPO
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Tipo de Anticipo (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Tipo de Anticipo (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+            @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_TIPOANTICIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @if (ViewBag.EsNuevo == 1)
+                    {
+                        @Html.EditorFor(model => model.ID_TIPOANTICIPO, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @Value = "0" } })
+                    }
+                    else
+                    {
+                        @Html.EditorFor(model => model.ID_TIPOANTICIPO, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                    }
+                    @Html.ValidationMessageFor(model => model.ID_TIPOANTICIPO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DESCRIPCION_ANTICIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.DESCRIPCION_ANTICIPO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.DESCRIPCION_ANTICIPO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LIMITE_CUOTAS, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.LIMITE_CUOTAS, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.LIMITE_CUOTAS, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PORC_DESCDIC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.PORC_DESCDIC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.PORC_DESCDIC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LIMITE_MONTO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.LIMITE_MONTO, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LIMITE_MONTO, "", new { @class = "text-danger" })
+                </div>
+                @Html.LabelFor(model => model.TIPO_SUELDO, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    @Html.DropDownList("TIPO_SUELDO", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.TIPO_SUELDO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID_TIPONOMINA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    @Html.DropDownList("ID_TIPONOMINA", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ID_TIPONOMINA, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-offset-9 col-md-10">
+                @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                <button id="saveOrder" type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
+}
+
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+
+<br />
+<br />
+
+@if (@ViewBag.MsgError != null)
+{
+    <div class="col-md-12">
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+            @ViewBag.MsgError
+        </div>
+    </div>
+}
+
+
+@*@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+    List<SIGEFINew.ViewModels.AsignaProductos> Productos = ViewBag.Prods;
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">Datos Principales</div>
+                <div class="panel-body">
+                    @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+                    @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ID_TIPOANTICIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @if (ViewBag.EsNuevo == 1)
+                            {
+                                @Html.EditorFor(model => model.ID_TIPOANTICIPO, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly", @Value = "0" } })
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.ID_TIPOANTICIPO, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                            }
+                            @Html.ValidationMessageFor(model => model.ID_TIPOANTICIPO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DESCRIPCION_ANTICIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-6">
+                            @Html.EditorFor(model => model.DESCRIPCION_ANTICIPO, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.DESCRIPCION_ANTICIPO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LIMITE_CUOTAS, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.LIMITE_CUOTAS, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.LIMITE_CUOTAS, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PORC_DESCDIC, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.PORC_DESCDIC, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                            @Html.ValidationMessageFor(model => model.PORC_DESCDIC, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LIMITE_MONTO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.EditorFor(model => model.LIMITE_MONTO, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LIMITE_MONTO, "", new { @class = "text-danger" })
+                        </div>
+                        @Html.LabelFor(model => model.TIPO_SUELDO, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2">
+                            @Html.DropDownList("TIPO_SUELDO", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TIPO_SUELDO, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ID_TIPONOMINA, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-6">
+                            @Html.DropDownList("ID_TIPONOMINA", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ID_TIPONOMINA, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button id="saveOrder" type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}*@
+
+<script>
+    $(document).ready(function () {
+         $('#DESCRIPCION_ANTICIPO').keyup(function () {
+            var datos = new String($('#DESCRIPCION_ANTICIPO').val());
+            datos = datos.toUpperCase(datos);
+            $('#DESCRIPCION_ANTICIPO').val(datos);
+         })
+
+        if (@ViewBag.EsNuevo== 1) {
+            $("#LIMITE_CUOTAS").val(1);
+            $("#LIMITE_MONTO").val(1);
+            $("#PORC_DESCDIC").val(0);
+        }
+
+    })
+</script>
+

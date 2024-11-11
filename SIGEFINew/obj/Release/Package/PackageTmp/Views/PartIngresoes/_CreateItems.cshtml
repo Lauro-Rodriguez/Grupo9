@@ -1,0 +1,50 @@
+﻿@model SIGEFINew.Models.Presupuesto.Item
+<div class="panel-info">
+    <div class="panel-heading">
+        Datos del Item
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-2">
+                @Html.Editor("GRUP_CODIGO", new { htmlAttributes = new { @class = "form-control input-sm", @Readonly="disabled" } })
+                @Html.ValidationMessage("GRUP_CODIGO", "", new { @class = "text-danger" })
+            </div>
+
+            @*@Html.LabelFor(model => model.PROG_CODIGO, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-2">
+                @Html.Editor("ITEM_CODIGO", new { htmlAttributes = new { @class = "form-control input-sm", id = "pc" } })
+                @Html.ValidationMessage("ITEM_CODIGO", "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-2">
+                @Html.Editor("ITEM_SUBITEM", new { htmlAttributes = new { @class = "form-control input-sm", id = "pc2" } })
+                @Html.ValidationMessage("ITEM_SUBITEM", "", new { @class = "text-danger" })
+            </div>
+
+            @*@Html.LabelFor(model => model.PROG_NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.Editor("ITEM_NOMBRE", new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessage("ITEM_NOMBRE", "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <button onclick="HideIT(1,@ViewBag.EsNuevo)" type="button" class="btn btn-success btn-sm" data-toggle="tooltip" title="Aceptar">
+                    <span class="fa fa-check"></span>
+                </button>
+
+                <button onclick="HideItem()" type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Cancelar">
+                    <span class="fa fa-remove"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#ITEM_NOMBRE').keyup(function () {
+        var datos = new String($('#ITEM_NOMBRE').val());
+        datos = datos.toUpperCase(datos);
+        $('#ITEM_NOMBRE').val(datos);
+    })
+</script>
+

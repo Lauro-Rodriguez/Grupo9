@@ -1,0 +1,42 @@
+﻿@model SIGEFINew.Models.Presupuesto.DETALLEGRESOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DETALLEGRESOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PartEgreso.PROY_CODIGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartEgreso.PROY_CODIGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

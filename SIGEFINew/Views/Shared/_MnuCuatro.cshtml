@@ -1,0 +1,210 @@
+﻿
+@Html.ActionLink("Nómina", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<style>
+    .dropdown-submenu {
+        position: relative;
+    }
+
+        .dropdown-submenu > .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-submenu > a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #ccc;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover > a:after {
+            border-left-color: #fff;
+        }
+
+        .dropdown-submenu.pull-left {
+            float: none;
+        }
+
+            .dropdown-submenu.pull-left > .dropdown-menu {
+                left: -100%;
+                margin-left: 10px;
+                -webkit-border-radius: 6px 0 6px 6px;
+                -moz-border-radius: 6px 0 6px 6px;
+                border-radius: 6px 0 6px 6px;
+            }
+</style>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        @*@foreach (var item in Model)
+            {
+               if (item.SUB_NIVEL.ToString() == "1")
+                   {*@
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Inicio
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Porcentajes de Aportación por Sección", "Index", "RP_PORCAPORTACION", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Receptores de Fondos", "Index", "RP_RECEPFONDOS")</li>
+                <li>@Html.ActionLink("Tipos de Rol", "Index", "RP_TIPOROL")</li>
+                <li>@Html.ActionLink("Empleados", "Index", "RP_EMPLEADOS")</li>
+                @*<li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Características</a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Generales", "Index", "IN_CARACGEN", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Presentación", "Index", "IN_PRESENTA", new { area = "" }, new { @id = "M01_01" })</li>
+            </ul>
+        </li>*@
+                @*<li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Productos</a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Estructura", "Index", "IN_CLASES", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Administración de Productos", "Index", "IN_ITEMS", new { area = "" }, new { @id = "M01_01" })</li>
+                <li>@Html.ActionLink("Productos entre Bodegas", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+            </ul>
+        </li>*@
+                <li>@Html.ActionLink("Rubros", "Index", "RP_RUBROS")</li>
+                <li>@Html.ActionLink("Asignación de Cuentas", "Index", "Actividads")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Tipos de Anticipo de Sueldo", "Index", "RP_TIPOSANTICIPO")</li>
+                <li class="divider"></li>
+                <li>@Html.ActionLink("Tabla de Impuesto a la Renta", "Index", "RP_TIMPRENTA")</li>
+                <li>@Html.ActionLink("Tabla de Discapacidad", "Index", "RP_TIPOSANTICIPO")</li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="M01_01">
+                Transacciones
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Registro de Asistencia", "Index", "IN_COMPRAS", new { area = "" }, new { @id = "M01_01" })</li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Nómina Mensual</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Por Rubros", "Index", "PR_CERTDISPRESUP", new { area = "" }, new { @id = "M01_01" })</li>
+                        <li>@Html.ActionLink("Por Empleado", "Index", "RP_POREMPLEADO", new { area = "" }, new { @id = "M01_01" })</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        @*<li>@Html.ActionLink(item.DESC_MENU, "", "", new { area = "" }, new { @class = "navbar-brand", @id = item.NOM_MENU })</li>*@
+        @*}
+            }*@
+
+    </ul>
+    <button class="btn btn-danger navbar-btn" onclick="idRol()">Seleccionar Rol</button>
+    @*<button type="submit" class="btn btn-primary" onclick="addNewOrder()">
+                   <span class="glyphicon glyphicon-pencil"></span> Firmas
+        </button>*@
+    @*<div class="form-group">
+
+        </div>*@
+
+    @Html.Partial("_LoginPartial")
+</div>
+
+@*<div class="col-md-3">
+    @Html.DropDownList("ID_TIPOROL", ViewBag.ID_TIPOROL as SelectList, new { @class = "form-control", onchange = "this.form.submit();" })
+</div>*@
+
+<div class="modal fade" id="newOrderModal">
+    <br />
+    <br />
+    <div class="modal-dialog modal-md" style="width 900px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>Tipos de Rol</h4>
+            </div>
+            <form id="NewOrderForm">
+                <div class="modal-body">
+                    <div id="Recursos">
+
+                    </div>
+                    <div class="form-horizontal">
+                        <input type="hidden" id="idRol" />
+                        @Html.DropDownList("ID_TIPOROL", new SelectList(" "), "Seleccione el Tipo de Rol", new { @class = "form-control input-sm" })
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button id="saveOrder" type="submit" class="btn btn-success">Aceptar</button>
+                    @*<input type="button" value="Nuevo" onclick="@("location.href='"+ Url.Action("Create","PR_CERTDISPRESUP",new {@id =@ViewBag.CodPlan,@id2 =@ViewBag.OrgCodi,@id3 =@ViewBag.CodPlanObj })+ "'")" class="btn btn-primary" />*@
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+     $("#saveOrder").click(function (e) {
+         e.preventDefault();
+         rol = $("#ID_TIPOROL").val();
+         var data = JSON.stringify({
+                    Rol:rol
+            });
+
+            $.when(saveOrder(data)).then(function (response) {
+                    console.log(response);
+                }).fail(function (err) {
+                    console.log(err);
+                });
+     });
+
+   function idRol() { 
+             
+            var url = "@Url.Action("FillTiposdeRol", "Funciones")";
+
+            var data = {  };
+
+            $("#ID_TIPOROL").empty();
+            $.post(url, data).done(function (data) {
+                $.each(data, function (index, row) {
+                    //$("#detailsTable").append("<tr><td> <input class='form-control input-sm' type='text' value="+ row.NOMBRE+"/>" + "</td><td>" + row.CARGO + "</td><td>" + "<a data-itemId='0' href='#' class='deleteItem'>Borrar</a>" + "</td></tr>");
+                    $("#ID_TIPOROL").append("<option value='" + row.ID_TIPOROL + "'>" + row.DESCRIPCION + "</option>")
+                });
+
+            });
+
+            $("#newOrderModal").modal();
+
+    }
+
+    function saveOrder(data) {
+            return $.ajax({
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                type: 'POST',
+                url: "/Funciones/OkRol",
+                data: data,
+                success: function (result) {
+                    //alert(result);
+                    //$("#Tit").va(result);
+                    location.reload();
+                },
+                error: function () {
+                    alert("Error!")
+                }
+            });
+        }
+</script>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="306f0a679d424f6ca91efe8de2992e82" Name="Diagram1">
+        <EntityTypeShape EntityType="BDatosModel.Cliente" Width="1.5" PointX="3.25" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="BDatosModel.FK_Cliente_Cliente" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BDatosModel.Reserva" Width="1.5" PointX="6.125" PointY="0.75" />
+        <AssociationConnector Association="BDatosModel.ClienteReserva" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

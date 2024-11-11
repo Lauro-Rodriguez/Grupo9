@@ -1,0 +1,121 @@
+﻿@model SIGEFINew.Models.Contabilidad.CO_CUENTASCONT
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    <div class="col-md-8">
+        @Html.AntiForgeryToken()
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <i class="glyphicon glyphicon-edit"></i>
+                <h3 class="box-title">Cuenta Contable (Editar)</h3>
+            </div>
+
+            <div class="box-body">
+                @if (@ViewBag.MsgError != null)
+                {
+                    <div class="col-md-12">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                            @ViewBag.MsgError
+                        </div>
+                    </div>
+                }
+            <div class="form-horizontal">
+                @Html.HiddenFor(model => model.ID_INSTITUCION)
+                @Html.HiddenFor(model => model.PERI_CODIGO)
+                @*@Html.HiddenFor(model => model.CODIGO_CG)*@
+                @Html.HiddenFor(model => model.NIVEL_CG)
+                @Html.HiddenFor(model => model.TIPO_CG)
+                @Html.HiddenFor(model => model.USER_CREA)
+                @Html.HiddenFor(model => model.FECHA_CREA)
+                @Html.HiddenFor(model => model.USER_MODIF)
+                @Html.HiddenFor(model => model.FECHA_MODIF)
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CODIGO_CG, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.CODIGO_CG, new { htmlAttributes = new { @class = "form-control", placeholder = ViewBag.Mask,@Readonly="readonly" } })
+                        @Html.ValidationMessageFor(model => model.CODIGO_CG, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NOMBRE_CG, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.NOMBRE_CG, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NOMBRE_CG, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PPDEBITO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @Html.EditorFor(model => model.PPDEBITO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PPDEBITO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PPCREDITO, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-2">
+                        @Html.EditorFor(model => model.PPCREDITO, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.PPCREDITO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SIGEF, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.SIGEF)
+                            @Html.ValidationMessageFor(model => model.SIGEF, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="border-top:inherit">
+                    <div class="col-md-offset-9 col-md-10">
+                        @Html.ActionLink(" Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                        <button id="saveOrder" type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span> Aceptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+  
+}
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+@section Scripts{
+    <script type="text/javascript">
+        $('#NOMBRE_CG').keyup(function () {
+            var datos = new String($('#NOMBRE_CG').val());
+            datos = datos.toUpperCase(datos);
+            $('#NOMBRE_CG').val(datos);
+        })
+
+         $("#CodigoCG").keyup(function (e) {
+            var valant = $("#CodigoCG").val();
+            if (e.keyCode == 38) {
+                 var nivel = parseFloat($("#Niv").val()) + parseFloat(1);
+            $("#Niv").val(nivel);
+            var url = "@Url.Action("MaskCuenPat", "Funciones")";
+            var data = { Nivel: nivel }
+             $.post(url, data).done(function (data) {
+                 $("#CodigoCG").mask(data);
+                 $("#CodigoCG").val(valant);
+                });
+            }
+
+        });
+    </script>
+
+}

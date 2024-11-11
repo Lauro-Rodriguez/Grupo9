@@ -1,0 +1,109 @@
+﻿@model SIGEFINew.Models.Inventarios.IN_CARACGEN
+
+@{
+    if (ViewBag.EsNuevo == 1)
+    {
+        ViewBag.Title = "Nuevo";
+    }
+    else
+    {
+        ViewBag.Title = "Editar";
+    }
+
+}
+@using (Html.BeginForm(new { @EsNuevo = ViewBag.EsNuevo }))
+{
+    @Html.AntiForgeryToken()
+<div class="col-md-8">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <i class="glyphicon glyphicon-edit"></i>
+            @if (ViewBag.EsNuevo == 1)
+            {
+                <h3 class="box-title">Característica (Nuevo)</h3>
+            }
+            else
+            {
+                <h3 class="box-title">Característica (Editar)</h3>
+            }
+        </div>
+
+        <div class="box-body">
+            @if (@ViewBag.MsgError != null)
+            {
+                <div class="col-md-12">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <h4><i class="icon alert-danger"></i>Mensaje</h4>
+                        @ViewBag.MsgError
+                    </div>
+                </div>
+            }
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.USER_CREA, new { @Value = ViewBag.UserCrea })
+            @Html.HiddenFor(model => model.FECHA_CREA, new { @Value = ViewBag.FechaCrea })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.COD_CAGEN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-3">
+                    @if (ViewBag.EsNuevo == 1)
+                    {
+                        @Html.EditorFor(model => model.COD_CAGEN, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    }
+                    else
+                    {
+                        @Html.EditorFor(model => model.COD_CAGEN, new { htmlAttributes = new { @class = "form-control input-sm", @readonly = "readonly" } })
+                    }
+                    @Html.ValidationMessageFor(model => model.COD_CAGEN, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DESCRIP_CAGEN, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.EditorFor(model => model.DESCRIP_CAGEN, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                    @Html.ValidationMessageFor(model => model.DESCRIP_CAGEN, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CARACT, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-9">
+                    @Html.DropDownList("CARACT", null, htmlAttributes: new { @class = "form-control input-sm" })
+                    @*@Html.DropDownListFor(model => model.CARACT, ViewBag.CARACT as SelectList, new { @class = "form-control input-sm" })*@
+                    @Html.ValidationMessageFor(model => model.CARACT, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-offset-9 col-md-10">
+                @Html.ActionLink("Cancelar", "Index", "", new { @class = "btn btn-warning" })
+                <button id="saveOrder" type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    
+}
+
+
+<script src="../../content/bower_components/jquery/dist/jquery.min.js"></script>
+@section Scripts{
+    <script>
+        $('#COD_CAGEN').keyup(function () {
+            var datos = new String($('#COD_CAGEN').val());
+            datos = datos.toUpperCase(datos);
+            $('#COD_CAGEN').val(datos);
+        })
+
+        $('#DESCRIP_CAGEN').keyup(function () {
+            var datos = new String($('#DESCRIP_CAGEN').val());
+            datos = datos.toUpperCase(datos);
+            $('#DESCRIP_CAGEN').val(datos);
+        })
+    </script>
+}
+
+

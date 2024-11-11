@@ -1,0 +1,90 @@
+﻿@model SIGEFINew.Models.POA.POA_EAI
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>POA_EAI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOM_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOM_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.META_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.META_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REFE_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REFE_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIOR_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRIOR_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAINI_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAINI_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHAFIN_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHAFIN_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBSERVA_EAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBSERVA_EAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USER_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USER_CREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CREA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
